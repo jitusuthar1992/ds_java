@@ -1,6 +1,8 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class BinaryTreeTraversal {
@@ -73,5 +75,69 @@ public class BinaryTreeTraversal {
                 current = current.getRight();
             }
         }
+    }
+    public ArrayList<Integer> levelOrder(BinaryTreeNode root){
+        ArrayList<Integer> res = new ArrayList<>();
+        if(null==root)
+            return res;
+        Queue<BinaryTreeNode> q = new LinkedList<>();
+        q.offer(root);
+        q.offer(null);
+        ArrayList<Integer> curr = new ArrayList<>();
+        while(!q.isEmpty()){
+            BinaryTreeNode tmp = q.poll();
+            if(null != tmp){
+                curr.add(tmp.getData());
+                if(null != tmp.getLeft())
+                    q.offer(tmp.getLeft());
+                if(null != tmp.getRight())
+                    q.offer(tmp.getRight());
+            }else{
+                ArrayList<Integer> curr_res = new ArrayList<>(curr);
+                res.addAll(curr_res);
+                curr.clear();
+                if(!q.isEmpty())
+                    q.offer(null);
+            }
+
+        }
+        return  res;
+    }
+
+    public  Integer maxInBinaryTree(BinaryTreeNode root){
+        int max_value = Integer.MIN_VALUE;
+        if(null != root){
+            int leftMax = maxInBinaryTree(root.getLeft());
+            int rightMax = maxInBinaryTree(root.getRight());
+            if(leftMax > rightMax)
+                max_value = leftMax;
+            max_value = rightMax;
+            if(root.getData() > max_value)
+                max_value = root.getData();
+        }
+        return max_value;
+    }
+    public  Integer maxInBinaryTreeLevelOrder(BinaryTreeNode root){
+        if(null == root)
+            return Integer.MIN_VALUE;
+        int max = Integer.MIN_VALUE;
+        Queue<BinaryTreeNode> q = new LinkedList<>();
+        q.offer(root);
+        while(!q.isEmpty()){
+            BinaryTreeNode tmp = q.poll();
+            if(null != tmp){
+                if(tmp.getData() > max)
+                    max = tmp.getData();
+            }
+            if(null != tmp.getLeft()){
+                q.offer(tmp.getLeft());
+            }
+            if(null != tmp.getRight()){
+                q.offer(tmp.getRight());
+            }
+        }
+
+        return  max;
+        
     }
 }
