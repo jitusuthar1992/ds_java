@@ -5,6 +5,7 @@ import command.pattern.Command;
 public class RemoteControl {
     Command[] onCommand;
     Command[] offCommand;
+    Command undoCommand;
 
     public RemoteControl() {
         offCommand = new Command[2];
@@ -22,10 +23,16 @@ public class RemoteControl {
     }
     public void onButtonWasPressed(int slot){
         onCommand[slot].execute();
+        undoCommand = onCommand[slot];
     }
 
     public void offButtonWasPressed(int slot){
         offCommand[slot].execute();
+        undoCommand = offCommand[0];
+    }
+
+    public void undoButtonWasPressed(){
+        undoCommand.undo();
     }
 
 }

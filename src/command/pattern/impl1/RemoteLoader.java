@@ -12,5 +12,6 @@ public class RemoteLoader {
         control.setCommand(0,lightOffCommand,lightOnCommand);
         control.offButtonWasPressed(0);
         control.onButtonWasPressed(0);
+        control.undoButtonWasPressed();
     }
 }
