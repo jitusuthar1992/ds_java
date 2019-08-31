@@ -1,4 +1,4 @@
-package decorator.degign.beverageproblem;
+package main.decorator.degign.beverageproblem;
 
 public abstract class Beverage {
     public String description = "Unknown Description";

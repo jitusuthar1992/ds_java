@@ -1,9 +1,15 @@
-package tree;
+package main.tree;
 
 public class BinaryTreeNode {
     private BinaryTreeNode left;
     private BinaryTreeNode right;
     private int data;
+
+    public BinaryTreeNode(BinaryTreeNode left, BinaryTreeNode right, int data) {
+        this.left = left;
+        this.right = right;
+        this.data = data;
+    }
 
     public BinaryTreeNode getLeft() {
         return left;
