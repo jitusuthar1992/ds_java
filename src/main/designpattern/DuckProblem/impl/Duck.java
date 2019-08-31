@@ -1,7 +1,7 @@
-package designpattern.DuckProblem.impl;
+package main.designpattern.DuckProblem.impl;
 
-import designpattern.DuckProblem.FlyBehaviour;
-import designpattern.DuckProblem.QuackBehaviour;
+import main.designpattern.DuckProblem.FlyBehaviour;
+import main.designpattern.DuckProblem.QuackBehaviour;
 
 public abstract class Duck {
     protected FlyBehaviour flyBehaviour;

@@ -1,7 +1,8 @@
-package linkedlist.singly;
+package main.linkedlist.singly;
 
 
 import java.util.HashSet;
+import java.util.Map;
 
 public class DetectAndRemoveLoop {
 
@@ -55,6 +56,8 @@ public class DetectAndRemoveLoop {
     }
         public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
+
+        Map<Integer,Integer> test ;
             list.head = new ListNode(50);
             list.head.setNext(new ListNode(20));
             list.head.getNext().setNext(new ListNode(15));
