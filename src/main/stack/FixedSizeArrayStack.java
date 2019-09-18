@@ -1,5 +1,7 @@
 package main.stack;
 
+import java.util.Stack;
+
 public class FixedSizeArrayStack<T extends Object> {
     //length of the main.array used to implement the main.stack
     protected int capacity;
