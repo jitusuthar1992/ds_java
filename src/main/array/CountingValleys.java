@@ -1,5 +1,7 @@
 package main.array;
 
+import java.util.Hashtable;
+
 public class CountingValleys {
    static int countingValleys(int n, String s) {
 
@@ -35,6 +37,10 @@ public class CountingValleys {
 
     public static void main(String[] args) {
         System.out.println(CountingValleys.countingValleys(8,"UDDDUDUUDU"));
+
+        Hashtable<Integer, String> h =
+                new Hashtable<Integer, String>();
+        h.put(1,"s");
 
     }
 }

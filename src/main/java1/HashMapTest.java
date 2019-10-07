@@ -7,7 +7,10 @@ import java.util.Map;
 public class HashMapTest {
     int a= 100;
     public static void main(String[] args) throws Exception {
-        Map<Test,String> map = new HashMap<>();
+
+
+
+        /*Map<Test,String> map = new HashMap<>();
         Test obj = new Test();
         obj.var ="1";
         obj.var2 ="1";
@@ -48,7 +51,7 @@ public class HashMapTest {
 
             System.out.println("yes");
         }
-
+*/
     }
 
     static int fix(int a){
@@ -112,3 +115,4 @@ class Pack
 
     }
 }
+

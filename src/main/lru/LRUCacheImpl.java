@@ -1,9 +1,6 @@
 package main.lru;
 
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 public class LRUCacheImpl {
     private Deque<Node> cache ;
@@ -19,6 +16,11 @@ public class LRUCacheImpl {
         public Node(Integer key, Integer value) {
             this.key = key;
             this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" + "key=" + key + ", value=" + value + '}';
         }
     }
 
@@ -50,11 +52,12 @@ public class LRUCacheImpl {
 
         }else {
             Node node = new Node(key,value);
-            if(map.size() > cSize){
+            if(map.size() >= cSize){
                 map.remove(key);
                 cache.removeLast();
-                cache.addLast(node);
+
             }
+            cache.addLast(node);
             map.put(key,node);
         }
     }
@@ -69,10 +72,15 @@ public class LRUCacheImpl {
         lrucache.put(12, 15);
         lrucache.put(18, 10);
         lrucache.put(13, 16);
+        Iterator it  = lrucache.cache.iterator();
 
-        System.out.println(lrucache.get(1));
+
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+        /*System.out.println(lrucache.get(1));
         System.out.println(lrucache.get(10));
-        System.out.println(lrucache.get(15));
+        System.out.println(lrucache.get(15));*/
 
     }
 
