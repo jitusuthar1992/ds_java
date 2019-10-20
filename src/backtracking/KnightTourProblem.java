@@ -1,5 +1,7 @@
 package backtracking;
 
+import java.util.ArrayList;
+
 public class KnightTourProblem {
 
     private  int boardSize;
