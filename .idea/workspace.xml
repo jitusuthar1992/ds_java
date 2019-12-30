@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15bb5e9d-2b9c-4ad3-b504-70f373e8d2a1" name="Default Changelist" comment="ds">
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CheckBeautifulString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dp/CoinChangingMinimumCoin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/array/MaxPossibleEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/array/MinimumDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/array/OddOccurence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/array/RowWithMaxOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/array/ZigZagArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/designpattern/tempatepattern/CaffeineBeverage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/designpattern/tempatepattern/TestBeverage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java1/TryWithResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/linkedlist/singly/CloneWithRandomPointer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/stack/MinElementusingStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tree/BalancedHeightTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tree/RootToLeafPaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="15bb5e9d-2b9c-4ad3-b504-70f373e8d2a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/array/ArrayOverLap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/EquilibriumIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/LargestSubArrayWithEquals0S1S.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/PrintTriplets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/SearchInRowAndColumnSorted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/SmallestWindowContainsAllChars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/SmallestWindowContainsAllCharsOfOther.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/SubArraySum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/design/HitCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/AbstractClassTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/CloneTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/CustomImmutableClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/GrepCommandImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/java7Features/AutoCloseableExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/BlockingThreadPoolExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/ClassLevelLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/ConstructorWithSynchronised.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/CountDownLatchDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/CustomThreadFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/CustomThreadPoolExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/CyclicBarrierDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/FutureCallableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/JoinExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/LockTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/MultiTaskExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/ObjectLevelLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/PiperStreamInterThreadComm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/ResolveDeadLockTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/SemaphoreTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/TestYield.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/ThreadLocalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/ThreeThreadsOrderedLockLess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/UncaughtExceptionHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java1/multithreading/WaitWithoutSynchrozed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/linkedlist/singly/RemoveDuplicatesUnsortedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/linkedlist/singly/RemoveDuplicatessortedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/linkedlist/singly/SortLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/string/RemoveDuplicatesString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tree/BSTImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tree/IntervalTreeImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tree/PrintAncestors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tree/TrieImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.ser" beforeDir="false" afterPath="$PROJECT_DIR$/out.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backtracking/KnightTourProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backtracking/KnightTourProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl/CeilingFan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl/CeilingFan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl/Light.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl/LightOnCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl/LightOnCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl/RemoteControlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl/RemoteControlTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl/SimpleRemoteControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl/SimpleRemoteControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl1/CeilingFanHighCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl1/CeilingFanHighCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl1/CeilingFanMediumCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl1/CeilingFanMediumCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl1/CeilingFanOffCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl1/CeilingFanOffCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl1/LightOffCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl1/LightOffCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl1/NoComand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl1/NoComand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl1/RemoteControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl1/RemoteControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/command/pattern/impl1/RemoteLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl1/RemoteLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorator/degign/beverageproblem/Beverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/decorator/beverageproblem/Beverage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorator/degign/beverageproblem/CondimentDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/decorator/beverageproblem/CondimentDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorator/degign/beverageproblem/Espresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/decorator/beverageproblem/Espresso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorator/degign/beverageproblem/Mocha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/decorator/beverageproblem/Mocha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorator/degign/beverageproblem/StarbuzzCoffee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/decorator/beverageproblem/StarbuzzCoffee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorator/degign/beverageproblem/upperstreaminputstream/UpperrCaseInputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/decorator/beverageproblem/upperstreaminputstream/UpperrCaseInputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/decorator/degign/lowercaseinputstream/LowerCaseInputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/decorator/lowercaseinputstream/LowerCaseInputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factory/NYStyleCheesePizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/factory/NYStyleCheesePizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factory/NYStylePizzaStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/factory/NYStylePizzaStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factory/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/factory/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factory/PizzaStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/factory/PizzaStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/factory/PizzaTestDrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/factory/PizzaTestDrive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backtracking/HamiltonianCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/backtracking/HamiltonianCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dp/CoinChangingMinimumCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dp/CoinChangingMinimumCoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/array/MaxHistogramArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/array/MaxHistogramArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/array/leetcode/array/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/array/leetcode/array/TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java1/SwitchWithoutBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java1/SwitchWithoutBreak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java1/collection/FailFastAndFailSafeIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java1/collection/FailFastAndFailSafeIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java1/thread/pool/ThreadPoolExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java1/thread/pool/ThreadPoolExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tree/BinaryTreeTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tree/BinaryTreeTraversal.java" afterDir="false" />
     </list>
     <list id="b2635985-f995-4448-88a5-312df4a62aab" name="test" comment="">
       <change beforePath="$PROJECT_DIR$/out/production/ds/array/KthDigit.class" beforeDir="false" />
@@ -128,7 +136,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -142,13 +150,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CoinChangingMinimumCoin">
-    <configuration name="BalancedHeightTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.tree.BalancedHeightTree" />
+  <component name="RunManager" selected="Application.CyclicBarrierDemo">
+    <configuration name="CustomThreadFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java1.multithreading.CustomThreadFactory" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.tree.*" />
+          <option name="PATTERN" value="main.java1.multithreading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,12 +164,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CoinChangingMinimumCoin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dp.CoinChangingMinimumCoin" />
+    <configuration name="CyclicBarrierDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java1.multithreading.CyclicBarrierDemo" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dp.*" />
+          <option name="PATTERN" value="main.java1.multithreading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,12 +177,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HamiltonianCycle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="backtracking.HamiltonianCycle" />
+    <configuration name="FutureCallableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java1.multithreading.FutureCallableTest" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="backtracking.*" />
+          <option name="PATTERN" value="main.java1.multithreading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,12 +190,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NQueenProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="backtracking.NQueenProblem" />
+    <configuration name="ThreadLocalTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java1.multithreading.ThreadLocalTest" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="backtracking.*" />
+          <option name="PATTERN" value="main.java1.multithreading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -195,12 +203,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZigZagArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.array.ZigZagArray" />
+    <configuration name="WaitWithoutSynchrozed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java1.multithreading.WaitWithoutSynchrozed" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.array.*" />
+          <option name="PATTERN" value="main.java1.multithreading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,19 +217,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.HamiltonianCycle" />
-      <item itemvalue="Application.NQueenProblem" />
-      <item itemvalue="Application.ZigZagArray" />
-      <item itemvalue="Application.BalancedHeightTree" />
-      <item itemvalue="Application.CoinChangingMinimumCoin" />
+      <item itemvalue="Application.CustomThreadFactory" />
+      <item itemvalue="Application.ThreadLocalTest" />
+      <item itemvalue="Application.WaitWithoutSynchrozed" />
+      <item itemvalue="Application.FutureCallableTest" />
+      <item itemvalue="Application.CyclicBarrierDemo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CoinChangingMinimumCoin" />
-        <item itemvalue="Application.BalancedHeightTree" />
-        <item itemvalue="Application.ZigZagArray" />
-        <item itemvalue="Application.NQueenProblem" />
-        <item itemvalue="Application.HamiltonianCycle" />
+        <item itemvalue="Application.CyclicBarrierDemo" />
+        <item itemvalue="Application.FutureCallableTest" />
+        <item itemvalue="Application.WaitWithoutSynchrozed" />
+        <item itemvalue="Application.ThreadLocalTest" />
+        <item itemvalue="Application.CustomThreadFactory" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570446032728</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="dp problems">
+      <created>1571596207249</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1571596207249</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +427,8 @@
     <MESSAGE value="quick find" />
     <MESSAGE value="array problems" />
     <MESSAGE value="ds" />
-    <option name="LAST_COMMIT_MESSAGE" value="ds" />
+    <MESSAGE value="dp problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="dp problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -569,7 +585,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java1/thread/pool/ThreadPoolExample.java</url>
-          <line>14</line>
+          <line>15</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -889,38 +905,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java1/collection/FailFastAndFailSafeIterator.java</url>
-          <line>37</line>
+          <line>38</line>
           <option name="timeStamp" value="173" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java1/collection/FailFastAndFailSafeIterator.java</url>
-          <line>35</line>
+          <line>36</line>
           <option name="timeStamp" value="174" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java</url>
-          <line>870</line>
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java</url>
-          <line>872</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java</url>
-          <line>907</line>
-          <option name="timeStamp" value="177" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java</url>
-          <line>875</line>
-          <option name="timeStamp" value="178" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java</url>
-          <line>878</line>
-          <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/oyo/MinRoomRequired.java</url>
@@ -1147,6 +1138,221 @@
           <line>319</line>
           <option name="timeStamp" value="244" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/SmallestWindowContainsAllChars.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="246" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/SmallestWindowContainsAllChars.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/SmallestWindowContainsAllCharsOfOther.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dp/MinumiumJumpToEnd.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dp/MinumiumJumpToEnd.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/LargestSubArrayWithEquals0S1S.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/LargestSubArrayWithEquals0S1S.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/LargestSubArrayWithEquals0S1S.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/LargestSubArrayWithEquals0S1S.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="265" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="266" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="270" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="271" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="272" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java1/multithreading/ThreeThreadsOrderedLockLess.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java1/multithreading/ThreeThreadsOrderedLockLess.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="276" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/string/SameFreqWithOneVariation.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="278" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/PrintTriplets.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="279" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/RemoveDuplicatesUnsortedList.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="280" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="283" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>139</line>
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="287" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>135</line>
+          <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="289" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="291" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>199</line>
+          <option name="timeStamp" value="292" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="293" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>204</line>
+          <option name="timeStamp" value="295" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="296" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
+          <line>164</line>
+          <option name="timeStamp" value="299" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="302" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="303" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="304" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java1/multithreading/CustomThreadPoolExecutor.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="305" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java1/multithreading/CustomThreadPoolExecutor.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="306" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java1/multithreading/CustomThreadPoolExecutor.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="307" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/concurrent/ThreadPoolExecutor.java</url>
+          <line>1616</line>
+          <option name="timeStamp" value="308" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java1/multithreading/ThreadLocalTest.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="311" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/DetectAndRemoveLoop.java</url>
           <line>20</line>
@@ -1157,7 +1363,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java1/thread/pool/ThreadPoolExample.java</url>
-          <line>7</line>
+          <line>8</line>
           <properties class="main.java1.thread.pool.ThreadPoolExample" method="main">
             <option name="EMULATED" value="true" />
           </properties>
@@ -1243,6 +1449,22 @@
           </properties>
           <option name="timeStamp" value="240" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/array/SubArraySum.java</url>
+          <line>23</line>
+          <properties class="main.array.SubArraySum" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="245" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/SortLinkedList.java</url>
+          <line>8</line>
+          <properties class="main.linkedlist.singly.SortLinkedList">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="281" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/designpattern/decorator/beverageproblem/Mocha.java</url>
           <line>7</line>
@@ -1254,6 +1476,12 @@
           <line>7</line>
           <properties field="a" class="main.java1.HashMapTest" />
           <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/lru/LRUCacheImpl.java</url>
+          <line>13</line>
+          <properties field="value" class="main.lru.LRUCacheImpl.Node" />
+          <option name="timeStamp" value="277" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

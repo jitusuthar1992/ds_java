@@ -17,7 +17,8 @@ public class FailFastAndFailSafeIterator {
        ///fail fast
         List<String> list = new ArrayList<>();
         list.add("1");
-        list.add(2,"1");
+        list.add("2");
+        //list.add(2,"1");
 
         Iterator iterator1 = list.iterator();
         while (iterator1.hasNext()){
@@ -45,7 +46,7 @@ public class FailFastAndFailSafeIterator {
         while (iterator2.hasNext()){
             String s = (String) iterator2.next();
             if(s.equals("1")){
-                list.remove(s);
+                iterator.remove();
             }
         }
 
@@ -59,7 +60,7 @@ public class FailFastAndFailSafeIterator {
         arrlist.add(40);
 
         // adding element 35 at fourth position
-        arrlist.add(5, 35);
+       // arrlist.add(5, 35);
 
         // let us print all the elements available in list
         for (Integer number : arrlist) {

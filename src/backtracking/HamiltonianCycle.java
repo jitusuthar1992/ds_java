@@ -33,8 +33,6 @@ public class HamiltonianCycle {
 
         // Print the solution
         hamiltonian.hamCycle();
-
-
     }
 
     private int hamCycle() {

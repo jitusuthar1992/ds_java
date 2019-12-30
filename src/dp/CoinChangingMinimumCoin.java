@@ -32,7 +32,7 @@ public class CoinChangingMinimumCoin {
         System.out.print("Coins used to form total ");
         while ( start != 0 ) {
             int j = R[start];
-            System.out.print(coins[j] + " ");
+                System.out.print(coins[j] + " ");
             start = start - coins[j];
         }
         System.out.print("\n");

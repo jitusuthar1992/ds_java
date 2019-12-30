@@ -48,10 +48,11 @@ public class BinaryTreeTraversal {
     public static  void inOrderRecursion(BinaryTreeNode root){
         if(null!= root){
             inOrderRecursion(root.getLeft());
-            System.out.println(root.getData());
+            System.out.print(root.getData() +" ");
             inOrderRecursion(root.getRight());
 
         }
+
     }
 
 

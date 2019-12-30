@@ -2,7 +2,7 @@ package main.array;
 
 import java.util.Stack;
 
-public class MaxHistogramArea {
+public class    MaxHistogramArea {
 
 
     public int maxHistogram(int input[]){
