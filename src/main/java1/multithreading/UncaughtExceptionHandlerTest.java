@@ -7,12 +7,12 @@ package main.java1.multithreading;
 public class UncaughtExceptionHandlerTest {
     public static void main(String[] args)
     {
-        Task task = new Task();
+        Task11 task = new Task11();
         Thread thread = new Thread(task);
         thread.start();
     }
 }
-class Task implements Runnable
+class Task11 implements Runnable
 {
     @Override
     public void run()

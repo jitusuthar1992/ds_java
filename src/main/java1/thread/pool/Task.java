@@ -2,7 +2,7 @@ package main.java1.thread.pool;
 
 import java.util.concurrent.TimeUnit;
 
-public class Task implements Runnable {
+class Task implements Runnable {
     private String name;
 
 
