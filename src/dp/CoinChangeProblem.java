@@ -32,7 +32,7 @@ public class CoinChangeProblem {
     }
     public static void main(String[] args) {
         int a[] ={1,2,3,4,5};
-        System.out.println(count(a,5,5));
+        System.out.println(count(a,6,5));
 
     }
 }

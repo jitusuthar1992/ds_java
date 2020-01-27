@@ -17,16 +17,22 @@ public class ScheduledThreadPoolExecutorExample {
         Task task2 = new Task("Demo Task 2");
         System.out.println("The time is : " + new Date());
 
-        executorService.schedule(task1, 5, TimeUnit.SECONDS);
+        /*executorService.schedule(task1, 5, TimeUnit.SECONDS);
         executorService.schedule(task1,10,TimeUnit.SECONDS);
 
         try {
-            executorService.awaitTermination(1, TimeUnit.DAYS);
+            executorService.awaitTermination(1, TimeUnit.MINUTES);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        executorService.shutdown();
+        executorService.shutdown();*/
+
+
+        //executorService.scheduleAtFixedRate(task1, 5,5, TimeUnit.SECONDS);
+
+        executorService.scheduleWithFixedDelay(task1, 5,5, TimeUnit.SECONDS);
+
     }
 }
 class Task implements Runnable
