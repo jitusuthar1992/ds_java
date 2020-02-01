@@ -1,4 +1,4 @@
-package main.observer.builtIn;
+package main.designpattern.observer.builtIn;
 
 import java.util.Observable;
 

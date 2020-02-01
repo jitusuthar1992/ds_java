@@ -1,4 +1,4 @@
-package main.observer;
+package main.designpattern.observer;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     //private WeatherData weatherData;

@@ -1,4 +1,4 @@
-package main.observer.builtIn;
+package main.designpattern.observer.builtIn;
 
 public  class WeatherStation {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package main.string;
+
 public class CheckBeautifulString {
     static boolean checkString (String str){
 

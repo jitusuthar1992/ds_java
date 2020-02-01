@@ -1,31 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15bb5e9d-2b9c-4ad3-b504-70f373e8d2a1" name="Default Changelist" comment="dp problems">
-      <change afterPath="$PROJECT_DIR$/src/main/java1/java8/DefaultMethodInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java1/java8/ForEach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java1/java8/MyFirstFunctionalInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java1/java8/OptionalsExample.java" afterDir="false" />
+    <list default="true" id="15bb5e9d-2b9c-4ad3-b504-70f373e8d2a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backtracking/HamiltonianCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/backtracking/HamiltonianCycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backtracking/KnightTourProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/backtracking/KnightTourProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backtracking/MColoringProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/backtracking/MColoringProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backtracking/NQueenProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/backtracking/NQueenProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backtracking/RateInMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/backtracking/RateInMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/CoinChangeProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/CoinChangeProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/CoinChangingMinimumCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/CoinChangingMinimumCoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/EggDropping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/EggDropping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/FibonacciWithMemoized.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/FibonacciWithMemoized.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/FibonacciWithTabulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/FibonacciWithTabulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/LongestCommonSubSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/LongestCommonSubSequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/MinumiumJumpToEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/MinumiumJumpToEnd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/RodCutProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/RodCutProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dp/SubsetSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dp/SubsetSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dynamicconnectivity/QuickFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/dynamicconnectivity/QuickFind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/design/HitCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/design/HitCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java1/collection/FailFastAndFailSafeIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java1/collection/FailFastAndFailSafeIterator.java" afterDir="false" />
-    </list>
-    <list id="b2635985-f995-4448-88a5-312df4a62aab" name="test" comment="">
       <change beforePath="$PROJECT_DIR$/out/production/ds/array/KthDigit.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ds/array/MergeSortedArray.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ds/array/MoveZeroEnd.class" beforeDir="false" />
@@ -54,6 +32,16 @@
       <change beforePath="$PROJECT_DIR$/out/production/ds/stack/Palindrome.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ds/stack/ValidateExpression.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ds/string/PalindromeConvertable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CheckBeautifulString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/string/CheckBeautifulString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/CurrentConditionsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/CurrentConditionsDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/CurrentConditionsDisplay1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/CurrentConditionsDisplay1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/DisplayElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/DisplayElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/WeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/WeatherStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/WeatherStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/builtIn/CurrentConditionsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/builtIn/CurrentConditionsDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/builtIn/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/builtIn/WeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/observer/builtIn/WeatherStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/builtIn/WeatherStation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +199,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="15bb5e9d-2b9c-4ad3-b504-70f373e8d2a1" name="Default Changelist" comment="" />
-      <changelist id="b2635985-f995-4448-88a5-312df4a62aab" name="test" comment="" />
+      <changelist id="" name="test" comment="" />
       <created>1538940056090</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -371,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580144889851</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="dp problems">
+      <created>1580550562329</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1580550562329</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -413,9 +408,9 @@
     <MESSAGE value="quick find" />
     <MESSAGE value="array problems" />
     <MESSAGE value="ds" />
-    <MESSAGE value="dp problems" />
     <MESSAGE value="music player design" />
-    <option name="LAST_COMMIT_MESSAGE" value="music player design" />
+    <MESSAGE value="dp problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="dp problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -486,32 +481,32 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/observer/WeatherData.java</url>
+          <url>file://$PROJECT_DIR$/src/main/designpattern/observer/WeatherData.java</url>
           <line>41</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/observer/WeatherData.java</url>
+          <url>file://$PROJECT_DIR$/src/main/designpattern/observer/WeatherData.java</url>
           <line>44</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/observer/WeatherData.java</url>
+          <url>file://$PROJECT_DIR$/src/main/designpattern/observer/WeatherData.java</url>
           <line>37</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/observer/WeatherData.java</url>
+          <url>file://$PROJECT_DIR$/src/main/designpattern/observer/WeatherData.java</url>
           <line>30</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/observer/WeatherData.java</url>
+          <url>file://$PROJECT_DIR$/src/main/designpattern/observer/WeatherData.java</url>
           <line>23</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/observer/WeatherData.java</url>
+          <url>file://$PROJECT_DIR$/src/main/designpattern/observer/WeatherData.java</url>
           <line>24</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
@@ -1066,57 +1061,57 @@
           <option name="timeStamp" value="230" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>36</line>
           <option name="timeStamp" value="232" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>13</line>
           <option name="timeStamp" value="233" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>4</line>
           <option name="timeStamp" value="234" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>10</line>
           <option name="timeStamp" value="235" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>20</line>
           <option name="timeStamp" value="236" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>34</line>
           <option name="timeStamp" value="237" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>30</line>
           <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>22</line>
           <option name="timeStamp" value="239" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>40</line>
           <option name="timeStamp" value="241" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>27</line>
           <option name="timeStamp" value="242" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CheckBeautifulString.java</url>
+          <url>file://$PROJECT_DIR$/src/main/string/CheckBeautifulString.java</url>
           <line>29</line>
           <option name="timeStamp" value="243" />
         </line-breakpoint>

@@ -1,6 +1,6 @@
-package main.observer.builtIn;
+package main.designpattern.observer.builtIn;
 
-import main.observer.DisplayElement;
+import main.designpattern.observer.DisplayElement;
 
 import java.util.Observable;
 import java.util.Observer;
