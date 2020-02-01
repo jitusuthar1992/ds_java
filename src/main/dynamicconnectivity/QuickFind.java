@@ -1,4 +1,4 @@
-package dynamicconnectivity;
+package main.dynamicconnectivity;
 
 public class QuickFind {
     private int[] id;

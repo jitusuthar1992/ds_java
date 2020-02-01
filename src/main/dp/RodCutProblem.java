@@ -1,4 +1,4 @@
-package dp;
+package main.dp;
 
 public class RodCutProblem {
     static int maxProfit(int n, int m[] ,int length,int prices[]){

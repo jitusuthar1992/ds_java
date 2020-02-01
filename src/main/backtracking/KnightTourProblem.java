@@ -1,6 +1,4 @@
-package backtracking;
-
-import java.util.ArrayList;
+package main.backtracking;
 
 public class KnightTourProblem {
 

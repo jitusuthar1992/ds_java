@@ -4,7 +4,7 @@ package main.design;
  * @author jitendra.kumar01
  * 25/10/19
  */
-public class HitCounter {
+public class  HitCounter {
 
     private static final int MAX_COUNT = 300;
     int timeStamp[] = new int[MAX_COUNT];

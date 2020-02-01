@@ -1,7 +1,7 @@
-package backtracking;
+package main.backtracking;
 
 /* Java program for solution of M Coloring problem
-using backtracking */
+using main.backtracking */
 public class MColoringProblem {
     final int V = 4;
     int color[];

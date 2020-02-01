@@ -1,4 +1,4 @@
-package backtracking;
+package main.backtracking;
 
 
 public class RateInMaze {

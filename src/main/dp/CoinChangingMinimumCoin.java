@@ -1,4 +1,4 @@
-package dp;
+package main.dp;
 
 public class CoinChangingMinimumCoin {
     public int minimumCoinBottomUp(int total, int coins[]){
