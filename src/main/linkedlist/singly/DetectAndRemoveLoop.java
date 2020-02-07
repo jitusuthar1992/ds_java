@@ -18,6 +18,7 @@ public class DetectAndRemoveLoop {
         return  false;
     }
 
+
     public static void removeLoop(ListNode loop,ListNode curr){
 
             ListNode ptr1 = curr, ptr2=null;
@@ -55,9 +56,8 @@ public class DetectAndRemoveLoop {
             prev.setNext(null);
     }
         public static void main(String[] args) {
-        SinglyLinkedList list = new SinglyLinkedList();
+            SinglyLinkedList list = new SinglyLinkedList();
 
-        Map<Integer,Integer> test ;
             list.head = new ListNode(50);
             list.head.setNext(new ListNode(20));
             list.head.getNext().setNext(new ListNode(15));
@@ -65,10 +65,13 @@ public class DetectAndRemoveLoop {
             list.head.getNext().getNext().getNext().setNext(new ListNode(10));
             list.head.getNext().getNext().getNext().getNext().setNext(list.head.getNext().getNext());
 
+           // System.out.println("Linked List before removing loop : ");
+           // list.printList(list.head);
 
             DetectAndRemoveLoop.detectLoopAndRemovesol1(list.head);
             System.out.println("Linked List after removing loop : ");
-            list.printList(list.head);
+           list.printList(list.head);
+
         }
 
     }

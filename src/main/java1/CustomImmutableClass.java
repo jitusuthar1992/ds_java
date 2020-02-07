@@ -4,7 +4,7 @@ package main.java1;
  * @author jitendra.kumar01
  * 12/12/19
  */
-public  class CustomImmutableClass {
+public  final class CustomImmutableClass {
     private final String var ;
 
     public String getVar() {

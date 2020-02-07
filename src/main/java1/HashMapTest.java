@@ -9,7 +9,6 @@ public class HashMapTest {
     public static void main(String[] args) throws Exception {
 
 
-
         /*Map<Test,String> map = new HashMap<>();
         Test obj = new Test();
         obj.var ="1";
