@@ -1,4 +1,4 @@
-package main.tree;
+package main.graph;
 
 import java.util.Iterator;
 import java.util.LinkedList;

@@ -42,4 +42,11 @@ public class SubArraySum {
         // return all subarray sum
         return result ;
     }
+
+    /**
+     * @author jitendra.kumar01
+     * 07/02/20
+     */
+    public static class CountGreaterElementsOnleftSide {
+    }
 }

@@ -1,4 +1,4 @@
-package main.array;
+package main.string;
 
 /**
  * @author jitendra.kumar01
