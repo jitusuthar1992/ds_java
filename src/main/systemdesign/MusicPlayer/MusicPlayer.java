@@ -1,4 +1,4 @@
-package main.design.MusicPlayer;
+package main.systemdesign.MusicPlayer;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

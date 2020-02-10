@@ -1,4 +1,4 @@
-package main.design;
+package main.systemdesign;
 
 /**
  * @author jitendra.kumar01

@@ -1,4 +1,4 @@
-package main.design.MusicPlayer;
+package main.systemdesign.MusicPlayer;
 
 /**
  * @author jitendra.kumar01
