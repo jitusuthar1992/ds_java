@@ -13,7 +13,4 @@ public class FunctionTest {
         };
         System.out.println(function.apply("wwwww"));
     }
-
-
-
 }

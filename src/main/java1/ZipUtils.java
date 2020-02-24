@@ -1,3 +1,4 @@
+/*
 package main.java1;
 import au.com.bytecode.opencsv.CSVWriter;
 
@@ -5,10 +6,12 @@ import java.io.*;
 import java.nio.file.*;
 import java.util.*;
 import java.util.zip.*;
+*/
 /**
  * @author jitendra.kumar01
  * 14/02/20
- */
+ *//*
+
 public class ZipUtils {
 
     private static final String EXTENSION = ".zip";
@@ -96,6 +99,7 @@ public class ZipUtils {
 
 
         Optional<String> str =  splitFile();
+        new File(str.get()).delete();
         System.out.println(str.get());
 
     }
@@ -142,7 +146,7 @@ public class ZipUtils {
             int divisor = listStr.size() / csvLimit;
             int mod = listStr.size() % csvLimit;
 
-            String commonPath = new StringBuilder("/opt/score/simulation/").append("F133332").append("_Suborder").toString();
+            String commonPath = new StringBuilder("/opt/score/simulation/").append("F133322").append("_Suborder").toString();
             String path;
 
             if (divisor > 0) {
@@ -175,4 +179,6 @@ public class ZipUtils {
         return optionalPath;
     }
 
+
 }
+*/

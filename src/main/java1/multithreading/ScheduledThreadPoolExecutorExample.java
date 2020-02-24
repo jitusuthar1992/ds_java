@@ -51,6 +51,8 @@ class Task implements Runnable
     public void run()
     {
         try {
+            Thread.sleep(5000);
+
             System.out.println("Doing a task during : " + name + " - Time - " + new Date());
         }
         catch (Exception e) {

@@ -1,6 +1,8 @@
 package main.array;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -8,6 +10,7 @@ import java.util.Map;
  * 06/02/20
  */
 public class CountFrequency {
+
     public static void countFreqSol1(int arr[], int n){
         boolean visited[] = new boolean[n];
         for (int i = 0; i <n ; i++) {
@@ -127,5 +130,10 @@ public class CountFrequency {
 
         int arr1[] = {2, 3, 3, 2, 5};
         findCounts(arr1, arr1.length);
+
+        System.out.println("List test cases");
+        List<Boolean> lists  = new ArrayList<>();
+        lists.add(false);
+        System.out.println(lists.contains(false));
     }
 }

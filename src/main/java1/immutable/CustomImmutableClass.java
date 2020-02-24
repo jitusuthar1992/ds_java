@@ -1,4 +1,4 @@
-package main.java1;
+package main.java1.immutable;
 
 /**
  * @author jitendra.kumar01
