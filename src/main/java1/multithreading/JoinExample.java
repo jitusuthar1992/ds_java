@@ -13,7 +13,7 @@ public class JoinExample {
             public void run()
             {
                 System.out.println("First task started");
-                System.out.println("sSleeping for 2 seconds");
+                System.out.println("Sleeping for 2 seconds");
                 try
                 {
                     Thread.sleep(2000);

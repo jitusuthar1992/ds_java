@@ -9,11 +9,12 @@ public class FailFastAndFailSafeIterator {
 
         Map<String,Integer> map = new HashMap<>();
         map.put(null,1);
+        System.out.println(map);
         map.put(null,null);
         map.put(null,null);
         //map.keySet().add("1");
         System.out.println(map);
-        System.out.println(map);
+        //System.out.println(map);
        ///fail fast
         List<String> list = new ArrayList<>();
         list.add("1");
@@ -28,7 +29,7 @@ public class FailFastAndFailSafeIterator {
             }
         }
 
-
+        //Exception in thread "main" java.util.ConcurrentModificationException
         Iterator iterator = list.iterator();
         while (iterator.hasNext()){
             String s = (String) iterator.next();

@@ -52,10 +52,8 @@ public class LRUCacheImpl {
 
         }else {
             Node node = new Node(key,value);
-            if(map.size() >= cSize){
-                map.remove(key);
+            if(map.size() == cSize){
                 cache.removeLast();
-
             }
             cache.addLast(node);
             map.put(key,node);

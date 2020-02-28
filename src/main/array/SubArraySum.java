@@ -14,6 +14,7 @@ public class SubArraySum {
         for (int i = 0; i < n; i++) {
             for (int j = i; j <n ; j++) {
                 for (int k = i; k <=j ; k++) {
+                    System.out.println(arr[k]);
                     sum+= arr[k];
                 }
             }
@@ -40,5 +41,12 @@ public class SubArraySum {
 
         // return all subarray sum
         return result ;
+    }
+
+    /**
+     * @author jitendra.kumar01
+     * 07/02/20
+     */
+    public static class CountGreaterElementsOnleftSide {
     }
 }

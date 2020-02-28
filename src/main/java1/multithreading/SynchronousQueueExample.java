@@ -3,11 +3,17 @@ package main.java1.multithreading;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/**
+ * @author jitendra.kumar01
+ * 08/02/20
+ */
 public class SynchronousQueueExample {
     public static void main(String[] args) throws InterruptedException {
 
         shareStateUsingCountDownLatch();
 
+        shareStateUsingSynchronousQueue();
     }
 
     static void shareStateUsingCountDownLatch() throws InterruptedException {
@@ -28,7 +34,7 @@ public class SynchronousQueueExample {
         };
 
         Runnable consumer = () -> {
-                Integer consumedElement = sharedState.get();
+            Integer consumedElement = sharedState.get();
             try {
                 latch.await();
             } catch (InterruptedException e) {
@@ -46,7 +52,7 @@ public class SynchronousQueueExample {
     }
 
 
-    void shareStateUsingSynchronousQueue() throws InterruptedException {
+    static void shareStateUsingSynchronousQueue() throws InterruptedException {
         ExecutorService service = Executors.newFixedThreadPool(2);
         SynchronousQueue<Integer> queue = new SynchronousQueue<>();
         Runnable producer = () -> {

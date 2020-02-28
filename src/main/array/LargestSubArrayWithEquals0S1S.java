@@ -11,10 +11,6 @@ public class LargestSubArrayWithEquals0S1S {
 
     int findSubArray(int arr[], int n)
     {
-
-
-
-
         int sum =0 ;
         int maxSize =-1;
         int startIndex =0;
