@@ -1,6 +1,5 @@
 package main.designpattern.command.impl1;
 
-import main.designpattern.command.impl.CeilingFan;
 import main.designpattern.command.impl.SimpleRemoteControl;
 
 public class CeilingFanHighCommand implements SimpleRemoteControl.Command {

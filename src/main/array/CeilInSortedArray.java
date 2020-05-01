@@ -68,4 +68,6 @@ public class CeilInSortedArray {
         else
             System.out.println("ceiling of "+x+" is "+arr[index]);
     }
+
+
 }

@@ -1,6 +1,5 @@
 package main.designpattern.command.impl1;
 
-import main.designpattern.command.impl.CeilingFan;
 import main.designpattern.command.impl.Light;
 import main.designpattern.command.impl.LightOnCommand;
 
@@ -9,7 +8,7 @@ public class RemoteLoader {
         RemoteControl control = new RemoteControl();
         Light light = new Light();
         LightOnCommand lightOnCommand = new LightOnCommand(light);
-        LightOffCommand lightOffCommand = new LightOffCommand(light);
+        LightOnCommand.LightOffCommand lightOffCommand = new LightOnCommand.LightOffCommand(light);
         control.setCommand(0,lightOffCommand,lightOnCommand);
         control.offButtonWasPressed(0);
         control.onButtonWasPressed(0);

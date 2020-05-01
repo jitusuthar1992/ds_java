@@ -3,6 +3,8 @@ package main.array;
 public class MaxSellBuyProblem {
 
     public static int maxProfit(int arr[]){
+
+
         int n = arr.length;
 
         int currentBuy = arr[0] ,currentSell = arr[0], maxProfit =0;
@@ -27,7 +29,7 @@ public class MaxSellBuyProblem {
     }
 
     public static void main(String[] args) {
-        int arr[] = {2,11,1,4,7};
+        int arr[] = {7,1,5,3,6,4};
         System.out.printf("Max profit = "+maxProfit(arr));
     }
 

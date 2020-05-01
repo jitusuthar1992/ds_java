@@ -1,4 +1,4 @@
-package main.designpattern.command.impl;
+package main.designpattern.command.impl1;
 
 public class CeilingFan {
     public static final int HIGH= 3;

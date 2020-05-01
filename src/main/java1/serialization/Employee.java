@@ -14,7 +14,7 @@ class Employee implements Serializable {
     public String name ;
     public int salary ;
     String lastName;
-    transient Address address;
+    Address address;
 
     public Employee(int age, String name, int salary,String lastName) {
         this.age = age;

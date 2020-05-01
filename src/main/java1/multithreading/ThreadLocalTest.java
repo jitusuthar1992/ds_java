@@ -24,14 +24,7 @@ class DemoTask1 implements Runnable
     private static final AtomicInteger nextId = new AtomicInteger(0);
 
     // Thread local variable containing each thread's ID
-    private static final ThreadLocal<Integer> threadId = new ThreadLocal<Integer>()
-    {
-        @Override
-        protected Integer initialValue()
-        {
-            return nextId.getAndIncrement();
-        }
-    };
+    private static final ThreadLocal<Integer> threadId = ThreadLocal.withInitial(() -> nextId.getAndIncrement());
 
     // Returns the current thread's unique ID, assigning it if necessary
     public int getThreadId()
@@ -39,13 +32,7 @@ class DemoTask1 implements Runnable
         return threadId.get();
     }
     // Returns the current thread's starting timestamp
-    private static final ThreadLocal<Date> startDate = new ThreadLocal<Date>()
-    {
-        protected Date initialValue()
-        {
-            return new Date();
-        }
-    };
+    private static final ThreadLocal<Date> startDate = ThreadLocal.withInitial(() -> new Date());
 
 
 

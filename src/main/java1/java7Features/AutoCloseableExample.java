@@ -10,6 +10,7 @@ public class AutoCloseableExample {
     private final static String INPUT = "in.txt";
     private final static String OUTPUT = "out.txt";
 
+
     public static void main(String[] args) {
         try(BufferedReader rd = new BufferedReader(new FileReader(INPUT));
             PrintStream stream = new PrintStream(new File(OUTPUT)))
