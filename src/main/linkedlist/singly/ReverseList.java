@@ -26,6 +26,16 @@ public class ReverseList {
 
     }
 
+    public static ListNode reverseRecursively(ListNode node){
+        if(null == node || null == node.next)
+            return node;
+
+        ListNode temp = reverseRecursively(node.next);
+        node.next.next = node;
+        node.next = null;
+        return temp;
+
+    }
     /*public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
         list.head = new ListNode(50);
