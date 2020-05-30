@@ -72,6 +72,7 @@ public class GraphImpl {
         graph.addEdge(4,5);
         graph.addEdge(1,3);
 
+        //graph.minSpanTree();
 
 //        System.out.println("DFS Visites :");
 //        graph.dfs();
@@ -105,6 +106,26 @@ public class GraphImpl {
         }
     }
 
+    public void minSpanTree(){
+        vertices[0].wasVisited = true;
+        stack.push(0);
+
+        while (!stack.isEmpty()){
+            int current = stack.peek();
+
+            int v = getUnvisitedVertex(current);
+
+            if(v==-1)
+                stack.pop();
+            else{
+                vertices[v].wasVisited= true;
+                displayvertex(current);
+                displayvertex(v);
+                System.out.println();
+                stack.push(v);
+            }
+        }
+    }
     public void dfs() {
         vertices[0].wasVisited = true;
         displayvertex(0);
