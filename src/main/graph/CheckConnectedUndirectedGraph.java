@@ -1,6 +1,7 @@
 package main.graph;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -23,7 +24,7 @@ public class CheckConnectedUndirectedGraph {
         graph.get(b).add(a);
     }
 
-    public boolean isGraphConnected(){
+    public boolean isUnDirectedGraphConnected(){
         dfs(0);
         for (int i = 0; i <nodes ; i++) {
             if(!visited[i])
@@ -63,6 +64,46 @@ public class CheckConnectedUndirectedGraph {
         a.addEdge(4, 5);
         //a.addEdge(4, 6);
 
-        System.out.println(a.isGraphConnected());
+        System.out.println(a.isUnDirectedGraphConnected());
+    }
+
+
+    public boolean isDirectedGraphConnected(){
+        for (int i = 0; i <nodes ; i++) {
+            dfs(i);
+
+            for (int j = 0; j <nodes ; j++) {
+                if(!visited[j]){
+                    return false;
+                }
+            }
+
+            Arrays.fill(visited,false);
+        }
+        return true;
+
+    }
+
+    public boolean ifSourceConnectedToDestination(int source, int destination) {
+
+        dfs(source);
+
+        return visited[destination];
+    }
+
+
+    public int connectedComponents(){
+        int noOfComponents =0;
+
+        for (int i = 0; i <nodes ; i++) {
+
+            if(!visited[i]){
+                dfs(i);
+                noOfComponents++;
+            }
+
+        }
+
+        return noOfComponents;
     }
 }
