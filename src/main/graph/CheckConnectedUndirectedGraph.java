@@ -106,4 +106,30 @@ public class CheckConnectedUndirectedGraph {
 
         return noOfComponents;
     }
+
+    public boolean ifUndirectedGraphHasCycle(){
+        for (int i = 0; i <nodes ; i++) {
+            if (!visited[i]){
+                if(ifCycle(i,-1))
+                    return true;
+            }
+        }
+    return false;
+    }
+
+    private boolean ifCycle(int index, int parent) {
+        visited[index] = true;
+        List<Integer> neighbours = graph.get(index);
+
+        for (Integer neighbour: neighbours) {
+            if(!visited[neighbour]){
+                ifCycle(neighbour,parent);
+            }else if(neighbour != parent){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 }
