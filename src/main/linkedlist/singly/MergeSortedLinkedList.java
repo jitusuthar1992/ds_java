@@ -48,6 +48,21 @@ public class MergeSortedLinkedList {
         }
     }
 
+    static ListNode mergeRecursion(ListNode head1 , ListNode head2){
+
+        if(head1 == null)
+            return head2;
+        if(head2== null)
+            return head1;
+
+        if(head1.data < head2.data){
+            head1.next = mergeRecursion(head1.next,head2);
+            return head1;
+        }else{
+            head2.next = mergeRecursion(head1,head2.next);
+            return head2;
+        }
+    }
     public static void main(String[] args) {
         SinglyLinkedList list1 = new SinglyLinkedList();
         list1.head = new ListNode(1);
@@ -59,7 +74,7 @@ public class MergeSortedLinkedList {
         list2.head.next  = new ListNode(2);
         list2.head.next.next  = new ListNode(4);
 
-        MergeSortedLinkedList.printList(merge(list1.head,list2.head));
+        MergeSortedLinkedList.printList(mergeRecursion(list1.head,list2.head));
 
     }
 }
