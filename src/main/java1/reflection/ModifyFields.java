@@ -9,7 +9,6 @@ public class ModifyFields    {
         field.setAccessible(true);
         //field.set(null,true);
 
-        field.setAccessible(true);
         int modifiers = field.getModifiers();
         Field modifierField = field.getClass().getDeclaredField("modifiers");
         modifiers = modifiers & ~Modifier.FINAL;
