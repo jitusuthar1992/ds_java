@@ -5,7 +5,7 @@ public class MinInSortedRotatedArray {
     public static int  findMin(int arr[],int low , int high){
         int mid = (low+high)/2;
         if(arr[high]> arr[low]){
-            return arr[0];
+            return arr[low];
         }
 
         if(high== low){

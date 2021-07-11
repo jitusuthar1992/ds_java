@@ -291,4 +291,46 @@ public class BinaryTreeTraversal {
         }
 
     }
+
+
+    public static void insertIntoMultiMap(Map<Integer, List<Integer>> map,
+                                   Integer key, Integer value) {
+        map.putIfAbsent(key, new ArrayList<>());
+        map.get(key).add(value);
+    }
+    private  static void vertialOrderTraversal( BinaryTreeNode root){
+        class QueueNode {
+            BinaryTreeNode node ;
+            int hd;
+
+            public QueueNode(BinaryTreeNode node, int hd) {
+                this.node = node;
+                this.hd = hd;
+            }
+
+        }
+
+        Map<Integer,List<Integer>> map = new HashMap();
+
+        Queue<QueueNode> queue = new LinkedList<>();
+
+        if(null == root)
+            return;
+
+        queue.offer(new QueueNode(root,0));
+        while (!queue.isEmpty()){
+            QueueNode tmp = queue.poll();
+            insertIntoMultiMap(map,tmp.hd,tmp.node.data);
+
+            if(null != tmp.node.left){
+                queue.offer(new QueueNode(tmp.node.left , tmp.hd+1));
+            }
+
+            if(null != tmp.node.right){
+                queue.offer(new QueueNode(tmp.node.right , tmp.hd-1));
+            }
+        }
+
+        map.values().stream().forEach(System.out::println);
+    }
 }

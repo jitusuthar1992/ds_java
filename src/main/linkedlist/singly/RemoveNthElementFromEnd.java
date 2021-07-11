@@ -23,6 +23,27 @@ public class RemoveNthElementFromEnd {
 
     }
 
+    public static void removeNthNodeFromEndSol1(int n , ListNode head , SinglyLinkedList list){
+        ListNode temp1 = head , temp2 = head;
+
+        for (int i = 0; i <n ; i++) {
+            if(temp2.next == null){
+                if(i == n-1)
+                    head = head.next;
+                return;
+            }
+           temp2 = temp2.next;
+        }
+
+        while (temp2.next != null){
+            temp1 = temp1.next;
+            temp2 = temp2.next;
+        }
+
+        temp1.next = temp1.next.next;
+
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
 
