@@ -13,6 +13,7 @@ public class Segregate012S {
         int mid = 0, temp = 0;
         while (mid <= hi) {
             switch (a[mid]) {
+
                 case 0: {
                     temp = a[lo];
                     a[lo] = a[mid];

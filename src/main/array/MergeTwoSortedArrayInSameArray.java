@@ -7,7 +7,9 @@ public class MergeTwoSortedArrayInSameArray {
     public static void mergeToA(int[] A, int aL, int[] B, int bL) {
         int a = aL - 1;
         int b = bL - 1;
-        int c = aL + bL - 1;
+        int c = aL + bL -1;
+        A = Arrays.copyOf(A, aL + bL);
+        System.out.printf("New Length"+A.length);
         while (b >= 0 && a >= 0) {
             if (A[a] >= B[b]) {
                 A[c--] = A[a--];

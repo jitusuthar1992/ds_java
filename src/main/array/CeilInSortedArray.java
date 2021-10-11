@@ -1,5 +1,8 @@
 package main.array;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class CeilInSortedArray {
 
     static int ceilIndexLinearSearch(int key , int low , int high , int arr[]){
@@ -59,14 +62,24 @@ public class CeilInSortedArray {
 
     public static void main (String[] args)
     {
-        int arr[] = {1, 2, 8, 10, 10, 12, 19};
+       /* int arr[] = {1, 2, 8, 10, 10, 12, };
         int n = arr.length;
         int x = 9;
         int index = ceilIndexBinarySearch(x ,0, n-1, arr);
         if(index == -1)
             System.out.println("Ceiling of "+x+" doesn't exist in array");
         else
-            System.out.println("ceiling of "+x+" is "+arr[index]);
+            System.out.println("ceiling of "+x+" is "+arr[index]);*/
+
+        List<String> cities = Arrays.asList("Milan",
+                "London",
+                "New York",
+                "San Francisco");
+
+        String citiesCommaSeparated = String.join(",", cities);
+        System.out.println(citiesCommaSeparated);
+
+
     }
 
 
