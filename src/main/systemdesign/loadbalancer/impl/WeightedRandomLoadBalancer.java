@@ -1,4 +1,4 @@
-package main.loadbalancer.impl;
+package main.systemdesign.loadbalancer.impl;
 
 import java.util.ArrayList;
 import java.util.Collection;

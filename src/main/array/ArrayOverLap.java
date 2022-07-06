@@ -1,6 +1,8 @@
 package main.array;
 
+/*
 import sun.jvm.hotspot.utilities.Interval;
+*/
 
 import java.util.*;
 
@@ -35,12 +37,7 @@ public class ArrayOverLap {
         Stack<IntervalTest> stack=new Stack<>();
 
         // sort the intervals in increasing order of start time
-        Arrays.sort(arr,new Comparator<IntervalTest>(){
-            public int compare(IntervalTest i1,IntervalTest i2)
-            {
-                return i1.start-i2.start;
-            }
-        });
+        Arrays.sort(arr, (i1, i2) -> i1.start-i2.start);
 
         // push the first interval to stack
         stack.push(arr[0]);

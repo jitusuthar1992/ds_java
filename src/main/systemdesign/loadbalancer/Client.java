@@ -1,8 +1,8 @@
-package main.loadbalancer;
+package main.systemdesign.loadbalancer;
 
-import main.loadbalancer.impl.RandomLoadBalancer;
-import main.loadbalancer.impl.RoundRobinLoadBalancer;
-import main.loadbalancer.impl.WeightedRoundRobinLoadBalancer;
+import main.systemdesign.loadbalancer.impl.RandomLoadBalancer;
+import main.systemdesign.loadbalancer.impl.RoundRobinLoadBalancer;
+import main.systemdesign.loadbalancer.impl.WeightedRoundRobinLoadBalancer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
