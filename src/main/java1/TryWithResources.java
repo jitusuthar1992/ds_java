@@ -6,11 +6,11 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 
 public class TryWithResources {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         // Using try-with-resources
-        try(    // Using multiple resources
-                FileOutputStream fileOutputStream =new FileOutputStream("/java7-new-features/src/abc.txt");
-                InputStream input = new FileInputStream("/java7-new-features/src/abc.txt")){
+        try (    // Using multiple resources
+                 FileOutputStream fileOutputStream = new FileOutputStream("/java7-new-features/src/abc.txt");
+                 InputStream input = new FileInputStream("/java7-new-features/src/abc.txt")) {
             // -----------------------------Code to write data into file--------------------------------------------//
             String msg = "Welcome to javaTpoint!";
             byte byteArray[] = msg.getBytes();  // Converting string into byte array
@@ -27,7 +27,7 @@ public class TryWithResources {
             String str = new String(byteArray2); // passing byte array into String constructor
             System.out.println("------------Data read from file--------------");
             System.out.println(str); // display file data
-        }catch(Exception exception){
+        } catch (Exception exception) {
             System.out.println(exception);
         }
     }

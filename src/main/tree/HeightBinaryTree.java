@@ -4,23 +4,23 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class HeightBinaryTree {
-    static int height(BinaryTreeNode root){
+    static int height(BinaryTreeNode root) {
 
-        if(root==null)
+        if (root == null)
             return 0;
         Queue<BinaryTreeNode> queue = new LinkedList<>();
         queue.offer(root);
-        int height =0;
+        int height = 0;
 
-        while (1==1){
-            int nodeCount =queue.size();
+        while (1 == 1) {
+            int nodeCount = queue.size();
 
-            if(nodeCount==0)
+            if (nodeCount == 0)
                 return height;
             height++;
-            while (nodeCount-- >0){
+            while (nodeCount-- > 0) {
                 BinaryTreeNode tmp = queue.poll();
-                if(tmp.getLeft() != null)
+                if (tmp.getLeft() != null)
                     queue.add(tmp.getLeft());
                 if (tmp.getRight() != null)
                     queue.add(tmp.getRight());
@@ -29,8 +29,7 @@ public class HeightBinaryTree {
         }
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         BinaryTreeTraversal tree = new BinaryTreeTraversal();
 
         // Let us create a binary tree shown in above diagram

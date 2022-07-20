@@ -6,7 +6,7 @@ package main.java1.javaPuzzles;
  */
 public class CreateObjectWithoutNew {
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, CloneNotSupportedException {
-       //Using Class.forName() and Class.newInstance()
+        //Using Class.forName() and Class.newInstance()
         Class ref = Class.forName("Demo");
         Demo obj = (Demo) ref.newInstance();
 
@@ -17,9 +17,9 @@ public class CreateObjectWithoutNew {
     }
 }
 
-class Demo implements Cloneable{
+class Demo implements Cloneable {
 
     public Object clone() throws CloneNotSupportedException {
-       return super.clone(); //utilize clone Object method
+        return super.clone(); //utilize clone Object method
     }
 }

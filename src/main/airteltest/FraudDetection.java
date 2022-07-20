@@ -16,17 +16,17 @@ public class FraudDetection {
 
     public static void fraudDetection(int callID, int hour) {
 
-        int count =0 ;
+        int count = 0;
         Map<Integer, Integer> hourToCountMap = map.get(callID);
-        if (null ==  hourToCountMap) {
+        if (null == hourToCountMap) {
             hourToCountMap = new HashMap<>();
-            count =1;
-            hourToCountMap.put(hour,count);
-            map.put(callID,hourToCountMap);
+            count = 1;
+            hourToCountMap.put(hour, count);
+            map.put(callID, hourToCountMap);
         } else {
             count = hourToCountMap.get(hour);
             count++;
-            hourToCountMap.put(hour,count);
+            hourToCountMap.put(hour, count);
         }
 
 
@@ -37,10 +37,10 @@ public class FraudDetection {
     }
 
     public static void main(String[] args) {
-        fraudDetection(2,1);
-        fraudDetection(1,1);
-        fraudDetection(2,1);
-        fraudDetection(2,1);
+        fraudDetection(2, 1);
+        fraudDetection(1, 1);
+        fraudDetection(2, 1);
+        fraudDetection(2, 1);
 
     }
 }

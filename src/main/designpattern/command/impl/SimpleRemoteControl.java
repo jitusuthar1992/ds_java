@@ -5,15 +5,18 @@ public class SimpleRemoteControl {
 
     public SimpleRemoteControl() {
     }
-    public void setCommand(Command command){
-        slot=command;
+
+    public void setCommand(Command command) {
+        slot = command;
     }
-    public void buttonWasPressed(){
+
+    public void buttonWasPressed() {
         slot.execute();
     }
 
     public static interface Command {
         void execute();
+
         void undo();
     }
 }

@@ -9,17 +9,15 @@ import java.util.HashSet;
 public class RemoveDuplicatesUnsortedList {
 
 
-
-
-    static void removeDuplicates(ListNode head){
-        ListNode curr = head , prev =null;
+    static void removeDuplicates(ListNode head) {
+        ListNode curr = head, prev = null;
 
         HashSet<Integer> hs = new HashSet<>();
 
-        while (curr != null){
-            if(hs.contains(curr.data)){
+        while (curr != null) {
+            if (hs.contains(curr.data)) {
                 prev.next = curr.next;
-            }else{
+            } else {
                 hs.add(curr.data);
                 prev = curr;
             }
@@ -28,15 +26,14 @@ public class RemoveDuplicatesUnsortedList {
         }
     }
 
-    static void printList(ListNode head)
-    {
-        while (head != null)
-        {
+    static void printList(ListNode head) {
+        while (head != null) {
             System.out.print(head.data + " ");
             head = head.next;
         }
         System.out.println();
     }
+
     public static void main(String[] args) {
 
         SinglyLinkedList list = new SinglyLinkedList();

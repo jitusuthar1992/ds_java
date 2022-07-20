@@ -4,30 +4,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReverseList {
-    public  static ListNode reverse(ListNode head){
-        ListNode prev = null,next =null, current = head;
-        while(null != current){
+    public static ListNode reverse(ListNode head) {
+        ListNode prev = null, next = null, current = head;
+        while (null != current) {
             next = current.getNext();
             current.setNext(prev);
             prev = current;
-            current= next;
+            current = next;
         }
         head = prev;
         return head;
     }
 
     public static void main(String[] args) {
-        Map<String,String> map = new HashMap<>();
-        map.put("test1","test1");
-        map.put("test1","test2");
+        Map<String, String> map = new HashMap<>();
+        map.put("test1", "test1");
+        map.put("test1", "test2");
         System.out.println(map.get("test1"));
         System.out.println(map.get("test1"));
-
-
     }
 
-    public static ListNode reverseRecursively(ListNode node){
-        if(null == node || null == node.next)
+    public static ListNode reverseRecursively(ListNode node) {
+        if (null == node || null == node.next)
             return node;
 
         ListNode temp = reverseRecursively(node.next);

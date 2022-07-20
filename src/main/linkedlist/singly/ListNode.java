@@ -1,6 +1,6 @@
 package main.linkedlist.singly;
 
-public  class ListNode{
+public class ListNode {
     public int data;
     public ListNode next;
 

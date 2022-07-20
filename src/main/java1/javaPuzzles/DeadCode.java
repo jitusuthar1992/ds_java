@@ -8,7 +8,7 @@ public class DeadCode {
     public void howToDoInJava_method1() {
         System.out.println("how to do");
         return;
-       // System.out.println("in java");
+        // System.out.println("in java");
     }
 
     public void howToDoInJava_method2() {
@@ -23,11 +23,10 @@ public class DeadCode {
         System.out.println("how to do");
         if (true) {
             return;
-        }else
-        {
+        } else {
             return;
         }
-       // System.out.println("in java");
+        // System.out.println("in java");
     }
 
     public void howToDoInJava_method4() {

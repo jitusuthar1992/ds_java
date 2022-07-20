@@ -9,10 +9,8 @@ import java.util.concurrent.*;
  */
 public class SlowConsumer {
 
-    public static void main(String args[])
-    {
-        try
-        {
+    public static void main(String args[]) {
+        try {
             Broker broker = new Broker();
 
             ExecutorService threadPool = Executors.newFixedThreadPool(3);
@@ -27,31 +25,25 @@ public class SlowConsumer {
 
 
             threadPool.shutdown();
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 }
-class Producer2 implements Runnable
-{
+
+class Producer2 implements Runnable {
     private Broker broker;
 
-    public Producer2(Broker broker)
-    {
+    public Producer2(Broker broker) {
         this.broker = broker;
     }
 
 
     @Override
-    public void run()
-    {
-        try
-        {
-            for (Integer i = 1; i < 5 + 1; ++i)
-            {
+    public void run() {
+        try {
+            for (Integer i = 1; i < 5 + 1; ++i) {
                 System.out.println("Producer produced: " + i);
                 Thread.sleep(100);
                 broker.put(i);
@@ -59,37 +51,31 @@ class Producer2 implements Runnable
 
             this.broker.continueProducing = Boolean.FALSE;
             System.out.println("Producer finished its job; terminating.");
-        }
-        catch (InterruptedException ex)
-        {
+        } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
 
     }
 }
-class Consumer2 implements Runnable
-{
+
+class Consumer2 implements Runnable {
 
     private String name;
     private Broker broker;
 
 
-    public Consumer2(String name, Broker broker)
-    {
+    public Consumer2(String name, Broker broker) {
         this.name = name;
         this.broker = broker;
     }
 
 
     @Override
-    public void run()
-    {
-        try
-        {
+    public void run() {
+        try {
             Integer data = broker.get();
 
-            while (broker.continueProducing || data != null)
-            {
+            while (broker.continueProducing || data != null) {
                 Thread.sleep(1000);
                 System.out.println("Consumer " + this.name + " processed data from broker: " + data);
 
@@ -98,26 +84,22 @@ class Consumer2 implements Runnable
 
 
             System.out.println("Comsumer " + this.name + " finished its job; terminating.");
-        }
-        catch (InterruptedException ex)
-        {
+        } catch (InterruptedException ex) {
             ex.printStackTrace();
         }
     }
 
 }
-class Broker
-{
+
+class Broker {
     public ArrayBlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(100);
     public Boolean continueProducing = Boolean.TRUE;
 
-    public void put(Integer data) throws InterruptedException
-    {
+    public void put(Integer data) throws InterruptedException {
         this.queue.put(data);
     }
 
-    public Integer get() throws InterruptedException
-    {
+    public Integer get() throws InterruptedException {
         return this.queue.poll(1, TimeUnit.SECONDS);
     }
 }

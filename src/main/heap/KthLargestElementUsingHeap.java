@@ -4,15 +4,15 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class KthLargestElementUsingHeap {
-    public static int kthLargestUsingMinHeap(int arr[], int k){
+    public static int kthLargestUsingMinHeap(int arr[], int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
-        for (int i = 0; i <k ; i++) {
+        for (int i = 0; i < k; i++) {
             minHeap.add(arr[i]);
         }
 
-        for (int i = k; i <arr.length ; i++) {
-            if(arr[i]> minHeap.peek()){
+        for (int i = k; i < arr.length; i++) {
+            if (arr[i] > minHeap.peek()) {
                 minHeap.poll();
                 minHeap.add(arr[i]);
             }
@@ -21,14 +21,14 @@ public class KthLargestElementUsingHeap {
         return minHeap.peek();
     }
 
-    public static int kthLargestUsingMaxHeap(int arr[], int k){
+    public static int kthLargestUsingMaxHeap(int arr[], int k) {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
 
-        for (int i = 0; i <arr.length ; i++) {
+        for (int i = 0; i < arr.length; i++) {
             maxHeap.add(arr[i]);
         }
 
-        for (int i = 0; i <k-1 ; i++) {
+        for (int i = 0; i < k - 1; i++) {
             maxHeap.poll();
         }
 

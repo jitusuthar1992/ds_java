@@ -15,13 +15,13 @@ public class QueueUsingStack<T> {
         this.s2 = s2;
     }
 
-    public void enQueue(T data){
+    public void enQueue(T data) {
         s1.push(data);
     }
 
-    public T deQueue(){
-        if(s2.isEmpty()){
-            while (!s1.isEmpty()){
+    public T deQueue() {
+        if (s2.isEmpty()) {
+            while (!s1.isEmpty()) {
                 s2.push(s1.pop());
             }
         }

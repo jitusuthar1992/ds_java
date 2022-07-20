@@ -11,13 +11,13 @@ import java.io.ObjectOutputStream;
  */
 public class SerializationMain {
     public static void main(String[] args) throws IOException {
-        Employee employee = new Employee(27,"Avinash",30000,"Kumar");
-        Address address=new Address(88,"MG road","Pune");
+        Employee employee = new Employee(27, "Avinash", 30000, "Kumar");
+        Address address = new Address(88, "MG road", "Pune");
 
         employee.setAddress(address);
 
-        try(FileOutputStream fileOutputStream = new FileOutputStream("employee.ser");
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);){
+        try (FileOutputStream fileOutputStream = new FileOutputStream("employee.ser");
+             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);) {
             objectOutputStream.writeObject(employee);
         }
     }

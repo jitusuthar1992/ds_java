@@ -2,26 +2,26 @@ package main.array;
 
 public class MaxSellBuyProblem {
 
-    public static int maxProfit(int arr[]){
+    public static int maxProfit(int arr[]) {
 
 
         int n = arr.length;
 
-        int currentBuy = arr[0] ,currentSell = arr[0], maxProfit =0;
+        int currentBuy = arr[0], currentSell = arr[0], maxProfit = 0;
 
 
-        for (int i = 1; i <n ; i++) {
-            if(arr[i] < currentBuy){
+        for (int i = 1; i < n; i++) {
+            if (arr[i] < currentBuy) {
                 currentBuy = arr[i];
-                currentSell = arr[i+1];
+                currentSell = arr[i + 1];
 
-                if(currentSell-currentBuy > maxProfit){
-                    maxProfit = currentSell-currentBuy;
+                if (currentSell - currentBuy > maxProfit) {
+                    maxProfit = currentSell - currentBuy;
                 }
-            }else if(arr[i] > currentSell){
+            } else if (arr[i] > currentSell) {
                 currentSell = arr[i];
-                if(currentSell-currentBuy > maxProfit){
-                    maxProfit = currentSell-currentBuy;
+                if (currentSell - currentBuy > maxProfit) {
+                    maxProfit = currentSell - currentBuy;
                 }
             }
         }
@@ -29,8 +29,8 @@ public class MaxSellBuyProblem {
     }
 
     public static void main(String[] args) {
-        int arr[] = {7,1,5,3,6,4};
-        System.out.printf("Max profit = "+maxProfit(arr));
+        int arr[] = {7, 1, 5, 3, 6, 4};
+        System.out.printf("Max profit = " + maxProfit(arr));
     }
 
 }

@@ -10,8 +10,8 @@ public class WeatherData implements CurrentConditionsDisplay.Subject {
     private float humidity;
     private float pressure;
 
-    public WeatherData( ) {
-        this.observers =  new ArrayList();
+    public WeatherData() {
+        this.observers = new ArrayList();
     }
 
     @Override
@@ -22,23 +22,23 @@ public class WeatherData implements CurrentConditionsDisplay.Subject {
     @Override
     public void removeConsumer(Observer o) {
         int i = observers.indexOf(o);
-        if (i  > -1)
+        if (i > -1)
             observers.remove(o);
     }
 
     @Override
     public void notifyConsumers() {
-        for (int i = 0; i <observers.size() ; i++) {
+        for (int i = 0; i < observers.size(); i++) {
             Observer o = (Observer) observers.get(i);
-            o.update(temp,humidity,pressure);
+            o.update(temp, humidity, pressure);
         }
     }
 
-    void measurementsChanged(){
+    void measurementsChanged() {
         notifyConsumers();
     }
 
-    public void setMeasurements(float temp, float humidity , float pressure){
+    public void setMeasurements(float temp, float humidity, float pressure) {
         this.temp = temp;
         this.humidity = humidity;
         this.pressure = pressure;

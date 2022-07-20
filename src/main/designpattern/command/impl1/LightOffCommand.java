@@ -5,13 +5,14 @@ import main.designpattern.command.impl.SimpleRemoteControl;
 
 public class LightOffCommand implements SimpleRemoteControl.Command {
     Light light;
+
     public LightOffCommand(Light light) {
-        this.light= light;
+        this.light = light;
     }
 
     @Override
     public void execute() {
-       light.off();
+        light.off();
     }
 
     @Override

@@ -45,18 +45,19 @@ public class Waitress {
     }*/
 
 
-    public void printMenu(){
+    public void printMenu() {
         Iterator<Menu> itr = menus.iterator();
-        while (itr.hasNext()){
-           Menu menu =  itr.next();
-           printMenu(menu.createIterator());
+        while (itr.hasNext()) {
+            Menu menu = itr.next();
+            printMenu(menu.createIterator());
         }
     }
-    private void printMenu(Iterator iterator){
-        while (iterator.hasNext()){
+
+    private void printMenu(Iterator iterator) {
+        while (iterator.hasNext()) {
             MenuItem menuItem = (MenuItem) iterator.next();
-            System.out.println(menuItem.getName()+", ");
-            System.out.println(menuItem.getPrice()+" -- ");
+            System.out.println(menuItem.getName() + ", ");
+            System.out.println(menuItem.getPrice() + " -- ");
             System.out.println(menuItem.getDescription());
         }
     }

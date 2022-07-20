@@ -8,6 +8,7 @@ abstract public class Polygon {
 
     public Polygon() {
     }
+
     public Polygon(List<Double> sides) {
         this.sides = sides;
     }

@@ -2,25 +2,26 @@ package main.designpattern.tempatepattern;
 
 abstract public class CaffeineBeverage {
     abstract void brew();
+
     abstract void addCondiments();
 
-    final void prepareRecipe(){
+    final void prepareRecipe() {
         boilWater();
         brew();
         pourInCup();
         addCondiments();
     }
 
-    void boilWater(){
+    void boilWater() {
         System.out.println("Boiling Water");
     }
 
-    void pourInCup(){
+    void pourInCup() {
         System.out.println("Pouring In Cup");
     }
 }
 
-class Coffee extends CaffeineBeverage{
+class Coffee extends CaffeineBeverage {
 
     @Override
     void brew() {
@@ -33,7 +34,7 @@ class Coffee extends CaffeineBeverage{
     }
 }
 
-class Tea extends CaffeineBeverage{
+class Tea extends CaffeineBeverage {
 
     @Override
     void brew() {

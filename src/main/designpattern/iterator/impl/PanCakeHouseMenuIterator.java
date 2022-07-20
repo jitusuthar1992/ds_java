@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class PanCakeHouseMenuIterator implements IIterator {
 
-    private int postion =0 ;
+    private int postion = 0;
     private ArrayList<MenuItem> menuItems;
 
     public PanCakeHouseMenuIterator(ArrayList<MenuItem> menuItems) {
@@ -20,7 +20,7 @@ public class PanCakeHouseMenuIterator implements IIterator {
 
     @Override
     public boolean hasNext() {
-        if(postion >= menuItems.size() || menuItems.get(postion) == null){
+        if (postion >= menuItems.size() || menuItems.get(postion) == null) {
             return false;
         }
         return true;
@@ -28,8 +28,8 @@ public class PanCakeHouseMenuIterator implements IIterator {
 
     @Override
     public Object next() {
-       MenuItem item =  menuItems.get(postion);
-       postion++;
-       return item;
+        MenuItem item = menuItems.get(postion);
+        postion++;
+        return item;
     }
 }

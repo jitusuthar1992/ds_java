@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  */
 public class FutureCallableTest {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         ExecutorService service = Executors.newSingleThreadExecutor();
 
         Future<Long> future = service.submit(new FactorialService(5));
@@ -31,7 +31,7 @@ public class FutureCallableTest {
 
         System.out.println();
         try {
-            service.awaitTermination(1,TimeUnit.MINUTES);
+            service.awaitTermination(1, TimeUnit.MINUTES);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

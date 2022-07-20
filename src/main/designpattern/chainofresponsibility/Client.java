@@ -10,7 +10,7 @@ public class Client {
         c1.setNext(c2);
         c2.setNext(c3);
 
-        c1.process(new Dimension(3,4,4));
+        c1.process(new Dimension(3, 4, 4));
 
     }
 

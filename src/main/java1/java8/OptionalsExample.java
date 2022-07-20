@@ -11,7 +11,7 @@ public class OptionalsExample {
         Optional<Integer> optionalInteger = Optional.of(5);
         optionalInteger.ifPresent(System.out::println);
         System.out.println(optionalInteger.isPresent());
-        if(optionalInteger.isPresent()){
+        if (optionalInteger.isPresent()) {
             System.out.println(optionalInteger.get());
         }
 

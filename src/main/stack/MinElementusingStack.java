@@ -6,22 +6,22 @@ public class MinElementusingStack {
     private static Stack<Integer> mainStack = new Stack<>();
     private static Stack<Integer> supportingStack = new Stack<>();
 
-    private static Integer getMin(){
+    private static Integer getMin() {
         return supportingStack.peek();
     }
 
-    private static void push(Integer item){
-        if((supportingStack.isEmpty()) || (item <= supportingStack.peek())){
+    private static void push(Integer item) {
+        if ((supportingStack.isEmpty()) || (item <= supportingStack.peek())) {
             supportingStack.push(item);
         }
         mainStack.push(item);
     }
 
-    private static Integer pop(){
+    private static Integer pop() {
         Integer item = null;
-        if(!mainStack.isEmpty()){
+        if (!mainStack.isEmpty()) {
             item = mainStack.pop();
-            if(item.equals(supportingStack.peek())){
+            if (item.equals(supportingStack.peek())) {
                 supportingStack.pop();
             }
         }

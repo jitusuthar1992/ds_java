@@ -11,12 +11,12 @@ import java.io.Serializable;
  */
 class Employee implements Serializable {
     public int age;
-    public String name ;
-    public int salary ;
+    public String name;
+    public int salary;
     String lastName;
     Address address;
 
-    public Employee(int age, String name, int salary,String lastName) {
+    public Employee(int age, String name, int salary, String lastName) {
         this.age = age;
         this.name = name;
         this.salary = salary;
@@ -99,27 +99,27 @@ class Employee implements Serializable {
         return result;
     }
 
-    private void writeObject(ObjectOutputStream os) throws IOException, ClassNotFoundException
-    {
+    private void writeObject(ObjectOutputStream os) throws IOException, ClassNotFoundException {
         try {
             os.defaultWriteObject();
             os.writeInt(address.getHomeNo());
             os.writeObject(address.getStreet());
             os.writeObject(address.getCity());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        catch (Exception e)
-        { e.printStackTrace(); }
     }
 
-    private void readObject(ObjectInputStream is) throws IOException, ClassNotFoundException
-    {
+    private void readObject(ObjectInputStream is) throws IOException, ClassNotFoundException {
         try {
             is.defaultReadObject();
-            int homeNo=is.readInt();
-            String street=(String) is.readObject();
-            String city=(String) is.readObject();
-            address=new Address(homeNo,street,city);
+            int homeNo = is.readInt();
+            String street = (String) is.readObject();
+            String city = (String) is.readObject();
+            address = new Address(homeNo, street, city);
 
-        } catch (Exception e) { e.printStackTrace(); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

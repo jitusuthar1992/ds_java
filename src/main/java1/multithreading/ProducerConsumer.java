@@ -43,7 +43,7 @@ public class ProducerConsumer {
         t2.join();
     }
 
-   static class  PC {
+    static class PC {
         LinkedList<Integer> list = new LinkedList<>();
         int capacity = 2;
 

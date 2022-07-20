@@ -7,26 +7,27 @@ public class FixedSizeArrayQueue {
     int rear = -1;
     int currentSize = 0;
 
-    public FixedSizeArrayQueue(int queueSize){
+    public FixedSizeArrayQueue(int queueSize) {
         this.capacity = queueSize;
         queueArr = new int[this.capacity];
     }
 
     /**
      * this method adds element at the end of the main.queue.
+     *
      * @param item
      */
     public void enqueue(int item) {
         if (isQueueFull()) {
-            System.out.println("Overflow ! Unable to add element: "+item);
+            System.out.println("Overflow ! Unable to add element: " + item);
         } else {
             rear++;
-            if(rear == capacity-1){
+            if (rear == capacity - 1) {
                 rear = 0;
             }
             queueArr[rear] = item;
             currentSize++;
-            System.out.println("Element " + item+ " is pushed to Queue !");
+            System.out.println("Element " + item + " is pushed to Queue !");
         }
     }
 
@@ -38,11 +39,11 @@ public class FixedSizeArrayQueue {
             System.out.println("Underflow ! Unable to remove element from Queue");
         } else {
             front++;
-            if(front == capacity-1){
-                System.out.println("Pop operation done ! removed: "+queueArr[front-1]);
+            if (front == capacity - 1) {
+                System.out.println("Pop operation done ! removed: " + queueArr[front - 1]);
                 front = 0;
             } else {
-                System.out.println("Pop operation done ! removed: "+queueArr[front-1]);
+                System.out.println("Pop operation done ! removed: " + queueArr[front - 1]);
             }
             currentSize--;
         }
@@ -50,11 +51,12 @@ public class FixedSizeArrayQueue {
 
     /**
      * This method checks whether the main.queue is full or not
+     *
      * @return boolean
      */
-    public boolean isQueueFull(){
+    public boolean isQueueFull() {
         boolean status = false;
-        if (currentSize == capacity){
+        if (currentSize == capacity) {
             status = true;
         }
         return status;
@@ -62,17 +64,18 @@ public class FixedSizeArrayQueue {
 
     /**
      * This method checks whether the main.queue is empty or not
+     *
      * @return
      */
-    public boolean isQueueEmpty(){
+    public boolean isQueueEmpty() {
         boolean status = false;
-        if (currentSize == 0){
+        if (currentSize == 0) {
             status = true;
         }
         return status;
     }
 
-    public static void main(String a[]){
+    public static void main(String a[]) {
 
         FixedSizeArrayQueue queue = new FixedSizeArrayQueue(4);
         queue.enqueue(4);

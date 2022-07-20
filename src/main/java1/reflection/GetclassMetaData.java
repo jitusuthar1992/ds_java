@@ -12,16 +12,16 @@ public class GetclassMetaData {
         System.out.println("Super Class Name : " + baseClassObj.getSuperclass());
 
         //get implemented interface list
-        Class[] interfaceList =  baseClassObj.getInterfaces();
+        Class[] interfaceList = baseClassObj.getInterfaces();
         System.out.print("Implemented interfaces are : ");
-        for(Class c : interfaceList){
+        for (Class c : interfaceList) {
             System.out.print(c.getName() + "");
         }
         System.out.println();
 
 
         int i = baseClassObj.getModifiers();
-        System.out.println("Access modifiers of the class are : " +Modifier.toString(i));
+        System.out.println("Access modifiers of the class are : " + Modifier.toString(i));
 
         baseClassObj.isLocalClass();
 

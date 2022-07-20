@@ -19,10 +19,10 @@ public class SwitchWithoutBreak {
                 System.out.println(str);
                 break;
         }*/
-        switch (str){
+        switch (str) {
             case "x":
                 System.out.println(str);
-                case "y":
+            case "y":
                 System.out.println("y");
         }
     }

@@ -13,14 +13,14 @@ public class BlockingQueueExample {
     public static void main(String[] args) {
         BlockingQueue<Integer> sharedQueue = new LinkedBlockingDeque<>();
 
-       new Thread( new Producer1(sharedQueue)).start();
-       new Thread( new Consumer1(sharedQueue)).start();
+        new Thread(new Producer1(sharedQueue)).start();
+        new Thread(new Consumer1(sharedQueue)).start();
 
     }
 }
 
 
-class Producer1 implements Runnable{
+class Producer1 implements Runnable {
 
     private BlockingQueue<Integer> sharedQueue;
 
@@ -30,8 +30,8 @@ class Producer1 implements Runnable{
 
     @Override
     public void run() {
-        for (int i = 0; i <10 ; i++) {
-            System.out.println("Produced :"+i);
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Produced :" + i);
             try {
                 sharedQueue.put(i);
                 TimeUnit.SECONDS.sleep(2);
@@ -42,7 +42,7 @@ class Producer1 implements Runnable{
     }
 }
 
-class Consumer1 implements Runnable{
+class Consumer1 implements Runnable {
     private BlockingQueue<Integer> sharedQueue;
 
     public Consumer1(BlockingQueue<Integer> sharedQueue) {
@@ -51,9 +51,9 @@ class Consumer1 implements Runnable{
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             try {
-                System.out.println("Consumer : "+sharedQueue.take());
+                System.out.println("Consumer : " + sharedQueue.take());
                 TimeUnit.SECONDS.sleep(2);
 
             } catch (InterruptedException e) {

@@ -7,15 +7,15 @@ public class RopeWithMinimumCost {
     public static int connectRopeWithMinimumCost(int[] ropes) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
-        for (int i = 0; i <ropes.length ; i++) {
+        for (int i = 0; i < ropes.length; i++) {
             minHeap.add(ropes[i]);
         }
 
         int minCost = 0;
 
-        while (minHeap.size()>1){
-            int tempCost = minHeap.poll()+minHeap.poll();
-            minCost+= tempCost;
+        while (minHeap.size() > 1) {
+            int tempCost = minHeap.poll() + minHeap.poll();
+            minCost += tempCost;
             minHeap.add(tempCost);
         }
 

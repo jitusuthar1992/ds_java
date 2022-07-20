@@ -6,8 +6,8 @@ package main.systemdesign.MusicPlayer;
  */
 public class Song {
     int songID;
-    String name ;
-    String singerName ;
+    String name;
+    String singerName;
     Genre type;
 
     public Song(int songID, String name, String singerName, Genre type) {

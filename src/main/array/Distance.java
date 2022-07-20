@@ -4,32 +4,38 @@ import java.util.*;
 
 /* Write your class implementations here. Do not use access modifiers when declaring your classes. */
 
-class Point2D{
-    protected int x ;
+class Point2D {
+    protected int x;
     protected int y;
-    Point2D(int x , int y){
+
+    Point2D(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    double dist2D(Point2D p){
-        return Math.ceil(Math.sqrt((this.x - p.x) * (this.x - p.x) +(this.y - p.y) * (this.y - p.y)));
+    double dist2D(Point2D p) {
+        return Math.ceil(Math.sqrt((this.x - p.x) * (this.x - p.x) + (this.y - p.y) * (this.y - p.y)));
     }
-    void printDistance(double d){
+
+    void printDistance(double d) {
         System.out.println(d);
     }
 }
+
 class Point3D extends Point2D {
     private int z;
-    Point3D(int x , int y,int z){
-        super(x,y);
+
+    Point3D(int x, int y, int z) {
+        super(x, y);
         this.z = z;
     }
-    double dist3D(Point3D p){
-        return Math.sqrt(((this.x - p.x) * (this.x - p.x)) +((this.y - p.y) * (this.y - p.y))
-                                 +((this.z - p.z) * (this.z - p.z)));
+
+    double dist3D(Point3D p) {
+        return Math.sqrt(((this.x - p.x) * (this.x - p.x)) + ((this.y - p.y) * (this.y - p.y))
+                + ((this.z - p.z) * (this.z - p.z)));
     }
-    void printDistance(double d){
+
+    void printDistance(double d) {
         System.out.println(d);
     }
 }

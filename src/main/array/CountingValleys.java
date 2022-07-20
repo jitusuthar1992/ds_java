@@ -3,20 +3,20 @@ package main.array;
 import java.util.Hashtable;
 
 public class CountingValleys {
-   static int countingValleys(int n, String s) {
+    static int countingValleys(int n, String s) {
 
-       int v = 0;     // # of valleys
-       int lvl = 0;   // current level
-       for(char c : s.toCharArray()){
-           if(c == 'U') ++lvl;
-           if(c == 'D') --lvl;
+        int v = 0;     // # of valleys
+        int lvl = 0;   // current level
+        for (char c : s.toCharArray()) {
+            if (c == 'U') ++lvl;
+            if (c == 'D') --lvl;
 
-           // if we just came UP to sea level
-           if(lvl == 0 && c == 'U')
-               ++v;
-       }
-       System.out.println(v);
-       return  v;
+            // if we just came UP to sea level
+            if (lvl == 0 && c == 'U')
+                ++v;
+        }
+        System.out.println(v);
+        return v;
        /*int level =0;
        int levelUp =0;
        int levelDown =0;
@@ -36,11 +36,11 @@ public class CountingValleys {
     }
 
     public static void main(String[] args) {
-        System.out.println(CountingValleys.countingValleys(8,"UDDDUDUUDU"));
+        System.out.println(CountingValleys.countingValleys(8, "UDDDUDUUDU"));
 
         Hashtable<Integer, String> h =
                 new Hashtable<Integer, String>();
-        h.put(1,"s");
+        h.put(1, "s");
 
     }
 }

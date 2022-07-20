@@ -9,8 +9,7 @@ public class MColoringProblem {
     /* A utility function to check if the current
     color assignment is safe for vertex v */
     boolean isSafe(int v, int graph[][], int color[],
-                   int c)
-    {
+                   int c) {
         for (int i = 0; i < V; i++)
             if (graph[v][i] == 1 && c == color[i])
                 return false;
@@ -20,8 +19,7 @@ public class MColoringProblem {
     /* A recursive utility function to solve m
     coloring problem */
     boolean graphColoringUtil(int graph[][], int m,
-                              int color[], int v)
-    {
+                              int color[], int v) {
 		/* base case: If all vertices are assigned
 		a color then return true */
         if (v == V)
@@ -29,18 +27,16 @@ public class MColoringProblem {
 
 		/* Consider this vertex v and try different
 		colors */
-        for (int c = 1; c <= m; c++)
-        {
+        for (int c = 1; c <= m; c++) {
 			/* Check if assignment of color c to v
 			is fine*/
-            if (isSafe(v, graph, color, c))
-            {
+            if (isSafe(v, graph, color, c)) {
                 color[v] = c;
 
 				/* recur to assign colors to rest
 				of the vertices */
                 if (graphColoringUtil(graph, m,
-                                      color, v + 1))
+                        color, v + 1))
                     return true;
 
 				/* If assigning color c doesn't lead
@@ -62,8 +58,7 @@ public class MColoringProblem {
     Please note that there may be more than one
     solutions, this function prints one of the
     feasible solutions.*/
-    boolean graphColoring(int graph[][], int m)
-    {
+    boolean graphColoring(int graph[][], int m) {
         // Initialize all color values as 0. This
         // initialization is needed correct functioning
         // of isSafe()
@@ -72,8 +67,7 @@ public class MColoringProblem {
             color[i] = 0;
 
         // Call graphColoringUtil() for vertex 0
-        if (!graphColoringUtil(graph, m, color, 0))
-        {
+        if (!graphColoringUtil(graph, m, color, 0)) {
             System.out.println("Solution does not exist");
             return false;
         }
@@ -84,18 +78,16 @@ public class MColoringProblem {
     }
 
     /* A utility function to print solution */
-    void printSolution(int color[])
-    {
+    void printSolution(int color[]) {
         System.out.println("Solution Exists: Following" +
-                                   " are the assigned colors");
+                " are the assigned colors");
         for (int i = 0; i < V; i++)
             System.out.print(" " + color[i] + " ");
         System.out.println();
     }
 
     // driver program to test above function
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         MColoringProblem Coloring = new MColoringProblem();
 		/* Create following graph and test whether it is
 		3 colorable

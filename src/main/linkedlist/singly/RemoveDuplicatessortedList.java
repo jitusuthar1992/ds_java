@@ -24,10 +24,10 @@ public class RemoveDuplicatessortedList {
 
     private static void removeDuplicates(ListNode head) {
 
-        ListNode curr = head , temp = null;
+        ListNode curr = head, temp = null;
 
-        while(curr != null && curr.next != null){
-            if(curr.data == curr.next.data) {
+        while (curr != null && curr.next != null) {
+            if (curr.data == curr.next.data) {
                 temp = curr.next.next;
                 if (temp == null) {
                     curr.next = null;
@@ -35,16 +35,14 @@ public class RemoveDuplicatessortedList {
                 }
                 curr.next = temp;
             }
-                if(curr.data != curr.next.data){
-                    curr = curr.next;
-                }
+            if (curr.data != curr.next.data) {
+                curr = curr.next;
             }
+        }
     }
 
-    static void printList(ListNode head)
-    {
-        while (head != null)
-        {
+    static void printList(ListNode head) {
+        while (head != null) {
             System.out.print(head.data + " ");
             head = head.next;
         }

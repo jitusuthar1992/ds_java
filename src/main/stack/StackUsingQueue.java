@@ -7,13 +7,14 @@ public class StackUsingQueue {
     Queue<Integer> q1 = new LinkedList<>();
     Queue<Integer> q2 = new LinkedList<>();
 
-    public void push(Integer val){
+    public void push(Integer val) {
         q1.add(val);
     }
-    public Integer pop(){
-        if(q1.isEmpty())
+
+    public Integer pop() {
+        if (q1.isEmpty())
             return -1;
-        while (q1.size() != 1){
+        while (q1.size() != 1) {
             q2.add(q1.remove());
         }
 

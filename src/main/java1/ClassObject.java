@@ -8,7 +8,7 @@ public class ClassObject {
     public static void main(String[] args) {
         SwitchWithoutBreak s1 = new SwitchWithoutBreak();
         SwitchWithoutBreak s2 = new SwitchWithoutBreak();
-        System.out.println(s1.getClass()==s2.getClass());
+        System.out.println(s1.getClass() == s2.getClass());
 
     }
 

@@ -16,7 +16,7 @@ public class Test {
         l.add(5);
         Collections.sort(l);
 
-        for (int i = 0; i <l.size() ; i++) {
+        for (int i = 0; i < l.size(); i++) {
             System.out.println(l.get(i));
         }
     }

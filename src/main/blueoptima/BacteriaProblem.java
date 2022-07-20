@@ -16,9 +16,9 @@ public class BacteriaProblem {
         input[m - 1][0] = 1;
         Stack<String> stack = new Stack<>();
         stack.push(m - 1 + "~" + 0);
-        reproduce(stack, input, n-1);
+        reproduce(stack, input, n - 1);
 
-        System.out.println("Value at Bottom Right corner after "+ (n-1) + " secs: " + input[m - 1][n - 1]);
+        System.out.println("Value at Bottom Right corner after " + (n - 1) + " secs: " + input[m - 1][n - 1]);
     }
 
     private static void reproduce(Stack<String> stack, int[][] input, int times) {

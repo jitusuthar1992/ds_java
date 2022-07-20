@@ -44,8 +44,6 @@ public class CloneTest {
         System.out.println("clonedEmp name:" + clonedEmp.getName());
 
 
-
-
         EmployeeWrap empWrap = new EmployeeWrap();
 
         empWrap.setId(1);
@@ -61,9 +59,9 @@ public class CloneTest {
 
         empWrap.getProps().put("1", "1");
 
-        System.out.println("empWrap mutable property value = "+empWrap.getProps());
+        System.out.println("empWrap mutable property value = " + empWrap.getProps());
 
-        System.out.println("clonedEmpWrap mutable property value = "+clonedEmpWrap.getProps());
+        System.out.println("clonedEmpWrap mutable property value = " + clonedEmpWrap.getProps());
 
     }
 
@@ -71,7 +69,7 @@ public class CloneTest {
 }
 
 
-class Employee implements Cloneable{
+class Employee implements Cloneable {
 
     private int id;
 
@@ -153,6 +151,7 @@ class Employee implements Cloneable{
     }
 
 }
+
 class EmployeeWrap extends Employee implements Cloneable {
 
     private String title;

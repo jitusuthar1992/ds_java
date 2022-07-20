@@ -8,9 +8,9 @@ public class TestPolyGon {
         List<Double> sides = new ArrayList<>();
         sides.add(1.1);
         sides.add(2.1);
-        Polygon polygon = new Square(sides,1.1,2.1);
+        Polygon polygon = new Square(sides, 1.1, 2.1);
         System.out.println(polygon.getArea());
-        polygon  = new Rectangle(sides,1.1,2.1);
+        polygon = new Rectangle(sides, 1.1, 2.1);
         System.out.println(polygon.getArea());
     }
 }

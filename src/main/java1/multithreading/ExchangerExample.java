@@ -14,7 +14,7 @@ public class ExchangerExample {
         new Thread(new Consumer3(exchanger)).start();
     }
 
- }
+}
 
 class Country {
 
@@ -30,7 +30,7 @@ class Country {
     }
 }
 
-class Producer3 implements Runnable{
+class Producer3 implements Runnable {
     Exchanger ex;
 
     public Producer3(Exchanger ex) {
@@ -39,21 +39,21 @@ class Producer3 implements Runnable{
 
     @Override
     public void run() {
-        for(int i = 0; i < 2; i ++){
-                Country country=null ;
-                if(i==0)
-                    country =new Country("India");
-                else
-                    country =new Country("Bhutan");
+        for (int i = 0; i < 2; i++) {
+            Country country = null;
+            if (i == 0)
+                country = new Country("India");
+            else
+                country = new Country("Bhutan");
 
-                try {
-                    // exchanging with an dummy Country object
-                    Country dummyCountry = (Country) ex.exchange(country);
-                    System.out.println("Got country object from Consumer thread : "+dummyCountry.getCountryName());
-                } catch (InterruptedException e) {
-                    System.out.println(e);
-                }
+            try {
+                // exchanging with an dummy Country object
+                Country dummyCountry = (Country) ex.exchange(country);
+                System.out.println("Got country object from Consumer thread : " + dummyCountry.getCountryName());
+            } catch (InterruptedException e) {
+                System.out.println(e);
             }
+        }
     }
 }
 

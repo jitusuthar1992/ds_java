@@ -10,7 +10,8 @@ public class ThreeThreadsOrderedLockLess {
 
     AtomicInteger sharedOutput = new AtomicInteger(0);
     private Object object = new Object();
-    public static void main(String args[]) throws InterruptedException{
+
+    public static void main(String args[]) throws InterruptedException {
         ThreeThreadsOrderedLockLess t = new ThreeThreadsOrderedLockLess();
         MyThread t1 = t.new MyThread(0);
         MyThread t2 = t.new MyThread(1);
@@ -29,8 +30,9 @@ public class ThreeThreadsOrderedLockLess {
     }
 
 
-    private class MyThread implements Runnable{
+    private class MyThread implements Runnable {
         private final int threadPosition;
+
         public MyThread(int threadPosition) {
             super();
             this.threadPosition = threadPosition;
@@ -44,9 +46,9 @@ public class ThreeThreadsOrderedLockLess {
 
                     if (sharedOutput.get() % 3 == this.threadPosition) {
 
-                        if(sharedOutput.get() < 9)
-                            System.out.println(Thread.currentThread()+"  "+
-                                                       sharedOutput.incrementAndGet());
+                        if (sharedOutput.get() < 9)
+                            System.out.println(Thread.currentThread() + "  " +
+                                    sharedOutput.incrementAndGet());
                     }
                 }
             }

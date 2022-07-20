@@ -4,8 +4,8 @@ package main.java1;
  * @author jitendra.kumar01
  * 12/12/19
  */
-public   class AbstractClassTest extends Test {
-    public static void method1(){
+public class AbstractClassTest extends Test {
+    public static void method1() {
         System.out.println("Child method1");
     }
 
@@ -28,8 +28,8 @@ public   class AbstractClassTest extends Test {
 }
 
 
-abstract class   Test {
-    public static void method1(){
+abstract class Test {
+    public static void method1() {
         System.out.println("Parent method1");
     }
 

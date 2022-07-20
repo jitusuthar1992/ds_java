@@ -25,9 +25,10 @@ class ProducerImpl implements Runnable {
 
     private BlockingQueueAdVanceImpl customBlockingQueue;
 
-    public ProducerImpl(BlockingQueueAdVanceImpl customBlockingQueue){
+    public ProducerImpl(BlockingQueueAdVanceImpl customBlockingQueue) {
         this.customBlockingQueue = customBlockingQueue;
     }
+
     @Override
     public void run() {
         for (int i = 1; i <= 10; i++) {
@@ -45,9 +46,10 @@ class ProducerImpl implements Runnable {
 class ConsumerImpl implements Runnable {
     private BlockingQueueAdVanceImpl customBlockingQueue;
 
-    public ConsumerImpl(BlockingQueueAdVanceImpl customBlockingQueue){
+    public ConsumerImpl(BlockingQueueAdVanceImpl customBlockingQueue) {
         this.customBlockingQueue = customBlockingQueue;
     }
+
     @Override
     public void run() {
         for (int i = 1; i <= 10; i++) {

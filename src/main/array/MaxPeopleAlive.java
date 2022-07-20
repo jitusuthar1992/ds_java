@@ -10,43 +10,44 @@ index where the sum is maximum.*/
 import java.util.Arrays;
 
 public class MaxPeopleAlive {
-    static  int maxPersonAliveInYear(int[] birthDates, int[] deathdates){
+    static int maxPersonAliveInYear(int[] birthDates, int[] deathdates) {
         int minBirthDate = getMinValue(birthDates);
         int maxDeathDate = getMaxValue(deathdates);
-        int tempArr[] = new int[(maxDeathDate-minBirthDate)+1];
-        Arrays.fill(tempArr,0);
+        int tempArr[] = new int[(maxDeathDate - minBirthDate) + 1];
+        Arrays.fill(tempArr, 0);
         for (int i = 0; i < birthDates.length; i++) {
-            tempArr[birthDates[i]-minBirthDate]++;
-            tempArr[deathdates[i]-minBirthDate]--;
+            tempArr[birthDates[i] - minBirthDate]++;
+            tempArr[deathdates[i] - minBirthDate]--;
         }
 
-        int population =0 ;
-        int max_population =0;
-        int max_population_index =0;
-        for (int i = 0; i <tempArr.length ; i++) {
+        int population = 0;
+        int max_population = 0;
+        int max_population_index = 0;
+        for (int i = 0; i < tempArr.length; i++) {
 
-            population +=tempArr[i];
-            if(population> max_population){
+            population += tempArr[i];
+            if (population > max_population) {
                 max_population = population;
-                max_population_index =i;
+                max_population_index = i;
             }
         }
-        return  max_population_index +minBirthDate;
+        return max_population_index + minBirthDate;
     }
 
-    public static int getMaxValue(int[] numbers){
+    public static int getMaxValue(int[] numbers) {
         int maxValue = numbers[0];
-        for(int i=1;i < numbers.length;i++){
-            if(numbers[i] > maxValue){
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > maxValue) {
                 maxValue = numbers[i];
             }
         }
         return maxValue;
     }
-    public static int getMinValue(int[] numbers){
+
+    public static int getMinValue(int[] numbers) {
         int minValue = numbers[0];
-        for(int i=1;i<numbers.length;i++){
-            if(numbers[i] < minValue){
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] < minValue) {
                 minValue = numbers[i];
             }
         }
@@ -54,8 +55,8 @@ public class MaxPeopleAlive {
     }
 
     public static void main(String[] args) {
-        int[] birthDates ={1990,1995,1997,2000,2005};
-        int[] deathdates  = {2046,2045,2055,2050,2017};
-        System.out.println(maxPersonAliveInYear(birthDates,deathdates));
+        int[] birthDates = {1990, 1995, 1997, 2000, 2005};
+        int[] deathdates = {2046, 2045, 2055, 2050, 2017};
+        System.out.println(maxPersonAliveInYear(birthDates, deathdates));
     }
 }

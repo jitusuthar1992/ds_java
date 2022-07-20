@@ -2,15 +2,15 @@ package main.tree;
 
 public class CeilFloorBST {
     static class NodeWrapper {
-        BinaryTreeNode node ;
+        BinaryTreeNode node;
+
         NodeWrapper() {
             this.node = new BinaryTreeNode(-1);
         }
     }
 
     // Recursive function to insert an key into BST
-    public static BinaryTreeNode insert(BinaryTreeNode root, int key)
-    {
+    public static BinaryTreeNode insert(BinaryTreeNode root, int key) {
         // if the root is null, create a new node an return it
         if (root == null) {
             return new BinaryTreeNode(key);
@@ -30,19 +30,19 @@ public class CeilFloorBST {
     }
 
 
-    private  static  void ceilOrFloor(BinaryTreeNode root ,NodeWrapper ceil , NodeWrapper floor, int key){
+    private static void ceilOrFloor(BinaryTreeNode root, NodeWrapper ceil, NodeWrapper floor, int key) {
 
-        while(null != root){
-            if(root.getData()== key){
+        while (null != root) {
+            if (root.getData() == key) {
                 ceil.node = root;
                 floor.node = root;
                 break;
             }
 
-            if(key < root.getData()){
+            if (key < root.getData()) {
                 ceil.node = root;
                 root = root.getLeft();
-            }else{
+            } else {
                 floor.node = root;
                 root = root.getRight();
             }
@@ -50,7 +50,7 @@ public class CeilFloorBST {
     }
 
     public static void main(String[] args) {
-        int[] keys = { 2, 4, 6, 8, 9, 10, 12 };
+        int[] keys = {2, 4, 6, 8, 9, 10, 12};
 
         BinaryTreeNode root = null;
         for (int key : keys) {
@@ -62,7 +62,7 @@ public class CeilFloorBST {
 
         ceilOrFloor(root, ceil, floor, 3);
         System.out.println(" Floor is " + floor.node.getData() + ", Ceil is "
-                                   + ceil.node.getData());
+                + ceil.node.getData());
 
     }
 }

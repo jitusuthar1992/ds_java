@@ -16,11 +16,11 @@ public interface MyFirstFunctionalInterface {
     @Override
     public boolean equals(Object obj);        //Overridden from Object class
 
-    default void doSomeMoreWork1(){
+    default void doSomeMoreWork1() {
         //Method body
     }
 
-    default void doSomeMoreWork2(){
+    default void doSomeMoreWork2() {
         //Method body
     }
 

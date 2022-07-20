@@ -15,7 +15,7 @@ public class Client {
         int NUM_OF_REQUESTS = 15;
         Client client = new Client();
 
-        ArrayList<String> ipPool = new ArrayList <>();
+        ArrayList<String> ipPool = new ArrayList<>();
         ipPool.add("192.168.0.1");
         ipPool.add("192.168.0.2");
         ipPool.add("192.168.0.3");
@@ -23,9 +23,9 @@ public class Client {
         ipPool.add("192.168.0.5");
 
         Map<String, Integer> ipPoolWeighted = new HashMap<>();
-        ipPoolWeighted.put("192.168.0.1",  6);
-        ipPoolWeighted.put("192.168.0.2",  6);
-        ipPoolWeighted.put("192.168.0.3",  3);
+        ipPoolWeighted.put("192.168.0.1", 6);
+        ipPoolWeighted.put("192.168.0.2", 6);
+        ipPoolWeighted.put("192.168.0.3", 3);
 
         client.printNextTurn("Random");
         LoadBalancer random = new RandomLoadBalancer(ipPool);

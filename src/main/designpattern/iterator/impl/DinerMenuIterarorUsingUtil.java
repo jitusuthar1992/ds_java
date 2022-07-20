@@ -10,7 +10,7 @@ import java.util.Iterator;
  */
 public class DinerMenuIterarorUsingUtil implements Iterator {
 
-    int        position = 0;
+    int position = 0;
     MenuItem[] menuItems;
 
     public DinerMenuIterarorUsingUtil(MenuItem[] menuItems) {
@@ -19,7 +19,7 @@ public class DinerMenuIterarorUsingUtil implements Iterator {
 
     @Override
     public boolean hasNext() {
-        if(position >= menuItems.length || menuItems[position] == null ){
+        if (position >= menuItems.length || menuItems[position] == null) {
             return false;
         }
         return true;
@@ -34,15 +34,15 @@ public class DinerMenuIterarorUsingUtil implements Iterator {
 
     @Override
     public void remove() {
-        if(position <=0){
+        if (position <= 0) {
             throw new IllegalStateException("You can't remove item from menu , because menu doesn't contain any item");
         }
 
-        if(menuItems[position-1] != null){
-            for (int i =position-1;i < (menuItems.length -1);i++){
-                menuItems[i] =menuItems[i+1];
+        if (menuItems[position - 1] != null) {
+            for (int i = position - 1; i < (menuItems.length - 1); i++) {
+                menuItems[i] = menuItems[i + 1];
             }
-            menuItems[menuItems.length-1] = null;
+            menuItems[menuItems.length - 1] = null;
         }
     }
 }

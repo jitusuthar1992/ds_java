@@ -14,37 +14,38 @@ public class CheckConnectedUndirectedGraph {
         this.nodes = nodes;
         visited = new boolean[nodes];
 
-        for (int i = 0; i <nodes ; i++) {
+        for (int i = 0; i < nodes; i++) {
             graph.add(i, new ArrayList<>());
         }
     }
 
-    public void addEdge(int a , int b){
+    public void addEdge(int a, int b) {
         graph.get(a).add(b);
         graph.get(b).add(a);
     }
 
-    public boolean isUnDirectedGraphConnected(){
+    public boolean isUnDirectedGraphConnected() {
         dfs(0);
-        for (int i = 0; i <nodes ; i++) {
-            if(!visited[i])
+        for (int i = 0; i < nodes; i++) {
+            if (!visited[i])
                 return false;
         }
         return true;
     }
-    public void dfs(int start){
+
+    public void dfs(int start) {
         Stack<Integer> stack = new Stack<>();
         stack.push(start);
-        visited[start]= true;
+        visited[start] = true;
 
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             Integer node = stack.pop();
             List<Integer> neighbours = graph.get(node);
 
-            for (Integer neighbour: neighbours) {
-                if(!visited[neighbour]){
+            for (Integer neighbour : neighbours) {
+                if (!visited[neighbour]) {
                     stack.push(neighbour);
-                    visited[neighbour]= true;
+                    visited[neighbour] = true;
                 }
             }
 
@@ -68,17 +69,17 @@ public class CheckConnectedUndirectedGraph {
     }
 
 
-    public boolean isDirectedGraphConnected(){
-        for (int i = 0; i <nodes ; i++) {
+    public boolean isDirectedGraphConnected() {
+        for (int i = 0; i < nodes; i++) {
             dfs(i);
 
-            for (int j = 0; j <nodes ; j++) {
-                if(!visited[j]){
+            for (int j = 0; j < nodes; j++) {
+                if (!visited[j]) {
                     return false;
                 }
             }
 
-            Arrays.fill(visited,false);
+            Arrays.fill(visited, false);
         }
         return true;
 
@@ -92,12 +93,12 @@ public class CheckConnectedUndirectedGraph {
     }
 
 
-    public int connectedComponents(){
-        int noOfComponents =0;
+    public int connectedComponents() {
+        int noOfComponents = 0;
 
-        for (int i = 0; i <nodes ; i++) {
+        for (int i = 0; i < nodes; i++) {
 
-            if(!visited[i]){
+            if (!visited[i]) {
                 dfs(i);
                 noOfComponents++;
             }
@@ -107,24 +108,24 @@ public class CheckConnectedUndirectedGraph {
         return noOfComponents;
     }
 
-    public boolean ifUndirectedGraphHasCycle(){
-        for (int i = 0; i <nodes ; i++) {
-            if (!visited[i]){
-                if(ifCycle(i,-1))
+    public boolean ifUndirectedGraphHasCycle() {
+        for (int i = 0; i < nodes; i++) {
+            if (!visited[i]) {
+                if (ifCycle(i, -1))
                     return true;
             }
         }
-    return false;
+        return false;
     }
 
     private boolean ifCycle(int index, int parent) {
         visited[index] = true;
         List<Integer> neighbours = graph.get(index);
 
-        for (Integer neighbour: neighbours) {
-            if(!visited[neighbour]){
-                ifCycle(neighbour,parent);
-            }else if(neighbour != parent){
+        for (Integer neighbour : neighbours) {
+            if (!visited[neighbour]) {
+                ifCycle(neighbour, parent);
+            } else if (neighbour != parent) {
                 return true;
             }
         }

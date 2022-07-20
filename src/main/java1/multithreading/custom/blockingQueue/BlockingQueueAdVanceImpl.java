@@ -13,7 +13,7 @@ public class BlockingQueueAdVanceImpl {
     final Lock lock = new ReentrantLock();
 
     // Conditions
-    final Condition produceCond  = lock.newCondition();
+    final Condition produceCond = lock.newCondition();
     final Condition consumeCond = lock.newCondition();
 
     // Array to store element for CustomBlockingQueue
@@ -25,7 +25,7 @@ public class BlockingQueueAdVanceImpl {
 
         lock.lock();
         try {
-            while (count == array.length){
+            while (count == array.length) {
                 // Queue is full, producers need to wait
                 produceCond.await();
             }
@@ -33,7 +33,7 @@ public class BlockingQueueAdVanceImpl {
             array[putIndex] = x;
             System.out.println("Producing - " + x);
             putIndex++;
-            if (putIndex == array.length){
+            if (putIndex == array.length) {
                 putIndex = 0;
             }
             // Increment the count for the array
@@ -47,14 +47,14 @@ public class BlockingQueueAdVanceImpl {
     public Object take() throws InterruptedException {
         lock.lock();
         try {
-            while (count == 0){
+            while (count == 0) {
                 // Queue is empty, consumers need to wait
                 consumeCond.await();
             }
             Object x = array[takeIndex];
             System.out.println("Consuming - " + x);
             takeIndex++;
-            if (takeIndex == array.length){
+            if (takeIndex == array.length) {
                 takeIndex = 0;
             }
             // reduce the count for the array

@@ -10,9 +10,9 @@ import java.util.concurrent.*;
  */
 public class MultiTaskExecutor {
     public static void main(String[] args) {
-        BlockingQueue<Runnable>  worksQueue       = new ArrayBlockingQueue<Runnable>(10);
+        BlockingQueue<Runnable> worksQueue = new ArrayBlockingQueue<Runnable>(10);
         RejectedExecutionHandler rejectionHandler = new RejectedExecutionHandelerImpl();
-        ThreadPoolExecutor       executor         = new ThreadPoolExecutor(3, 3, 10, TimeUnit.SECONDS, worksQueue, rejectionHandler);
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 3, 10, TimeUnit.SECONDS, worksQueue, rejectionHandler);
         executor.prestartAllCoreThreads();
 
         List<Runnable> taskGroup = new ArrayList<Runnable>();
@@ -24,19 +24,21 @@ public class MultiTaskExecutor {
     }
 }
 
-class MultiRunnable implements Runnable{
-    final List<Runnable> runnables ;
+class MultiRunnable implements Runnable {
+    final List<Runnable> runnables;
 
     MultiRunnable(List<Runnable> runnables) {
         this.runnables = runnables;
     }
+
     @Override
     public void run() {
-        for (Runnable runnable :runnables) {
+        for (Runnable runnable : runnables) {
             new Thread(runnable).start();
         }
     }
 }
+
 class TaskOne implements Runnable {
     @Override
     public void run() {
@@ -72,6 +74,7 @@ class TaskThree implements Runnable {
         }
     }
 }
+
 class RejectedExecutionHandelerImpl implements RejectedExecutionHandler {
     @Override
     public void rejectedExecution(Runnable runnable, ThreadPoolExecutor executor) {

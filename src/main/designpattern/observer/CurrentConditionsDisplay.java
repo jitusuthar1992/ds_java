@@ -20,12 +20,14 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("Current Conditions : "+ temp + "F Degrees and "+ humidity + " % humidity");
+        System.out.println("Current Conditions : " + temp + "F Degrees and " + humidity + " % humidity");
     }
 
-    public static interface  Subject {
+    public static interface Subject {
         void registerObjerver(Observer o);
+
         void removeConsumer(Observer o);
+
         void notifyConsumers();
 
     }

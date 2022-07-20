@@ -4,9 +4,9 @@ public class HashFunction {
 
     private long prime;
     private long odd;
-    private int LIMIT ;
+    private int LIMIT;
 
-    public HashFunction(final long prime, final long odd,final int LIMIT) {
+    public HashFunction(final long prime, final long odd, final int LIMIT) {
         this.prime = prime;
         this.odd = odd;
         this.LIMIT = LIMIT;
@@ -21,7 +21,7 @@ public class HashFunction {
     }
 
     private int calculateHash(final int hash, final long prime, final long odd) {
-        return (int)((((hash % LIMIT) * prime) % LIMIT) * odd) % LIMIT;
+        return (int) ((((hash % LIMIT) * prime) % LIMIT) * odd) % LIMIT;
     }
 
 }

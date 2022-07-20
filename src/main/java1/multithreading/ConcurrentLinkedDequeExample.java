@@ -7,8 +7,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
  * 31/12/19
  */
 public class ConcurrentLinkedDequeExample {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         ConcurrentLinkedDeque<String> list = new ConcurrentLinkedDeque<>();
         Thread threads[] = new Thread[100];
 
@@ -62,6 +61,7 @@ class AddTask implements Runnable {
         }
     }
 }
+
 class RemoveTask implements Runnable {
 
     private ConcurrentLinkedDeque<String> list;

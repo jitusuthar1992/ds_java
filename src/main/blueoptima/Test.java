@@ -12,10 +12,10 @@ public class Test {
 
 
         /*HashMap*/
-        Map<Employee,Integer> map = new HashMap<>();
-        Employee emp1 = new Employee(23,"Test1",100000,"L1");
+        Map<Employee, Integer> map = new HashMap<>();
+        Employee emp1 = new Employee(23, "Test1", 100000, "L1");
         System.out.println(emp1.hashCode());
-        Employee emp2 = new Employee(23,"Test2",100000,"L2");
+        Employee emp2 = new Employee(23, "Test2", 100000, "L2");
         System.out.println(emp2.hashCode());
         //System.out.println(emp1.equals(emp1));
 
@@ -24,8 +24,8 @@ public class Test {
 
         Employee emp4 = new Employee(24,"Test1",100000);*/
 
-       map.put(emp1,emp1.age);
-        map.put(emp2,emp2.age);
+        map.put(emp1, emp1.age);
+        map.put(emp2, emp2.age);
         /*map.put(emp3,emp3.age);
 
         map.put(emp4,emp4.age);*/
@@ -35,10 +35,11 @@ public class Test {
     }
 }
 
-class A1{
+class A1 {
     public A1() {
         System.out.println("Cons A1");
     }
+
     static {
         System.out.println("Static a");
     }
@@ -48,10 +49,11 @@ class A1{
     }
 }
 
-class B1 extends A1{
+class B1 extends A1 {
     public B1() {
         System.out.println("Cons B1");
     }
+
     static {
         System.out.println("Static B1");
     }
@@ -61,13 +63,13 @@ class B1 extends A1{
     }
 }
 
-class Employee{
+class Employee {
     public int age;
-    public String name ;
-    public int salary ;
+    public String name;
+    public int salary;
     String lastName;
 
-    public Employee(int age, String name, int salary,String lastName) {
+    public Employee(int age, String name, int salary, String lastName) {
         this.age = age;
         this.name = name;
         this.salary = salary;

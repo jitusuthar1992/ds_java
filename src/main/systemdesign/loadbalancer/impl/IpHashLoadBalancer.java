@@ -16,10 +16,10 @@ public class IpHashLoadBalancer extends LoadBalancer {
         return null;
     }
 
-    protected String getIp(String clientIp){
+    protected String getIp(String clientIp) {
 
-        if(null == clientIp){
-            clientIp="127.0.0.1";
+        if (null == clientIp) {
+            clientIp = "127.0.0.1";
         }
         int index = clientIp.hashCode() % ipList.size();
         return ipList.get(index);

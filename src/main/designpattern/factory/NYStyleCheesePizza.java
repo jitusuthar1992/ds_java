@@ -1,14 +1,14 @@
 package main.designpattern.factory;
 
-public class NYStyleCheesePizza  extends Pizza{
+public class NYStyleCheesePizza extends Pizza {
     public NYStyleCheesePizza() {
         name = "NY Style Sauce and Cheese Pizza";
-        dough ="Thin Crust Dough";
+        dough = "Thin Crust Dough";
         sauce = "Marinara Sauce";
         toppings.add("Grated Reggiano Cheese");
     }
 
-    void cut(){
+    void cut() {
         System.out.println("Cutting the pizza into square slices");
     }
 }

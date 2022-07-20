@@ -103,19 +103,18 @@ public class SortLinkedList {
     }
 */
     node head = null;
+
     // node a, b;
     static class node {
         int val;
         node next;
 
-        public node(int val)
-        {
+        public node(int val) {
             this.val = val;
         }
     }
 
-    node sortedMerge(node a, node b)
-    {
+    node sortedMerge(node a, node b) {
         node result = null;
         /* Base cases */
         if (a == null)
@@ -127,16 +126,14 @@ public class SortLinkedList {
         if (a.val <= b.val) {
             result = a;
             result.next = sortedMerge(a.next, b);
-        }
-        else {
+        } else {
             result = b;
             result.next = sortedMerge(a, b.next);
         }
         return result;
     }
 
-    node mergeSort(node h)
-    {
+    node mergeSort(node h) {
         // Base case : if head is null
         if (h == null || h.next == null) {
             return h;
@@ -161,8 +158,7 @@ public class SortLinkedList {
     }
 
     // Utility function to get the middle of the linked list
-    public static node getMiddle(node head)
-    {
+    public static node getMiddle(node head) {
         if (head == null)
             return head;
 
@@ -175,8 +171,7 @@ public class SortLinkedList {
         return slow;
     }
 
-    void push(int new_data)
-    {
+    void push(int new_data) {
         /* allocate node */
         node new_node = new node(new_data);
 
@@ -188,16 +183,14 @@ public class SortLinkedList {
     }
 
     // Utility function to print the linked list
-    void printList(node headref)
-    {
+    void printList(node headref) {
         while (headref != null) {
             System.out.print(headref.val + " ");
             headref = headref.next;
         }
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         SortLinkedList li = new SortLinkedList();
         /*

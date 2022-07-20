@@ -27,24 +27,22 @@ L - [(2,6), (11,16), (23, 45), (67, 78) …. N intervals]  --disjoint and sorted
  */
 public class ArrayOverLap {
 
-    public static void mergeIntervals(IntervalTest arr[])
-    {
+    public static void mergeIntervals(IntervalTest arr[]) {
         // Test if the given set has at least one interval
         if (arr.length <= 0)
             return;
 
         // Create an empty stack of intervals
-        Stack<IntervalTest> stack=new Stack<>();
+        Stack<IntervalTest> stack = new Stack<>();
 
         // sort the intervals in increasing order of start time
-        Arrays.sort(arr, (i1, i2) -> i1.start-i2.start);
+        Arrays.sort(arr, (i1, i2) -> i1.start - i2.start);
 
         // push the first interval to stack
         stack.push(arr[0]);
 
         // Start from the next interval and merge if necessary
-        for (int i = 1 ; i < arr.length; i++)
-        {
+        for (int i = 1; i < arr.length; i++) {
             // get interval from stack top
             IntervalTest top = stack.peek();
 
@@ -55,8 +53,7 @@ public class ArrayOverLap {
 
                 // Otherwise update the ending time of top if ending of current
                 // interval is more
-            else if (top.end < arr[i].end)
-            {
+            else if (top.end < arr[i].end) {
                 top.end = arr[i].end;
                 stack.pop();
                 stack.push(top);
@@ -65,33 +62,31 @@ public class ArrayOverLap {
 
         // Print contents of stack
         System.out.print("The Merged Intervals are: ");
-        while (!stack.isEmpty())
-        {
+        while (!stack.isEmpty()) {
             IntervalTest t = stack.pop();
-            System.out.print("["+t.start+","+t.end+"] ");
+            System.out.print("[" + t.start + "," + t.end + "] ");
         }
     }
 
     public static void main(String args[]) {
-        IntervalTest arr[]=new IntervalTest[5];
-        arr[0]=new IntervalTest(2,6);
-        arr[1]=new IntervalTest(11,16);
-        arr[2]=new IntervalTest(23,45);
-        arr[3]=new IntervalTest(67,78);
-        arr[4]=new IntervalTest(10,35);
+        IntervalTest arr[] = new IntervalTest[5];
+        arr[0] = new IntervalTest(2, 6);
+        arr[1] = new IntervalTest(11, 16);
+        arr[2] = new IntervalTest(23, 45);
+        arr[3] = new IntervalTest(67, 78);
+        arr[4] = new IntervalTest(10, 35);
         mergeIntervals(arr);
 
 
     }
 }
 
-class IntervalTest
-{
-    int start,end;
-    IntervalTest(int start, int end)
-    {
-        this.start=start;
-        this.end=end;
+class IntervalTest {
+    int start, end;
+
+    IntervalTest(int start, int end) {
+        this.start = start;
+        this.end = end;
     }
 
    /* static class IntervalTest{
@@ -225,4 +220,4 @@ class IntervalTest
     }*/
 
 
-    }
+}

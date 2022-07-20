@@ -2,15 +2,15 @@ package main.array;
 
 public class MoveZeroEnd {
 
-    public static Integer[] zerosToEndSOl1(Integer[] arr){
+    public static Integer[] zerosToEndSOl1(Integer[] arr) {
 
-        int count=0;
-        for (int i = 0; i <arr.length ; i++) {
-            if(arr[i] !=0)
-                arr[count++] =arr[i];
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0)
+                arr[count++] = arr[i];
         }
-        while(count <arr.length)
-            arr[count++]=0;
+        while (count < arr.length)
+            arr[count++] = 0;
         return arr;
     }
 

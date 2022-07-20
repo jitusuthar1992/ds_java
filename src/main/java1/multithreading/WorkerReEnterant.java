@@ -1,36 +1,32 @@
 package main.java1.multithreading;
 
 import java.text.SimpleDateFormat;
-        import java.util.Date;
-        import java.util.concurrent.ExecutorService;
-        import java.util.concurrent.Executors;
-        import java.util.concurrent.locks.ReentrantLock;
+import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.locks.ReentrantLock;
 
-class Worker implements Runnable
-{
+class Worker implements Runnable {
     String name;
     ReentrantLock re;
-    Worker(ReentrantLock rl, String n)
-    {
+
+    Worker(ReentrantLock rl, String n) {
         re = rl;
         name = n;
     }
-    public void run()
-    {
+
+    public void run() {
         boolean done = false;
-        while (!done)
-        {
+        while (!done) {
             //Getting Outer Lock
             boolean ans = re.tryLock();
 
             // Returns True if lock is free
-            if(ans)
-            {
-                try
-                {
+            if (ans) {
+                try {
                     Date d = new Date();
                     SimpleDateFormat ft = new SimpleDateFormat("hh:mm:ss");
-                    System.out.println("task name - "+ name
+                    System.out.println("task name - " + name
                             + " outer lock acquired at "
                             + ft.format(d)
                             + " Doing outer work");
@@ -38,23 +34,18 @@ class Worker implements Runnable
 
                     // Getting Inner Lock
                     re.lock();
-                    try
-                    {
+                    try {
                         d = new Date();
                         ft = new SimpleDateFormat("hh:mm:ss");
-                        System.out.println("task name - "+ name
+                        System.out.println("task name - " + name
                                 + " inner lock acquired at "
                                 + ft.format(d)
                                 + " Doing inner work");
-                        System.out.println("Lock Hold Count - "+ re.getHoldCount());
+                        System.out.println("Lock Hold Count - " + re.getHoldCount());
                         Thread.sleep(1500);
-                    }
-                    catch(InterruptedException e)
-                    {
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
-                    }
-                    finally
-                    {
+                    } finally {
                         //Inner lock release
                         System.out.println("task name - " + name +
                                 " releasing inner lock");
@@ -65,13 +56,9 @@ class Worker implements Runnable
                     System.out.println("task name - " + name + " work done");
 
                     done = true;
-                }
-                catch(InterruptedException e)
-                {
+                } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
-                finally
-                {
+                } finally {
                     //Outer lock release
                     System.out.println("task name - " + name +
                             " releasing outer lock");
@@ -80,17 +67,12 @@ class Worker implements Runnable
                     System.out.println("Lock Hold Count - " +
                             re.getHoldCount());
                 }
-            }
-            else
-            {
+            } else {
                 System.out.println("task name - " + name +
                         " waiting for lock");
-                try
-                {
+                try {
                     Thread.sleep(1000);
-                }
-                catch(InterruptedException e)
-                {
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
@@ -98,11 +80,10 @@ class Worker implements Runnable
     }
 }
 
-public class WorkerReEnterant
-{
+public class WorkerReEnterant {
     static final int MAX_T = 2;
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         ReentrantLock rel = new ReentrantLock();
         ExecutorService pool = Executors.newFixedThreadPool(MAX_T);
         Runnable w1 = new Worker(rel, "Job1");

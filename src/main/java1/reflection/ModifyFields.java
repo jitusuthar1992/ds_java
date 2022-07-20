@@ -3,7 +3,7 @@ package main.java1.reflection;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-public class ModifyFields    {
+public class ModifyFields {
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
         Field field = Test.class.getDeclaredField("check");
         field.setAccessible(true);
@@ -15,7 +15,7 @@ public class ModifyFields    {
         modifierField.setAccessible(true);
         modifierField.setInt(field, modifiers);
 
-        field.set(field,true);
+        field.set(field, true);
 
         System.out.println(Test.getCheck());
     }

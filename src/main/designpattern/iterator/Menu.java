@@ -8,5 +8,6 @@ import java.util.Iterator;
  */
 public interface Menu {
     Iterator createIterator();
-    void addItem(String name , String description , boolean veg , double price );
+
+    void addItem(String name, String description, boolean veg, double price);
 }

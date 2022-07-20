@@ -78,8 +78,8 @@ public class MinRoomRequired {
     public static void main(String[] args) {
         //int arr[] = { 1, 2, 3, 4, 5, };
         //int dep[] = { 2, 3, 4, 6, 7 };
-        int arr[] = { 1, 3, 5};
-        int dep[] = { 2,6,10 };
+        int arr[] = {1, 3, 5};
+        int dep[] = {2, 6, 10};
         int n = arr.length;
         System.out.println("Minimum Number of Rooms Required = " + findRooms(arr, dep, n));
     }

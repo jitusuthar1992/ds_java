@@ -5,31 +5,30 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class ReverseLevelOrderTraversal {
-    static  void reverseLevelOrder(BinaryTreeNode node){
-        if(node == null)
+    static void reverseLevelOrder(BinaryTreeNode node) {
+        if (node == null)
             return;
         Queue<BinaryTreeNode> queue = new LinkedList<>();
-        Stack<BinaryTreeNode > stack = new Stack<>();
+        Stack<BinaryTreeNode> stack = new Stack<>();
         queue.offer(node);
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             BinaryTreeNode tmp = queue.poll();
-            if(null !=tmp){
+            if (null != tmp) {
                 stack.push(tmp);
-                if(tmp.getRight() != null)
+                if (tmp.getRight() != null)
                     queue.offer(tmp.getRight());
-                if(tmp.getLeft() != null)
+                if (tmp.getLeft() != null)
                     queue.offer(tmp.getLeft());
 
             }
         }
-        while (!stack.isEmpty()){
-            System.out.print(stack.pop().getData()+" ");
+        while (!stack.isEmpty()) {
+            System.out.print(stack.pop().getData() + " ");
         }
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         BinaryTreeTraversal tree = new BinaryTreeTraversal();
 
         // Let us create trees shown in above diagram

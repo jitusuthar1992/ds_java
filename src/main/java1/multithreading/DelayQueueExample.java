@@ -12,8 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 31/12/19
  */
 public class DelayQueueExample {
-    public static void main(String[] args) throws InterruptedException, ExecutionException
-    {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
         DelayQueue<DelayedEvent> queue = new DelayQueue<>();
         AtomicInteger counter = new AtomicInteger();
         ScheduledExecutorService ses = Executors.newScheduledThreadPool(2);
@@ -48,8 +47,7 @@ class DelayedEvent implements Delayed {
     }
 
     @Override
-    public int compareTo(Delayed that)
-    {
+    public int compareTo(Delayed that) {
         long result = this.getDelay(TimeUnit.NANOSECONDS)
                 - that.getDelay(TimeUnit.NANOSECONDS);
         if (result < 0) {
@@ -59,6 +57,7 @@ class DelayedEvent implements Delayed {
         }
         return 0;
     }
+
     @Override
     public long getDelay(TimeUnit unit) {
         LocalDateTime now = LocalDateTime.now();
@@ -72,10 +71,9 @@ class DelayedEvent implements Delayed {
     }
 }
 
-class DelayedEventProducer implements Runnable
-{
+class DelayedEventProducer implements Runnable {
     private final DelayQueue<DelayedEvent> queue;
-    private       AtomicInteger            counter;
+    private AtomicInteger counter;
 
     public DelayedEventProducer(DelayQueue<DelayedEvent> queue, AtomicInteger counter) {
         this.queue = queue;
@@ -83,8 +81,7 @@ class DelayedEventProducer implements Runnable
     }
 
     @Override
-    public void run()
-    {
+    public void run() {
         LocalDateTime now = LocalDateTime.now();
         int id = counter.incrementAndGet();
         DelayedEvent event = new DelayedEvent(id, "Task-" + id, now);
@@ -93,8 +90,7 @@ class DelayedEventProducer implements Runnable
     }
 }
 
-class DelayedEventConsumer implements Runnable
-{
+class DelayedEventConsumer implements Runnable {
     private final DelayQueue<DelayedEvent> queue;
 
     public DelayedEventConsumer(DelayQueue<DelayedEvent> queue) {
@@ -102,8 +98,7 @@ class DelayedEventConsumer implements Runnable
     }
 
     @Override
-    public void run()
-    {
+    public void run() {
         List<DelayedEvent> events = new ArrayList<DelayedEvent>();
         queue.drainTo(events);
         System.out.println("\nEvent processing start **********\n");

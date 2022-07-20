@@ -19,7 +19,7 @@ public class SingletonCLS implements Serializable, Cloneable {
     }
 
     // create static method to get same instance every time
-    public static SingletonCLS getInstance(){
+    public static SingletonCLS getInstance() {
         return INSTANCE;
     }
 

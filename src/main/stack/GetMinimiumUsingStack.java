@@ -13,41 +13,41 @@ public class GetMinimiumUsingStack {
     private Stack elementStack = new Stack();
     private Stack minStack = new Stack();
 
-    public void pushSol1(int data){
+    public void pushSol1(int data) {
         elementStack.push(data);
-        if(minStack.isEmpty() || (Integer)minStack.peek()>= (Integer)data ){
+        if (minStack.isEmpty() || (Integer) minStack.peek() >= (Integer) data) {
             minStack.push(data);
-        }else{
+        } else {
             minStack.push(minStack.peek());
         }
     }
 
-    public Object popsol1(){
-        if(elementStack.isEmpty())
+    public Object popsol1() {
+        if (elementStack.isEmpty())
             return null;
         minStack.pop();
-        return  elementStack.pop();
+        return elementStack.pop();
     }
 
-    public Object getMinimium(){
+    public Object getMinimium() {
         return minStack.peek();
     }
 
 
-    public void pushSol2(int data){
+    public void pushSol2(int data) {
         elementStack.push(data);
-        if(minStack.isEmpty() || (Integer)minStack.peek()>= (Integer)data )
+        if (minStack.isEmpty() || (Integer) minStack.peek() >= (Integer) data)
             minStack.push(data);
     }
 
-    public Object popsol2(){
-        if(elementStack.isEmpty())
+    public Object popsol2() {
+        if (elementStack.isEmpty())
             return null;
         int minTop = (Integer) minStack.peek();
         int element = (Integer) elementStack.peek();
-        if(minTop == element)
+        if (minTop == element)
             minStack.pop();
 
-        return  elementStack.pop();
+        return elementStack.pop();
     }
 }

@@ -6,11 +6,11 @@ package main.sorting;
  */
 public class SelectionSort {
 
-    void sort(int arr[], int n){
-        for (int i = 0; i <n ; i++) {
+    void sort(int arr[], int n) {
+        for (int i = 0; i < n; i++) {
             int minIndex = i;
-            for (int j = i+1; j <n ; j++) {
-                if(arr[j] < arr[minIndex]){
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIndex]) {
                     minIndex = j;
                 }
             }
@@ -20,8 +20,7 @@ public class SelectionSort {
         }
     }
 
-    static void printArray(int arr[])
-    {
+    static void printArray(int arr[]) {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
@@ -31,9 +30,9 @@ public class SelectionSort {
 
     public static void main(String[] args) {
 
-        int arr[] = { 12, 11, 13, 5, 6 };
+        int arr[] = {12, 11, 13, 5, 6};
         InsertionSort ob = new InsertionSort();
-        ob.sort(arr,arr.length);
+        ob.sort(arr, arr.length);
 
         printArray(arr);
     }

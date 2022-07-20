@@ -2,31 +2,32 @@ package main.tree;
 
 public class BalancedHeightTree {
     static BinaryTreeNode root;
-    static  int height(BinaryTreeNode node){
-        if(null == node ){
+
+    static int height(BinaryTreeNode node) {
+        if (null == node) {
             return 0;
         }
 
         int lh = height(node.left);
         int rh = height(node.right);
 
-        if(lh> rh)
-            return (lh+1);
-        return (rh+1);
+        if (lh > rh)
+            return (lh + 1);
+        return (rh + 1);
     }
 
-    static boolean isBalanced(BinaryTreeNode node){
-        if(node== null)
+    static boolean isBalanced(BinaryTreeNode node) {
+        if (node == null)
             return true;
         int lh = height(node.left);
         int rh = height(node.right);
 
-        if(Math.abs(lh-rh)<=1 && isBalanced(node.left) && isBalanced(node.right))
+        if (Math.abs(lh - rh) <= 1 && isBalanced(node.left) && isBalanced(node.right))
             return true;
         return false;
     }
-    public static void main(String args[])
-    {
+
+    public static void main(String args[]) {
         BalancedHeightTree tree = new BalancedHeightTree();
         tree.root = new BinaryTreeNode(1);
         tree.root.left = new BinaryTreeNode(2);
@@ -36,15 +37,14 @@ public class BalancedHeightTree {
         tree.root.left.left.left = new BinaryTreeNode(8);
 
         Height height = new Height();
-        if (isBalancedSOl1(tree.root,height))
+        if (isBalancedSOl1(tree.root, height))
             System.out.println("Tree is balanced");
         else
             System.out.println("Tree is not balanced");
     }
 
 
-    static boolean isBalancedSOl1(BinaryTreeNode root, Height height)
-    {
+    static boolean isBalancedSOl1(BinaryTreeNode root, Height height) {
         /* If tree is empty then return true */
         if (root == null) {
             height.height = 0;

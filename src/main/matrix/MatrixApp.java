@@ -1,22 +1,22 @@
 package main.matrix;
 
 public class MatrixApp {
-    public static int noOFElementsLessThanGivenValue(int mat[][], int val){
-        if(mat.length ==0){
+    public static int noOFElementsLessThanGivenValue(int mat[][], int val) {
+        if (mat.length == 0) {
             System.out.println("Matrix is blank");
             return -1;
         }
         int totalRows = mat.length;
         int totalColumns = mat[0].length;
-        int row = 0 , column = totalColumns-1;
+        int row = 0, column = totalColumns - 1;
 
-        int count =0;
+        int count = 0;
 
-        while (row < totalColumns && column >=0){
-            if (val >= mat[row][column]){
-                count = count +column +1;
+        while (row < totalColumns && column >= 0) {
+            if (val >= mat[row][column]) {
+                count = count + column + 1;
                 row++;
-            }else{
+            } else {
                 column--;
             }
         }
@@ -24,7 +24,7 @@ public class MatrixApp {
     }
 
     public static void searchElementInRowColumnSortedMatrix(int[][] mat, int val) {
-        if(mat.length == 0) {
+        if (mat.length == 0) {
             System.out.println("Matrix is Blank");
             return;
         }
@@ -36,13 +36,13 @@ public class MatrixApp {
         row = 0;
         column = totalColumns - 1;
 
-        while(row < totalRows && column >= 0) {
-            if(mat[row][column] == val) {
-                System.out.println("Value is present at: "+ row +" " + column);
+        while (row < totalRows && column >= 0) {
+            if (mat[row][column] == val) {
+                System.out.println("Value is present at: " + row + " " + column);
                 return;
             }
 
-            if(val > mat[row][column]) {
+            if (val > mat[row][column]) {
                 row++;
             } else {
                 column--;

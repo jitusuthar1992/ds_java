@@ -3,30 +3,32 @@ package main.array;
 public class KthDigit {
     public static double nthDigit(double n) {
 
-        if(n<10){
+        if (n < 10) {
             return n;
         }
 
 
         int k = 0;
-        double first =9;double last=0;double orig =n;
-        while(n>0){
+        double first = 9;
+        double last = 0;
+        double orig = n;
+        while (n > 0) {
             k++;
-            n -= 9 * Math.pow(10, k - 1) * k +first;
+            n -= 9 * Math.pow(10, k - 1) * k + first;
 
         }
 
-        if(k ==2){
-            orig-=first;
+        if (k == 2) {
+            orig -= first;
 
-        }else{
-            orig -= 9 * Math.pow(10, k - 1) * k +first;
+        } else {
+            orig -= 9 * Math.pow(10, k - 1) * k + first;
         }
 
-        if(orig%k ==0){
-            return ((orig/k)-1)%Math.pow(10,k-1);
+        if (orig % k == 0) {
+            return ((orig / k) - 1) % Math.pow(10, k - 1);
         }
-        return orig%k;
+        return orig % k;
 
 
     }
@@ -36,14 +38,14 @@ public class KthDigit {
 
         int k = 0;
         //double first =9;double last=0;double orig =n;
-        while(n>0){
+        while (n > 0) {
             k++;
             n -= 9 * Math.pow(10, k - 1) * k;
 
         }
 
         n += 9 * Math.pow(10, k - 1) * k;
-        if( n % k == 0) {
+        if (n % k == 0) {
 
             return (Math.pow(10, k - 1) + (n / k) - 1) % 10;
         } else {
@@ -53,8 +55,9 @@ public class KthDigit {
 
 
     }
+
     public static void main(String[] args) {
-        System.out.println(nDigit(146  ));
+        System.out.println(nDigit(146));
 
     }
 }

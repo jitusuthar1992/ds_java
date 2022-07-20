@@ -14,8 +14,7 @@ public class MainMethodVariants {
     }
 
     //Overloading Main method
-    public static void main(int[] args)
-    {
+    public static void main(int[] args) {
         System.out.println("Main Method int Array");
     }
 }

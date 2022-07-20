@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
 public class PrismAlgoMinSpanTree {
 
     List<List<Edge>> graph;
-    int nodes ;
+    int nodes;
     boolean visited[];
 
     public PrismAlgoMinSpanTree(int nodes) {
@@ -17,13 +17,13 @@ public class PrismAlgoMinSpanTree {
         visited = new boolean[nodes];
         graph = new ArrayList<>();
 
-        for (int i = 0; i <nodes ; i++) {
-            graph.add(i,new ArrayList<>());
+        for (int i = 0; i < nodes; i++) {
+            graph.add(i, new ArrayList<>());
         }
     }
 
     class Edge {
-        int distance ;
+        int distance;
         int targetIndex;
 
         public Edge(int distance, int targetIndex) {
@@ -32,24 +32,25 @@ public class PrismAlgoMinSpanTree {
         }
     }
 
-    public void addEdge(int source , int dest , int distance){
-        graph.get(source).add(new Edge(distance,dest));
-        graph.get(dest).add(new Edge(distance,source));
+    public void addEdge(int source, int dest, int distance) {
+        graph.get(source).add(new Edge(distance, dest));
+        graph.get(dest).add(new Edge(distance, source));
 
     }
-    public int minDistanceSpanTree(int source){
+
+    public int minDistanceSpanTree(int source) {
         int minCost = 0;
         PriorityQueue<Edge> minHeap = new PriorityQueue<>(Comparator.comparingInt(e -> e.distance));
         visited[source] = true;
         List<Edge> childOfSource = graph.get(source);
 
-        for (Edge edge: childOfSource) {
+        for (Edge edge : childOfSource) {
             minHeap.add(edge);
         }
 
-        while (!minHeap.isEmpty()){
-            Edge edge = minHeap.poll()  ;
-            if(visited[edge.targetIndex])
+        while (!minHeap.isEmpty()) {
+            Edge edge = minHeap.poll();
+            if (visited[edge.targetIndex])
                 continue;
 
             visited[edge.targetIndex] = true;
@@ -57,23 +58,24 @@ public class PrismAlgoMinSpanTree {
 
             List<Edge> childList = graph.get(edge.targetIndex);
 
-            for(Edge child: childList) {
+            for (Edge child : childList) {
                 minHeap.add(child);
             }
         }
         return minCost;
     }
 
-    public int minCost(){
-        int minCost =0 ;
+    public int minCost() {
+        int minCost = 0;
 
-        for (int i = 0; i <nodes ; i++) {
-            if(!visited[i]){
+        for (int i = 0; i < nodes; i++) {
+            if (!visited[i]) {
                 minCost = minCost = minDistanceSpanTree(i);
             }
         }
         return minCost;
     }
+
     public static void main(String[] args) {
         int nodes = 5;
 

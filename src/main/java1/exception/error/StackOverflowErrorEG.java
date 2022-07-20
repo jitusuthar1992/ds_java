@@ -6,10 +6,10 @@ package main.java1.exception.error;
  */
 public class StackOverflowErrorEG {
 
-    public static void call(int n)
-    {
+    public static void call(int n) {
         call(8);
     }
+
     public static void main(String[] args) {
         call(8);
     }

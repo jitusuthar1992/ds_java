@@ -16,6 +16,7 @@ public class Singleton implements Serializable {
 
     private Singleton() {
     }
+
     protected Object readResolve() {
         return INSTANCE;
     }

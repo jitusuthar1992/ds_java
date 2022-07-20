@@ -9,8 +9,8 @@ public class Without3A3B {
         while (A > 0 || B > 0) {
             boolean writeA = false;
             int L = ans.length();
-            if (L >= 2 && ans.charAt(L-1) == ans.charAt(L-2)) {
-                if (ans.charAt(L-1) == 'b')
+            if (L >= 2 && ans.charAt(L - 1) == ans.charAt(L - 2)) {
+                if (ans.charAt(L - 1) == 'b')
                     writeA = true;
             } else {
                 if (A >= B)
@@ -30,20 +30,20 @@ public class Without3A3B {
     }
 
     public static void main(String[] args) {
-        System.out.println(strWithout3a3b(3,3));
+        System.out.println(strWithout3a3b(3, 3));
 
-        System.out.println( Optional.ofNullable(null).orElse(0.0));
+        System.out.println(Optional.ofNullable(null).orElse(0.0));
 
-        for (int i = 0; i <10 ; i++) {
+        for (int i = 0; i < 10; i++) {
 
-            try{
-                if(i==1){
+            try {
+                if (i == 1) {
                     throw new RuntimeException();
 
                 }
-                System.out.println("s"+i);
+                System.out.println("s" + i);
 
-            }catch (Exception e){
+            } catch (Exception e) {
                 System.out.println("NULL");
             }
 

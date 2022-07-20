@@ -27,27 +27,28 @@ the output sequence.
 public class CountSort {
 
 
-    static  void sort(int k , int[] a){
-        int[] count= new int[k+1];
-        Arrays.fill(count,0);
+    static void sort(int k, int[] a) {
+        int[] count = new int[k + 1];
+        Arrays.fill(count, 0);
         int outPut[] = new int[a.length];
 
-        for(int i =0;i<a.length ;i++)
+        for (int i = 0; i < a.length; i++)
             ++count[a[i]];
-        for (int i=1;i<=k;i++)
-            count[i]+= count[i-1];
-        for (int i=a.length-1;i>=0;i--){
-            outPut[count[a[i]]-1] = a[i];
+        for (int i = 1; i <= k; i++)
+            count[i] += count[i - 1];
+        for (int i = a.length - 1; i >= 0; i--) {
+            outPut[count[a[i]] - 1] = a[i];
             --count[a[i]];
         }
-        for(int i =0;i<a.length ;i++)
+        for (int i = 0; i < a.length; i++)
             System.out.println(outPut[i]);
 
 
     }
+
     public static void main(String[] args) {
-        int a[]= {2,4,1,5,1,4,3,5};
-        sort(5,a);
+        int a[] = {2, 4, 1, 5, 1, 4, 3, 5};
+        sort(5, a);
 
     }
 }

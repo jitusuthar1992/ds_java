@@ -1,11 +1,9 @@
 package main.array;
 
-public class ProductArray
-{
+public class ProductArray {
     /* Function to print product main.array for a given main.array
        arr[] of size n */
-    void productArray(int arr[], int n)
-    {
+    void productArray(int arr[], int n) {
         // Initialize memory to all arrays
         int left[] = new int[n];
         int right[] = new int[n];
@@ -40,8 +38,7 @@ public class ProductArray
     }
 
     /* Driver program to test the aboe function */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         ProductArray pa = new ProductArray();
         int arr[] = {10, 3, 5, 6, 2};
         int n = arr.length;

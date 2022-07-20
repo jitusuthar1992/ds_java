@@ -9,8 +9,7 @@ import java.io.PipedWriter;
  */
 public class PiperStreamInterThreadComm {
     public static void main(String[] args) {
-        try
-        {
+        try {
             // Create writer and reader instances
             PipedReader pr = new PipedReader();
             PipedWriter pw = new PipedWriter();
@@ -19,26 +18,24 @@ public class PiperStreamInterThreadComm {
             pw.connect(pr);
 
             // Create one writer thread and one reader thread
-            Thread thread1 = new Thread(new PipedReaderThread(pr,"ReaderThread"));
+            Thread thread1 = new Thread(new PipedReaderThread(pr, "ReaderThread"));
 
-            Thread thread2 = new Thread(new PipedWriterThread(pw,"WriterThread" ));
+            Thread thread2 = new Thread(new PipedWriterThread(pw, "WriterThread"));
 
             // start both threads
             thread1.start();
             thread2.start();
 
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("PipeThread Exception: " + e);
         }
     }
 }
 
-class PipedReaderThread implements Runnable{
+class PipedReaderThread implements Runnable {
 
     PipedReader pr = null;
-    String name ;
+    String name;
 
     public PipedReaderThread(PipedReader pr, String name) {
         this.pr = pr;
@@ -47,10 +44,10 @@ class PipedReaderThread implements Runnable{
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             try {
                 char c = (char) pr.read();
-                if(c != -1){
+                if (c != -1) {
                     System.out.print(c);
                 }
             } catch (Exception e) {
@@ -60,10 +57,10 @@ class PipedReaderThread implements Runnable{
     }
 }
 
-class PipedWriterThread implements Runnable{
+class PipedWriterThread implements Runnable {
 
     PipedWriter pw = null;
-    String      name ;
+    String name;
 
     public PipedWriterThread(PipedWriter pw, String name) {
         this.pw = pw;
@@ -72,7 +69,7 @@ class PipedWriterThread implements Runnable{
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             try {
                 pw.write("Testing data written...n");
                 pw.flush();

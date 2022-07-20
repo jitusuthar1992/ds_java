@@ -3,8 +3,9 @@ package main.designpattern.command.impl;
 public class LightOnCommand implements SimpleRemoteControl.Command {
 
     Light light;
-    public LightOnCommand(Light light ) {
-        this.light=light;
+
+    public LightOnCommand(Light light) {
+        this.light = light;
     }
 
     @Override

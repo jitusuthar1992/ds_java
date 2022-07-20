@@ -22,11 +22,11 @@ public class LengthOfLongestSubstring {
         }
         return true;
     }
-    public static void main(String[] args)
-    {
+
+    public static void main(String[] args) {
         String str = "geeksforgeeks";
         System.out.println("The input string is " + str);
-        int len =lengthOfLongestSubstringSol2(str);
+        int len = lengthOfLongestSubstringSol2(str);
         System.out.println("The length of "
                 + "the longest non repeating character is " + len);
     }
@@ -37,11 +37,10 @@ public class LengthOfLongestSubstring {
         int ans = 0, i = 0, j = 0;
         while (i < n && j < n) {
             // try to extend the range [i, j]
-            if (!set.contains(s.charAt(j))){
+            if (!set.contains(s.charAt(j))) {
                 set.add(s.charAt(j++));
                 ans = Math.max(ans, j - i);
-            }
-            else {
+            } else {
                 set.remove(s.charAt(i++));
             }
         }

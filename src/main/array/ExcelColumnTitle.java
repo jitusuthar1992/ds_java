@@ -1,17 +1,17 @@
 package main.array;
 
 public class ExcelColumnTitle {
-    private static void printString(int columnNumber){
+    private static void printString(int columnNumber) {
         StringBuilder columnName = new StringBuilder();
-        while (columnNumber > 0){
-            int rem = columnNumber %26;
+        while (columnNumber > 0) {
+            int rem = columnNumber % 26;
 
-            if(rem ==0){
+            if (rem == 0) {
                 columnName.append("Z");
-                columnNumber = (columnNumber/26)-1;
-            }else {
-                columnName.append((char)((rem-1)+'A'));
-                columnNumber = (columnNumber/26);
+                columnNumber = (columnNumber / 26) - 1;
+            } else {
+                columnName.append((char) ((rem - 1) + 'A'));
+                columnNumber = (columnNumber / 26);
             }
         }
 
@@ -19,8 +19,7 @@ public class ExcelColumnTitle {
 
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         printString(26);
         printString(53);
         printString(52);

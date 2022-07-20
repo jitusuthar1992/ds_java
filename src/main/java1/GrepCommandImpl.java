@@ -20,8 +20,8 @@ public class GrepCommandImpl {
         }
         Pattern pattern = null;
         try {
-            pattern= Pattern.compile(args[0]);
-        }catch (PatternSyntaxException e) {
+            pattern = Pattern.compile(args[0]);
+        } catch (PatternSyntaxException e) {
             System.err.println("Invalid RE syntax: " + e.getDescription());
             System.exit(1);
         }
@@ -32,20 +32,20 @@ public class GrepCommandImpl {
             br = new BufferedReader(new InputStreamReader(new FileInputStream(args[1])));
         } catch (FileNotFoundException e) {
             System.err.println("Unable to open file " +
-                                       args[1] + ": " + e.getMessage());
+                    args[1] + ": " + e.getMessage());
             System.exit(1);
         }
 
 
-        try{
+        try {
             String s;
-            while ((s = br.readLine()) !=null){
+            while ((s = br.readLine()) != null) {
                 Matcher m = pattern.matcher(s);
-                if(m.find()){
+                if (m.find()) {
                     System.out.println(s);
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.err.println("Error reading line: " + e.getMessage());
             System.exit(1);
         }

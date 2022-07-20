@@ -8,7 +8,7 @@ public class FunctionTest {
         Function<String, String> function = new Function<String, String>() {
             @Override
             public String apply(String input) {
-                return   input.toUpperCase();
+                return input.toUpperCase();
             }
         };
         System.out.println(function.apply("wwwww"));

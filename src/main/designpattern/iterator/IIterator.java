@@ -6,5 +6,6 @@ package main.designpattern.iterator;
  */
 public interface IIterator {
     boolean hasNext();
+
     Object next();
 }

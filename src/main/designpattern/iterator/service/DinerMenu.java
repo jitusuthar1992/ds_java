@@ -13,8 +13,8 @@ import java.util.Iterator;
  * 09/02/20
  */
 public class DinerMenu implements Menu {
-    final  int MAX_ITEMS =6 ;
-    int numberOfItems = 0 ;
+    final int MAX_ITEMS = 6;
+    int numberOfItems = 0;
     MenuItem[] menuItems;
 
     public DinerMenu() {
@@ -22,11 +22,11 @@ public class DinerMenu implements Menu {
     }
 
     @Override
-    public void addItem(String name , String description , boolean veg , double price ){
-        MenuItem menuItem = new MenuItem(name,description,veg,price);
-        if(numberOfItems >= MAX_ITEMS){
+    public void addItem(String name, String description, boolean veg, double price) {
+        MenuItem menuItem = new MenuItem(name, description, veg, price);
+        if (numberOfItems >= MAX_ITEMS) {
             System.err.println("Sorry , menu is full ! Can't add item to menu ");
-        }else{
+        } else {
             menuItems[numberOfItems] = menuItem;
             numberOfItems++;
         }
@@ -38,8 +38,8 @@ public class DinerMenu implements Menu {
     }*/
 
     @Override
-    public Iterator createIterator(){
-        return  new DinerMenuIterarorUsingUtil(menuItems);
+    public Iterator createIterator() {
+        return new DinerMenuIterarorUsingUtil(menuItems);
     }
 
 

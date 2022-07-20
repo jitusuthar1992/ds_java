@@ -8,12 +8,12 @@ public class LimitInstanceClass {
     private static LimitInstanceClass limInstance;
     public static int objCount = 0;
 
-    private LimitInstanceClass(){
+    private LimitInstanceClass() {
         objCount++;
     }
 
-    public static synchronized LimitInstanceClass getLimInstance(){
-        if(objCount < 3 ){
+    public static synchronized LimitInstanceClass getLimInstance() {
+        if (objCount < 3) {
             limInstance = new LimitInstanceClass();
         }
         return limInstance;

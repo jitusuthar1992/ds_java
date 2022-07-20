@@ -12,21 +12,21 @@ public class DijkastraToMinDistance {
 
 
     public DijkastraToMinDistance(int nodes) {
-        visited= new boolean[nodes];
+        visited = new boolean[nodes];
         graph = new ArrayList<>();
         distances = new int[nodes];
-        for (int i = 0; i <nodes ; i++) {
+        for (int i = 0; i < nodes; i++) {
             graph.add(i, new ArrayList<>());
             distances[i] = Integer.MAX_VALUE;
         }
     }
 
-    public void addEdge(int source , int dest,int distance){
-        graph.get(source).add(new Edge(distance,dest));
+    public void addEdge(int source, int dest, int distance) {
+        graph.get(source).add(new Edge(distance, dest));
     }
 
     class Edge {
-        int distance ;
+        int distance;
         int targetIndex;
 
         public Edge(int distance, int targetIndex) {
@@ -35,32 +35,32 @@ public class DijkastraToMinDistance {
         }
     }
 
-    public int minDistance(int source , int destination){
-        if(source == destination)
+    public int minDistance(int source, int destination) {
+        if (source == destination)
             return 0;
-        PriorityQueue<Edge> minHeap = new PriorityQueue<>((e1,e2)->e1.distance - e2.distance);
+        PriorityQueue<Edge> minHeap = new PriorityQueue<>((e1, e2) -> e1.distance - e2.distance);
 
-        distances[source]=0;
-        minHeap.add(new Edge(0,0));
+        distances[source] = 0;
+        minHeap.add(new Edge(0, 0));
 
-        while (!minHeap.isEmpty()){
+        while (!minHeap.isEmpty()) {
             int v = minHeap.poll().targetIndex;
 
-            if(visited[v])
+            if (visited[v])
                 continue;
 
-            visited[v]= true;
+            visited[v] = true;
 
             List<Edge> childList = graph.get(v);
 
-            for ( Edge edge :childList) {
+            for (Edge edge : childList) {
 
                 int distance = edge.distance;
                 int childNode = edge.targetIndex;
 
-                if(!visited[childNode] && (distances[v]+distance < distances[childNode])){
-                    distances[childNode] = distances[v]+distance;
-                    edge.distance = distances[v]+distance;
+                if (!visited[childNode] && (distances[v] + distance < distances[childNode])) {
+                    distances[childNode] = distances[v] + distance;
+                    edge.distance = distances[v] + distance;
                     minHeap.add(edge);
                 }
 

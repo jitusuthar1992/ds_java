@@ -6,23 +6,26 @@ public class Inheritance {
         obj.test();
     }
 }
+
 class A {
 
-    protected void test() throws ArithmeticException{
+    protected void test() throws ArithmeticException {
         System.out.println("Class A");
     }
 }
+
 class B extends A {
 
     @Override
-    protected void test(){
+    protected void test() {
         System.out.println("Class A");
     }
 }
-class C extends B{
+
+class C extends B {
 
     @Override
-    public void test(){
+    public void test() {
         System.out.println("Class C");
     }
 }

@@ -2,8 +2,7 @@ package main.matrix;
 
 public class RotateMatrixAntiClock90Degree {
     // Function for do transpose of matrix
-    static void transpose(int arr[][])
-    {
+    static void transpose(int arr[][]) {
         for (int i = 0; i < arr.length; i++)
             for (int j = i; j < arr[0].length;
                  j++) {
@@ -13,9 +12,9 @@ public class RotateMatrixAntiClock90Degree {
             }
     }
 
-    static void reverseColumns(int arr[][]){
-        for (int i = 0; i <arr[0].length ; i++) {
-            for (int j = 0,k=arr[0].length-1; j <k ; j++,k--) {
+    static void reverseColumns(int arr[][]) {
+        for (int i = 0; i < arr[0].length; i++) {
+            for (int j = 0, k = arr[0].length - 1; j < k; j++, k--) {
                 int temp = arr[j][i];
                 arr[j][i] = arr[k][i];
                 arr[k][i] = temp;
@@ -23,8 +22,7 @@ public class RotateMatrixAntiClock90Degree {
         }
     }
 
-    static void printMatrix(int arr[][])
-    {
+    static void printMatrix(int arr[][]) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length;
                  j++)
@@ -33,19 +31,17 @@ public class RotateMatrixAntiClock90Degree {
         }
     }
 
-    static void rotate90(int arr[][])
-    {
+    static void rotate90(int arr[][]) {
         transpose(arr);
         reverseColumns(arr);
     }
 
     /* Driver program to test above function */
-    public static void main(String[] args)
-    {
-        int arr[][] = { { 1, 2, 3, 4 },
-                { 5, 6, 7, 8 },
-                { 9, 10, 11, 12 },
-                { 13, 14, 15, 16 } };
+    public static void main(String[] args) {
+        int arr[][] = {{1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12},
+                {13, 14, 15, 16}};
 
         rotate90(arr);
         printMatrix(arr);

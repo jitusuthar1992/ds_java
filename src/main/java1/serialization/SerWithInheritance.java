@@ -17,14 +17,14 @@ public class SerWithInheritance {
 
         try {
             SerializationUtil.serialize(subClass, fileName);
-        } catch ( IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             return;
         }
 
         try {
             Child subNew = (Child) SerializationUtil.deserialize(fileName);
-            System.out.println("SubClass read = "+subNew);
+            System.out.println("SubClass read = " + subNew);
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
         }
@@ -33,7 +33,7 @@ public class SerWithInheritance {
 
 
 class Super {
-    int var1 ;
+    int var1;
     String var2;
 
     public int getVar1() {
@@ -78,7 +78,7 @@ class Super {
 }
 
 
-class Child extends Super implements Serializable{
+class Child extends Super implements Serializable {
 
     private static final long serialVersionUID = -1322322139926390329L;
 
@@ -97,7 +97,7 @@ class Child extends Super implements Serializable{
         this.var3 = var3;
     }
 
-    private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException{
+    private void readObject(ObjectInputStream ois) throws ClassNotFoundException, IOException {
         ois.defaultReadObject();
 
         //notice the order of read and write should be same
@@ -105,12 +105,13 @@ class Child extends Super implements Serializable{
         setVar2((String) ois.readObject());
     }
 
-    private void writeObject(ObjectOutputStream oos) throws IOException{
+    private void writeObject(ObjectOutputStream oos) throws IOException {
         oos.defaultWriteObject();
 
         oos.writeInt(getVar1());
         oos.writeObject(getVar2());
     }
+
     @Override
     public String toString() {
         return "Child{" +

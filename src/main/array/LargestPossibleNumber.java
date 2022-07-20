@@ -5,9 +5,9 @@ import java.util.*;
 
 public class LargestPossibleNumber {
 
-    static void largestPossibleNumber(List<String> numbers){
+    static void largestPossibleNumber(List<String> numbers) {
         // sort using a custom function object
-        Collections.sort(numbers, new Comparator<String>(){
+        Collections.sort(numbers, new Comparator<String>() {
 
             // A comparison function which is used by
             // sort() in printLargest()
@@ -15,14 +15,14 @@ public class LargestPossibleNumber {
             public int compare(String X, String Y) {
 
                 // first append Y at the end of X
-                String XY=X + Y;
+                String XY = X + Y;
 
                 // then append X at the end of Y
-                String YX=Y + X;
+                String YX = Y + X;
 
                 // Now see which of the two formed numbers
                 // is greater
-                return XY.compareTo(YX) > 0 ? -1:1;
+                return XY.compareTo(YX) > 0 ? -1 : 1;
             }
         });
 
@@ -37,11 +37,9 @@ public class LargestPossibleNumber {
     }
 
 
-
     ///Solution 2
 
-    public  String largestNumber(List<Integer> arr)
-    {
+    public String largestNumber(List<Integer> arr) {
         // finding number of digits in maximum element
         // present in array
         int n =
@@ -49,18 +47,18 @@ public class LargestPossibleNumber {
 
         ArrayList<ExtendedNum> en =
                 new ArrayList<ExtendedNum>();
-        for (int i = 0 ; i < arr.size(); i++)
+        for (int i = 0; i < arr.size(); i++)
             en.add(new ExtendedNum(arr.get(i),
-                                   n));
+                    n));
 
         // sort based on modified value
         Collections.sort(en, (p1, p2) ->
-                (int)(p2.modifiedValue - p1.modifiedValue));
+                (int) (p2.modifiedValue - p1.modifiedValue));
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < en.size(); i++)
             sb.append(new StringBuilder
-                              (Long.toString(en.get(i).originalValue)));
+                    (Long.toString(en.get(i).originalValue)));
 
 
         // To remove any zeroes at head.
@@ -68,13 +66,12 @@ public class LargestPossibleNumber {
 
         return bi.toString();
     }
-    class ExtendedNum
-    {
+
+    class ExtendedNum {
         int originalValue;
         long modifiedValue;
 
-        public ExtendedNum(int originalValue, int n)
-        {
+        public ExtendedNum(int originalValue, int n) {
             this.originalValue = originalValue;
             String s = Integer.toString(originalValue);
             StringBuilder sb = new StringBuilder(s);
@@ -86,8 +83,7 @@ public class LargestPossibleNumber {
             modifiedValue = Long.parseLong(s);
         }
 
-        public String toString()
-        {
+        public String toString() {
             return "[" + modifiedValue +
                     ", " + originalValue + "]";
         }

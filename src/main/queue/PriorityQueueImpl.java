@@ -6,43 +6,45 @@ public class PriorityQueueImpl {
     int noItems;
 
     public PriorityQueueImpl() {
-        noItems =0;
+        noItems = 0;
     }
 
-    public void insert(int val){
+    public void insert(int val) {
         int i;
-        if(noItems ==0){
+        if (noItems == 0) {
             arr[0] = val;
             noItems++;
             return;
         }
 
-        for (i = noItems-1; i >=0 ; i--) {
-            if(val > arr[i]){
-                arr[i+1]= arr[i];
-            }else {
+        for (i = noItems - 1; i >= 0; i--) {
+            if (val > arr[i]) {
+                arr[i + 1] = arr[i];
+            } else {
                 break;
             }
         }
-        arr[i+1]= val;
+        arr[i + 1] = val;
         noItems++;
     }
 
-    public void printQueue(){
-        for (int i = 0; i <noItems ; i++) {
-            System.out.print(arr[i]+" ");
+    public void printQueue() {
+        for (int i = 0; i < noItems; i++) {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
 
-    public int remove(){
+    public int remove() {
         return arr[--noItems];
     }
-    public boolean isEmpty(){
-        return noItems==0;
+
+    public boolean isEmpty() {
+        return noItems == 0;
     }
-    public boolean isFull(){
-        return noItems==MAX;
+
+    public boolean isFull() {
+        return noItems == MAX;
     }
 
     public static void main(String[] args) {
@@ -60,7 +62,7 @@ public class PriorityQueueImpl {
 
         priorityQueue.printQueue();
 
-        System.out.println("Removed Elements :" +priorityQueue.remove());
+        System.out.println("Removed Elements :" + priorityQueue.remove());
 
         priorityQueue.printQueue();
 

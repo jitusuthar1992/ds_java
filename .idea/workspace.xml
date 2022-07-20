@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="15bb5e9d-2b9c-4ad3-b504-70f373e8d2a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="15bb5e9d-2b9c-4ad3-b504-70f373e8d2a1" name="Default Changelist" comment="vertical order traversal">
+      <change afterPath="$PROJECT_DIR$/src/main/array/CountSquares.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/FindRepeatingAndMissingElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/array/SearchInSortedRotatedArraySol2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/linkedlist/singly/ReverseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/linkedlist/singly/ReverseList.java" afterDir="false" />
+    </list>
+    <list id="4da07cb6-2b48-456f-8264-07d495b3081f" name=".class" comment="">
       <change beforePath="$PROJECT_DIR$/out/production/ds/array/KthDigit.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ds/array/MergeSortedArray.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ds/array/MoveZeroEnd.class" beforeDir="false" />
@@ -32,18 +41,12 @@
       <change beforePath="$PROJECT_DIR$/out/production/ds/stack/Palindrome.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ds/stack/ValidateExpression.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ds/string/PalindromeConvertable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CheckBeautifulString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/string/CheckBeautifulString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/CurrentConditionsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/CurrentConditionsDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/CurrentConditionsDisplay1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/CurrentConditionsDisplay1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/DisplayElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/DisplayElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/Observer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/WeatherData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/WeatherStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/WeatherStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/builtIn/CurrentConditionsDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/builtIn/CurrentConditionsDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/builtIn/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/builtIn/WeatherData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/observer/builtIn/WeatherStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/observer/builtIn/WeatherStation.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list id="46d69f59-3cff-432b-b8c2-53efb2fe16c1" name="new" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/designpattern/command/impl1/RemoteLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/designpattern/command/impl1/RemoteLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tree/IntervalTreeImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tree/IntervalTreeImplementation.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,9 +66,6 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="201" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="ds" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -80,6 +80,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -89,34 +100,29 @@
   </component>
   <component name="ProjectId" id="1RkNbSeULHI1ZIxg3A79fe5WSXM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="LongestSu&#9;PSI&#9;JAVA://dp.LongestCommonSubSequence&#10;Rain&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/array/RainWaterTrapping.java&#10;merge&#9;PSI&#9;JAVA://main.sorting.MergeSort&#10;Thread.class&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar!/java/lang/Thread.class&#10;Thread&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/java1/thread/pool/ThreadPoolExample.java&#10;Lru&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/lru/LRUCacheImpl.java&#10;LRU&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/lru/LRUCacheImpl.java&#10;Has&#9;PSI&#9;JAVA://main.java1.HashMapTest&#10;First&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/array/FirstNonRepeatingCharacter.java&#10;Tree&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/TreeMap.java&#10;HashMap&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/java1/HashMapTest.java&#10;inher&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/java1/inheritance/Inheritance.java&#10;Max&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/array/MaxSumArraySum.java&#10;Custom&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/custom/CustomArrayList.java&#10;stack&#9;PSI&#9;JAVA://main.stack.GetMinimiumUsingStack&#10;tree&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/tree&#10;DeadLoc&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/lib/sa-jdi.jar!/sun/jvm/hotspot/runtime/DeadlockDetector.class&#10;Custo&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/custom/CustomArrayList.java&#10;Binary&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/tree/BinaryTreeTraversal.java&#10;Topo&#9;PSI&#9;JAVA://main.graph.TopologicalSort&#10;Binar&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/tree/BinaryTreeTraversal.java&#10;Min&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/dp/MinumiumJumpToEnd.java&#10;Mer&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/sorting/MergeSort.java&#10;Qui&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/sorting/QuickSort.java&#10;hacker&#9;FILE&#9;file:///Users/jitendra.kumar01/jitu/ds/src/main/array/hackerrank&#10;WeatherSta&#9;PSI&#9;JAVA://design.observer.pattern.impl.CurrentConditionsDisplay.WeatherStation" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570127868239" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/jitu/git/ds_java&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="main.thereadLocal" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.PrintReverseWord">
-    <configuration name="IncrementOperator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java1.IncrementOperator" />
+  <component name="RunManager" selected="Application.FindRepeatingAndMissingElement">
+    <configuration name="CountSquares" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.array.CountSquares" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java1.*" />
+          <option name="PATTERN" value="main.array.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MethodLocalVariableDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java1.MethodLocalVariableDemo" />
+    <configuration name="FindRepeatingAndMissingElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.array.FindRepeatingAndMissingElement" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java1.*" />
+          <option name="PATTERN" value="main.array.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintReverseWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.string.PrintReverseWord" />
+    <configuration name="MinStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.stack.MinStack" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.string.*" />
+          <option name="PATTERN" value="main.stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,12 +156,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java1.ReflectionDemo" />
+    <configuration name="MinStackAuxiliarySpace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.stack.MinStackAuxiliarySpace" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java1.*" />
+          <option name="PATTERN" value="main.stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,12 +169,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SerializeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java1.SerializeDemo" />
+    <configuration name="SearchInSortedRotatedArraySol2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.array.SearchInSortedRotatedArraySol2" />
       <module name="ds" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java1.*" />
+          <option name="PATTERN" value="main.array.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,33 +183,74 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.IncrementOperator" />
-      <item itemvalue="Application.MethodLocalVariableDemo" />
-      <item itemvalue="Application.ReflectionDemo" />
-      <item itemvalue="Application.SerializeDemo" />
-      <item itemvalue="Application.PrintReverseWord" />
+      <item itemvalue="Application.CountSquares" />
+      <item itemvalue="Application.FindRepeatingAndMissingElement" />
+      <item itemvalue="Application.SearchInSortedRotatedArraySol2" />
+      <item itemvalue="Application.MinStack" />
+      <item itemvalue="Application.MinStackAuxiliarySpace" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PrintReverseWord" />
-        <item itemvalue="Application.SerializeDemo" />
-        <item itemvalue="Application.ReflectionDemo" />
-        <item itemvalue="Application.MethodLocalVariableDemo" />
-        <item itemvalue="Application.IncrementOperator" />
+        <item itemvalue="Application.FindRepeatingAndMissingElement" />
+        <item itemvalue="Application.CountSquares" />
+        <item itemvalue="Application.SearchInSortedRotatedArraySol2" />
+        <item itemvalue="Application.MinStackAuxiliarySpace" />
+        <item itemvalue="Application.MinStack" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="15bb5e9d-2b9c-4ad3-b504-70f373e8d2a1" name="Default Changelist" comment="" />
-      <changelist id="" name="test" comment="" />
+      <changelist id="46d69f59-3cff-432b-b8c2-53efb2fe16c1" name="new" comment="" />
+      <changelist id="4da07cb6-2b48-456f-8264-07d495b3081f" name=".class" comment="" />
       <created>1538940056090</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538940056090</updated>
+      <workItem from="1623558260393" duration="7680000" />
+      <workItem from="1623652930815" duration="8968000" />
+      <workItem from="1623754755566" duration="630000" />
+      <workItem from="1623823942630" duration="1242000" />
+      <workItem from="1623848784268" duration="3473000" />
+      <workItem from="1623906353428" duration="6545000" />
+      <workItem from="1624024493625" duration="2037000" />
+      <workItem from="1624102703380" duration="5890000" />
+      <workItem from="1624261583130" duration="739000" />
+      <workItem from="1624282000088" duration="2317000" />
+      <workItem from="1624346563662" duration="23000" />
+      <workItem from="1624365702601" duration="819000" />
+      <workItem from="1624456740755" duration="806000" />
+      <workItem from="1624544481545" duration="606000" />
+      <workItem from="1624590720988" duration="2199000" />
+      <workItem from="1624618000627" duration="1833000" />
+      <workItem from="1624773951142" duration="4321000" />
+      <workItem from="1624876503968" duration="186000" />
+      <workItem from="1625287477717" duration="7924000" />
+      <workItem from="1625376548861" duration="1252000" />
+      <workItem from="1625479028181" duration="43000" />
+      <workItem from="1625892193965" duration="10333000" />
+      <workItem from="1625980095349" duration="9517000" />
+      <workItem from="1626084695727" duration="125000" />
+      <workItem from="1627565099287" duration="774000" />
+      <workItem from="1630839047650" duration="4317000" />
+      <workItem from="1630851598364" duration="220000" />
+      <workItem from="1630851880383" duration="30000" />
+      <workItem from="1630908206622" duration="16000" />
+      <workItem from="1631603869207" duration="779000" />
+      <workItem from="1656871759090" duration="1472000" />
+      <workItem from="1656909448528" duration="7000" />
+      <workItem from="1656909461838" duration="3889000" />
+      <workItem from="1657009088154" duration="503000" />
+      <workItem from="1657093674879" duration="1942000" />
+      <workItem from="1657119595557" duration="2196000" />
+      <workItem from="1657129221398" duration="1817000" />
+      <workItem from="1657175805302" duration="716000" />
+      <workItem from="1657177060149" duration="64000" />
     </task>
     <task id="LOCAL-00001" summary="queue using fixed size array">
       <created>1542739737348</created>
@@ -366,8 +413,81 @@
       <option name="project" value="LOCAL" />
       <updated>1580550562329</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="loose and tight coupling">
+      <created>1623572179270</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1623572179270</updated>
+    </task>
+    <task id="LOCAL-00025" summary="optimized bubble sort">
+      <created>1623592159395</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1623592159396</updated>
+    </task>
+    <task id="LOCAL-00026" summary="count 1's">
+      <created>1623682386422</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1623682386422</updated>
+    </task>
+    <task id="LOCAL-00027" summary="vertical order traversal">
+      <created>1626000897930</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1626000897930</updated>
+    </task>
+    <task id="LOCAL-00028" summary="merge intervals and next greatest elements">
+      <created>1631960631224</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1631960631224</updated>
+    </task>
+    <task id="LOCAL-00029" summary="vertical order traversal">
+      <created>1633964752137</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1633964752137</updated>
+    </task>
+    <task id="LOCAL-00030" summary="vertical order traversal">
+      <created>1633965063445</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1633965063445</updated>
+    </task>
+    <task id="LOCAL-00031" summary="LoadBalancer Implementation">
+      <created>1656784870802</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1656784870803</updated>
+    </task>
+    <task id="LOCAL-00032" summary="count min sketch implementation">
+      <created>1657130157166</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1657130157166</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Stack that supports getMin() in O(1) time and O(1) extra space">
+      <created>1658328443367</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1658328443367</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -386,8 +506,22 @@
                   </entry>
                 </map>
               </option>
-              <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -410,7 +544,15 @@
     <MESSAGE value="ds" />
     <MESSAGE value="music player design" />
     <MESSAGE value="dp problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="dp problems" />
+    <MESSAGE value="loose and tight coupling" />
+    <MESSAGE value="optimized bubble sort" />
+    <MESSAGE value="count 1's" />
+    <MESSAGE value="merge intervals and next greatest elements" />
+    <MESSAGE value="vertical order traversal" />
+    <MESSAGE value="LoadBalancer Implementation" />
+    <MESSAGE value="count min sketch implementation" />
+    <MESSAGE value="Stack that supports getMin() in O(1) time and O(1) extra space" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stack that supports getMin() in O(1) time and O(1) extra space" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1161,46 +1303,6 @@
           <option name="timeStamp" value="264" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="265" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="266" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="267" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
-          <line>110</line>
-          <option name="timeStamp" value="268" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="269" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="270" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="271" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/tree/TrieImplementation.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="272" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java1/multithreading/ThreeThreadsOrderedLockLess.java</url>
           <line>44</line>
           <option name="timeStamp" value="273" />
@@ -1232,77 +1334,77 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>169</line>
+          <line>157</line>
           <option name="timeStamp" value="283" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>139</line>
+          <line>131</line>
           <option name="timeStamp" value="285" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>134</line>
+          <line>126</line>
           <option name="timeStamp" value="287" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>135</line>
+          <line>127</line>
           <option name="timeStamp" value="288" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>129</line>
+          <line>121</line>
           <option name="timeStamp" value="289" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>198</line>
+          <line>186</line>
           <option name="timeStamp" value="291" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>199</line>
+          <line>187</line>
           <option name="timeStamp" value="292" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>200</line>
+          <line>188</line>
           <option name="timeStamp" value="293" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>201</line>
+          <line>189</line>
           <option name="timeStamp" value="294" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>204</line>
+          <line>192</line>
           <option name="timeStamp" value="295" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>205</line>
+          <line>193</line>
           <option name="timeStamp" value="296" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/array/ArrayOverLap.java</url>
-          <line>164</line>
+          <line>152</line>
           <option name="timeStamp" value="299" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java</url>
-          <line>37</line>
+          <line>40</line>
           <option name="timeStamp" value="302" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java</url>
-          <line>38</line>
+          <line>41</line>
           <option name="timeStamp" value="303" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/CheckPalindromeLinkedList.java</url>
-          <line>31</line>
+          <line>34</line>
           <option name="timeStamp" value="304" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1340,10 +1442,65 @@
           <line>20</line>
           <option name="timeStamp" value="313" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/stack/ReverseStackUsingRecursion.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="316" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/MergeTwoSortedArrayInSameArray.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="320" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/MergeTwoSortedArrayInSameArray.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="321" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/MaxSellBuyStockWithKTx.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="322" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/RowWithMaxOne.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="323" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/DateValidation.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="325" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/SearchInSortedRotatedArraySol2.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="326" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/SearchInSortedRotatedArraySol2.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/SearchInSortedRotatedArraySol2.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="328" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/SearchInSortedRotatedArraySol2.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="329" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/array/SearchInSortedRotatedArraySol2.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="330" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/linkedlist/singly/DetectAndRemoveLoop.java</url>
           <line>20</line>
-          <properties class="main.linkedlist.singly.DetectAndRemoveLoop" method="removeLoop">
+          <properties class="main.linkedlist.singly.DetectAndRemoveLoop">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="12" />
@@ -1371,14 +1528,6 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="101" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/lru/LRUCacheImpl.java</url>
-          <line>62</line>
-          <properties class="main.lru.LRUCacheImpl" method="main">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java1/HashMapTest.java</url>
@@ -1468,6 +1617,22 @@
           </properties>
           <option name="timeStamp" value="315" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/tree/BinaryTreeTraversal.java</url>
+          <line>187</line>
+          <properties class="main.tree.BinaryTreeTraversal" method="printRightView">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="318" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/tree/BinaryTreeTraversal.java</url>
+          <line>143</line>
+          <properties class="main.tree.BinaryTreeTraversal" method="leftView">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="319" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/designpattern/decorator/beverageproblem/Mocha.java</url>
           <line>7</line>
@@ -1480,103 +1645,15 @@
           <properties field="a" class="main.java1.HashMapTest" />
           <option name="timeStamp" value="198" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/lru/LRUCacheImpl.java</url>
-          <line>13</line>
-          <properties field="value" class="main.lru.LRUCacheImpl.Node" />
-          <option name="timeStamp" value="277" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>ds</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

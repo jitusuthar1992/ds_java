@@ -2,22 +2,18 @@ package main.linkedlist.singly;
 
 public class AddTwoLinkedListFromRight {
 
-    class node
-    {
+    class node {
         int val;
         node next;
 
-        public node(int val)
-        {
+        public node(int val) {
             this.val = val;
         }
     }
 
     // Function to print linked list
-    void printlist(node head)
-    {
-        while (head != null)
-        {
+    void printlist(node head) {
+        while (head != null) {
             System.out.print(head.val + " ");
             head = head.next;
         }
@@ -27,21 +23,15 @@ public class AddTwoLinkedListFromRight {
     int carry;
 
     /* A utility function to push a value to linked list */
-    void push(int val, int list)
-    {
+    void push(int val, int list) {
         node newnode = new node(val);
-        if (list == 1)
-        {
+        if (list == 1) {
             newnode.next = head1;
             head1 = newnode;
-        }
-        else if (list == 2)
-        {
+        } else if (list == 2) {
             newnode.next = head2;
             head2 = newnode;
-        }
-        else
-        {
+        } else {
             newnode.next = result;
             result = newnode;
         }
@@ -52,8 +42,7 @@ public class AddTwoLinkedListFromRight {
     // head1 and head2 and returns head of the resultant
     // linked list. Carry is propagated while returning
     // from the recursion
-    void addsamesize(node n, node m)
-    {
+    void addsamesize(node n, node m) {
         // Since the function assumes linked lists are of
         // same size, check any of the two head pointers
         if (n == null)
@@ -79,11 +68,9 @@ public class AddTwoLinkedListFromRight {
     // Once the right sublist is added, the carry must be
     // added to the left side of larger list to get the
     // final result.
-    void propogatecarry(node head1)
-    {
+    void propogatecarry(node head1) {
         // If diff. number of nodes are not traversed, add carry
-        if (head1 != cur)
-        {
+        if (head1 != cur) {
             propogatecarry(head1.next);
             int sum = carry + head1.val;
             carry = sum / 10;
@@ -94,11 +81,9 @@ public class AddTwoLinkedListFromRight {
         }
     }
 
-    int getsize(node head)
-    {
+    int getsize(node head) {
         int count = 0;
-        while (head != null)
-        {
+        while (head != null) {
             count++;
             head = head.next;
         }
@@ -108,18 +93,15 @@ public class AddTwoLinkedListFromRight {
     // The main function that adds two linked lists
     // represented by head1 and head2. The sum of two
     // lists is stored in a list referred by result
-    void addlists()
-    {
+    void addlists() {
         // first list is empty
-        if (head1 == null)
-        {
+        if (head1 == null) {
             result = head2;
             return;
         }
 
         // first list is empty
-        if (head2 == null)
-        {
+        if (head2 == null) {
             result = head1;
             return;
         }
@@ -128,16 +110,12 @@ public class AddTwoLinkedListFromRight {
         int size2 = getsize(head2);
 
         // Add same size lists
-        if (size1 == size2)
-        {
+        if (size1 == size2) {
             addsamesize(head1, head2);
-        }
-        else
-        {
+        } else {
             // First list should always be larger than second list.
             // If not, swap pointers
-            if (size1 < size2)
-            {
+            if (size1 < size2) {
                 node temp = head1;
                 head1 = head2;
                 head2 = temp;
@@ -146,8 +124,7 @@ public class AddTwoLinkedListFromRight {
 
             // move diff. number of nodes in first list
             node temp = head1;
-            while (diff-- >= 0)
-            {
+            while (diff-- >= 0) {
                 cur = temp;
                 temp = temp.next;
             }
@@ -166,15 +143,14 @@ public class AddTwoLinkedListFromRight {
     }
 
     // Driver program to test above functions
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         AddTwoLinkedListFromRight list = new AddTwoLinkedListFromRight();
         list.head1 = null;
         list.head2 = null;
         list.result = null;
         list.carry = 0;
-        int arr1[] = { 9, 9, 9 };
-        int arr2[] = { 1, 8 };
+        int arr1[] = {9, 9, 9};
+        int arr2[] = {1, 8};
 
         // Create first list as 9->9->9
         for (int i = arr1.length - 1; i >= 0; --i)

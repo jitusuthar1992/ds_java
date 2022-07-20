@@ -5,39 +5,39 @@ package main.string;
  * 24/10/19
  */
 public class SmallestWindowContainsAllCharsOfOther {
-    static String findSubString1(String str1 , String pat){
+    static String findSubString1(String str1, String pat) {
         int len1 = str1.length();
         int len2 = pat.length();
 
-        if(len1 < len2)
+        if (len1 < len2)
             return "";
 
-        int hashPat[]= new int[256];
-        int hashStr[]= new int[256];
+        int hashPat[] = new int[256];
+        int hashStr[] = new int[256];
 
-        for (int i = 0; i <len2 ; i++) {
+        for (int i = 0; i < len2; i++) {
             hashPat[pat.charAt(i)]++;
         }
 
-        int start = 0 , startIndex =-1, minLength = Integer.MAX_VALUE;
-        int count =0 ;
+        int start = 0, startIndex = -1, minLength = Integer.MAX_VALUE;
+        int count = 0;
 
-        for (int i = 0; i <len1 ; i++) {
+        for (int i = 0; i < len1; i++) {
             hashStr[str1.charAt(i)]++;
 
             if (hashPat[str1.charAt(i)] != 0 &&
-                    hashStr[str1.charAt(i)] <= hashPat[str1.charAt(i)] )
+                    hashStr[str1.charAt(i)] <= hashPat[str1.charAt(i)])
                 count++;
 
-            if(count == len2){
-                while (hashPat[str1.charAt(start)]  < hashStr[str1.charAt(start)] || hashPat[str1.charAt(start)] == 0){
-                    if(hashPat[str1.charAt(start)]  < hashStr[str1.charAt(start)])
+            if (count == len2) {
+                while (hashPat[str1.charAt(start)] < hashStr[str1.charAt(start)] || hashPat[str1.charAt(start)] == 0) {
+                    if (hashPat[str1.charAt(start)] < hashStr[str1.charAt(start)])
                         hashStr[str1.charAt(start)]--;
                     start++;
                 }
-                int lenWindow = i -start+1;
+                int lenWindow = i - start + 1;
 
-                if(lenWindow < minLength){
+                if (lenWindow < minLength) {
                     minLength = lenWindow;
                     startIndex = start;
                 }
@@ -45,8 +45,7 @@ public class SmallestWindowContainsAllCharsOfOther {
 
         }
 
-        if (startIndex == -1)
-        {
+        if (startIndex == -1) {
             System.out.println("No such window exists");
             return "";
         }
@@ -57,24 +56,21 @@ public class SmallestWindowContainsAllCharsOfOther {
 
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         String str = "this is a test string";
         String pat = "tist";
 
         System.out.print("Smallest window is :\n " +
-                                 findSubString1(str, pat));
+                findSubString1(str, pat));
     }
 
-    static String findSubString(String str, String pat)
-    {
+    static String findSubString(String str, String pat) {
         int len1 = str.length();
         int len2 = pat.length();
 
         // check if string's length is less than pattern's
         // length. If yes then no such window can exist
-        if (len1 < len2)
-        {
+        if (len1 < len2) {
             System.out.println("No such window exists");
             return "";
         }
@@ -90,28 +86,25 @@ public class SmallestWindowContainsAllCharsOfOther {
 
         // start traversing the string
         int count = 0; // count of characters
-        for (int j = 0; j < len1 ; j++)
-        {
+        for (int j = 0; j < len1; j++) {
             // count occurrence of characters of string
             hash_str[str.charAt(j)]++;
 
             // If string's char matches with pattern's char
             // then increment count
             if (hash_pat[str.charAt(j)] != 0 &&
-                    hash_str[str.charAt(j)] <= hash_pat[str.charAt(j)] )
+                    hash_str[str.charAt(j)] <= hash_pat[str.charAt(j)])
                 count++;
 
             // if all the characters are matched
-            if (count == len2)
-            {
+            if (count == len2) {
                 // Try to minimize the window i.e., check if
                 // any character is occurring more no. of times
                 // than its occurrence in pattern, if yes
                 // then remove it from starting and also remove
                 // the useless characters.
-                while ( hash_str[str.charAt(start)] > hash_pat[str.charAt(start)]
-                        || hash_pat[str.charAt(start)] == 0)
-                {
+                while (hash_str[str.charAt(start)] > hash_pat[str.charAt(start)]
+                        || hash_pat[str.charAt(start)] == 0) {
 
                     if (hash_str[str.charAt(start)] > hash_pat[str.charAt(start)])
                         hash_str[str.charAt(start)]--;
@@ -120,8 +113,7 @@ public class SmallestWindowContainsAllCharsOfOther {
 
                 // update window size
                 int len_window = j - start + 1;
-                if (min_len > len_window)
-                {
+                if (min_len > len_window) {
                     min_len = len_window;
                     start_index = start;
                 }
@@ -129,8 +121,7 @@ public class SmallestWindowContainsAllCharsOfOther {
         }
 
         // If no window found
-        if (start_index == -1)
-        {
+        if (start_index == -1) {
             System.out.println("No such window exists");
             return "";
         }

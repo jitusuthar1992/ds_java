@@ -10,7 +10,7 @@ public class TightCoupling {
 
 class Subject {
 
-    public void startReading(){
+    public void startReading() {
         Topic topic = new Topic();
         System.out.println("Start Reading");
         topic.underStand();
@@ -18,7 +18,7 @@ class Subject {
 }
 
 class Topic {
-    public void underStand(){
+    public void underStand() {
         System.out.println("Understanding Topic");
     }
 }

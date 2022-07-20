@@ -7,14 +7,15 @@ import java.util.concurrent.CyclicBarrier;
  * @author jitendra.kumar01
  * 18/12/19
  */
-public class CyclicBarrierDemo extends Thread{
+public class CyclicBarrierDemo extends Thread {
 
-    public static CyclicBarrier barrier =new CyclicBarrier(3);
+    public static CyclicBarrier barrier = new CyclicBarrier(3);
+
     @Override
     public void run() {
 
-        System.out.println("Number of parties required to trip the barrier = "+
-                                   barrier.getParties());
+        System.out.println("Number of parties required to trip the barrier = " +
+                barrier.getParties());
         System.out.println("Sum of product and sum = " + (Computation2.product +
                 Computation1.sum));
 
@@ -26,7 +27,7 @@ public class CyclicBarrierDemo extends Thread{
 
         try {
             barrier.await();
-        } catch (InterruptedException  | BrokenBarrierException e) {
+        } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
         }
 
@@ -47,37 +48,34 @@ public class CyclicBarrierDemo extends Thread{
     }
 }
 
-class Computation1 extends Thread{
+class Computation1 extends Thread {
 
     public static int sum = 0;
+
     @Override
     public void run() {
 
         System.out.println("Is the barrier broken? - " + CyclicBarrierDemo.barrier.isBroken());
-        sum = 10+20;
+        sum = 10 + 20;
 
         try {
             CyclicBarrierDemo.barrier.await();
-            System.out.println("Number of parties waiting at the barrier "+
-                                       "at this point = " + CyclicBarrierDemo.barrier.getNumberWaiting());
-        }catch (InterruptedException  | BrokenBarrierException e) {
+            System.out.println("Number of parties waiting at the barrier " +
+                    "at this point = " + CyclicBarrierDemo.barrier.getNumberWaiting());
+        } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
         }
     }
 }
 
-class Computation2 extends Thread
-{
+class Computation2 extends Thread {
     public static int product = 0;
-    public void run()
-    {
+
+    public void run() {
         product = 2 * 3;
-        try
-        {
+        try {
             CyclicBarrierDemo.barrier.await();
-        }
-        catch (InterruptedException | BrokenBarrierException e)
-        {
+        } catch (InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
         }
     }

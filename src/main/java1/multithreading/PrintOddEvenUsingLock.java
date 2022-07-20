@@ -34,10 +34,10 @@ class OddEvenImpl {
 
     private final Condition evenCondition = lock.newCondition();
 
-    private int counter =1;
+    private int counter = 1;
 
     public void printOdd() throws InterruptedException {
-        while (counter <=10) {
+        while (counter <= 10) {
             try {
                 lock.lock();
                 System.out.println("ODD :" + counter++);
@@ -45,28 +45,28 @@ class OddEvenImpl {
                 if (counter < 10) {
                     oddCondition.await();
                 }
-            }finally {
+            } finally {
                 lock.unlock();
             }
         }
     }
 
     public void printEven() throws InterruptedException {
-        while(counter <= 10) {
+        while (counter <= 10) {
             try {
                 // Getting lock for EVEN block
                 lock.lock();
-                System.out.println("EVEN : "+ counter++);
+                System.out.println("EVEN : " + counter++);
                 // signaling to ODD condition
                 oddCondition.signal();
                 /*
                  * Just stopping await once reach counter to 10.
                  * Not to even thread to await indefinitely
                  */
-                if(counter < 10) {
+                if (counter < 10) {
                     evenCondition.await();
                 }
-            }finally {
+            } finally {
                 lock.unlock();
             }
         }
@@ -76,9 +76,11 @@ class OddEvenImpl {
 
 class Odd extends Thread {
     OddEvenImpl pc;
+
     public Odd(OddEvenImpl pc) {
         this.pc = pc;
     }
+
     @Override
     public void run() {
         try {
@@ -91,9 +93,11 @@ class Odd extends Thread {
 
 class Even extends Thread {
     OddEvenImpl pc;
+
     public Even(OddEvenImpl pc) {
         this.pc = pc;
     }
+
     @Override
     public void run() {
         try {

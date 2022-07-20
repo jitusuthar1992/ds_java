@@ -19,13 +19,13 @@ public class PanCackeHouseMenu implements Menu {
         menuItems = new ArrayList<>();
     }
 
-    public Iterator createIterator(){
+    public Iterator createIterator() {
         return menuItems.iterator();
     }
 
     @Override
-    public void addItem(String name , String description , boolean veg , double price ){
-        MenuItem menuItem = new MenuItem(name,description,veg,price);
+    public void addItem(String name, String description, boolean veg, double price) {
+        MenuItem menuItem = new MenuItem(name, description, veg, price);
         menuItems.add(menuItem);
     }
 

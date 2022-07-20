@@ -1,6 +1,6 @@
 package main.designpattern.observer.builtIn;
 
-public  class WeatherStation {
+public class WeatherStation {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
         WeatherData weatherData1 = new WeatherData();

@@ -5,19 +5,20 @@ import java.util.Stack;
 public class MinStackAuxiliarySpace {
     private Stack<Integer> stack = new Stack<>();
     private Stack<Integer> auxStack = new Stack<>();
-    public void push(int val){
-        if(stack.isEmpty()){
+
+    public void push(int val) {
+        if (stack.isEmpty()) {
             auxStack.push(val);
-        }else {
+        } else {
             int top = auxStack.peek();
-            if(val < top){
+            if (val < top) {
                 auxStack.push(val);
             }
         }
         stack.push(val);
     }
 
-    public int pop(){
+    public int pop() {
         if (stack.empty()) {
             System.out.println("Stack underflow!!");
             System.exit(-1);
@@ -25,16 +26,17 @@ public class MinStackAuxiliarySpace {
         int top = auxStack.peek();
         int popElm = stack.pop();
 
-        if(top == popElm){
+        if (top == popElm) {
             auxStack.pop();
         }
         return popElm;
     }
+
     public int getMin() {
         return auxStack.peek();
     }
-    public static void main (String[] args)
-    {
+
+    public static void main(String[] args) {
         MinStack s = new MinStack();
 
         s.push(6);

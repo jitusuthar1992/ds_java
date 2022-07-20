@@ -13,13 +13,13 @@ class MaxPossibleEvents {
      *  2. INTEGER_ARRAY duration
      */
 
-    public static int maxEvents(int[] arrival, int[]  duration) {
+    public static int maxEvents(int[] arrival, int[] duration) {
 
         int n = arrival.length;
-        int[]  departure = new int[n];
+        int[] departure = new int[n];
 
-        for (int i = 0; i <n ; i++) {
-            departure[i] = arrival[i]+duration[i];
+        for (int i = 0; i < n; i++) {
+            departure[i] = arrival[i] + duration[i];
         }
 
         Arrays.sort(arrival);
@@ -33,16 +33,14 @@ class MaxPossibleEvents {
         while (i < n && j < n) {
             // If next event in sorted order is arrival,
             // increment count of platforms needed
-            if (arrival[i] <= departure[j] ){
+            if (arrival[i] <= departure[j]) {
                 events++;
                 i++;
 
                 // Update result if needed
                 if (events > maxEvents)
                     maxEvents = events;
-            }
-
-            else {
+            } else {
                 events--;
                 j++;
             }
@@ -51,10 +49,10 @@ class MaxPossibleEvents {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 3, 5};
-        int dur[] = { 2,6,10 };
+        int arr[] = {1, 3, 5};
+        int dur[] = {2, 6, 10};
 
-        System.out.println(maxEvents(arr,dur));
+        System.out.println(maxEvents(arr, dur));
 
     }
 }

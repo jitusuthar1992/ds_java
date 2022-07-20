@@ -2,13 +2,11 @@ package main.array;
 
 public class SegregateEvenAndOdd {
     static void arrayEvenAndOdd(
-            int arr[], int n)
-    {
+            int arr[], int n) {
 
         int i = -1, j = 0;
         while (j != n) {
-            if (arr[j] % 2 == 0)
-            {
+            if (arr[j] % 2 == 0) {
                 i++;
 
                 // Swapping even and
@@ -26,10 +24,9 @@ public class SegregateEvenAndOdd {
     }
 
     // Driver code
-    public static void main(String args[])
-    {
-        int arr[] = { 1, 3, 2, 4, 7,
-                6, 9, 10 };
+    public static void main(String args[]) {
+        int arr[] = {1, 3, 2, 4, 7,
+                6, 9, 10};
         int n = arr.length;
         arrayEvenAndOdd(arr, n);
     }

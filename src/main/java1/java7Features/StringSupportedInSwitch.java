@@ -5,19 +5,16 @@ package main.java1.java7Features;
  * 01/01/20
  */
 public class StringSupportedInSwitch {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         System.out.println(getExpendedMessage("one"));
         System.out.println(getExpendedMessage("three"));
         System.out.println(getExpendedMessage("five"));
     }
 
-    static String getExpendedMessage(final String token)
-    {
+    static String getExpendedMessage(final String token) {
         String value = null;
 
-        switch (token)
-        {
+        switch (token) {
             case ("one"):
                 value = "Token one identified";
                 break;

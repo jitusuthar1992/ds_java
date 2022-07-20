@@ -5,20 +5,20 @@ package main.java1.multithreading;
  * 24/12/19
  */
 public class ObjectLevelLock {
-    public synchronized void demoMethod(){
+    public synchronized void demoMethod() {
 
     }
 
-    public  void demoMethod1(){
-        synchronized (this){
+    public void demoMethod1() {
+        synchronized (this) {
 
         }
     }
 
     private final Object lock = new Object();
-    public void demoMethod3(){
-        synchronized (lock)
-        {
+
+    public void demoMethod3() {
+        synchronized (lock) {
             //other thread safe code
         }
     }

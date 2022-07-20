@@ -1,20 +1,20 @@
 package main.linkedlist.singly;
 
 public class SwapTwoNode {
-    public static ListNode swap(ListNode head , int a , int b ){
-        if(null== head || null== head.next)
+    public static ListNode swap(ListNode head, int a, int b) {
+        if (null == head || null == head.next)
             return null;
 
-        ListNode prev1 , prev2, t1,t2, node;
+        ListNode prev1, prev2, t1, t2, node;
 
         node = head;
 
-        prev1 = prev2=t1=t2=null;
+        prev1 = prev2 = t1 = t2 = null;
 
-        while (null != node){
+        while (null != node) {
 
-            if(node.data==a){
-                t1= node;
+            if (node.data == a) {
+                t1 = node;
                 break;
             }
 
@@ -23,10 +23,10 @@ public class SwapTwoNode {
         }
 
 
-        while (null != node){
+        while (null != node) {
 
-            if(node.data==b){
-                t2= node;
+            if (node.data == b) {
+                t2 = node;
                 break;
             }
 
@@ -35,18 +35,18 @@ public class SwapTwoNode {
         }
 
 
-        if(null == t1 || null == t2)
+        if (null == t1 || null == t2)
             return head;
 
-        if(prev1 != null){
+        if (prev1 != null) {
             prev1.next = t2;
-        }else{
+        } else {
             head = t2;
         }
 
-        if(prev2 != null){
+        if (prev2 != null) {
             prev2.next = t1;
-        }else{
+        } else {
             head = t1;
         }
 
@@ -66,6 +66,6 @@ public class SwapTwoNode {
         list.head.getNext().setNext(new ListNode(8));
         list.head.getNext().getNext().setNext(new ListNode(39));
         list.head.getNext().getNext().getNext().setNext(new ListNode(5));
-        list.printList(swap(list.head,99,39));
+        list.printList(swap(list.head, 99, 39));
     }
 }

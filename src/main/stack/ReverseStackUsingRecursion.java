@@ -3,10 +3,10 @@ package main.stack;
 import java.util.Stack;
 
 public class ReverseStackUsingRecursion {
-    private  Stack<Integer> stack = new Stack<>();
+    private Stack<Integer> stack = new Stack<>();
 
-    private void reverse(){
-        if(stack.size() >0){
+    private void reverse() {
+        if (stack.size() > 0) {
             Integer x = stack.peek();
             stack.pop();
             reverse();
@@ -15,10 +15,10 @@ public class ReverseStackUsingRecursion {
         }
     }
 
-    private  void insertAtBottom(Integer x) {
-        if(stack.isEmpty()){
+    private void insertAtBottom(Integer x) {
+        if (stack.isEmpty()) {
             stack.push(x);
-        }else{
+        } else {
             Integer a = stack.peek();
             stack.pop();
             insertAtBottom(x);
@@ -35,12 +35,12 @@ public class ReverseStackUsingRecursion {
         obj.stack.push(2);
         obj.stack.push(3);
         obj.stack.push(4);
-        for ( Integer a: obj.stack) {
+        for (Integer a : obj.stack) {
             System.out.println(a);
         }
         obj.reverse();
 
-        for ( Integer a: obj.stack) {
+        for (Integer a : obj.stack) {
             System.out.println(a);
         }
     }

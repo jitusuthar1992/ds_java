@@ -7,19 +7,19 @@ import java.util.TreeSet;
 
 public class Test {
 
-    static  int a =3;
-    static int b ;
+    static int a = 3;
+    static int b;
 
-    static void method(int x){
-        System.out.println("x = "+x);
-        System.out.println("a = "+a);
-        System.out.println("b = "+b);
+    static void method(int x) {
+        System.out.println("x = " + x);
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
 
     }
 
     static {
-        System.out.println("a ="+a);
-        b=a*4;
+        System.out.println("a =" + a);
+        b = a * 4;
     }
 
     /*public static void main(String[] args) {
@@ -27,11 +27,11 @@ public class Test {
     }*/
 
 
-
-    void display(Object o){
+    void display(Object o) {
         System.out.println("Object");
     }
-    void display(String s){
+
+    void display(String s) {
         System.out.println("String");
     }
 

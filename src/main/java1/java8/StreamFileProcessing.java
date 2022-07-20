@@ -12,15 +12,15 @@ public class StreamFileProcessing {
     public static void main(String[] args) throws IOException {
         Path path = Paths.get("test2.txt");
 
-        Map<Object, Integer> wordCountMap =  Files.readAllLines(path).stream().map(line->line.split("|"))
+        Map<Object, Integer> wordCountMap = Files.readAllLines(path).stream().map(line -> line.split("|"))
                 .flatMap(Arrays::stream).collect(Collectors.toMap(
-                        k->k,
-                        v->1,
+                        k -> k,
+                        v -> 1,
                         Integer::sum
                 ));
 
-        for (Map.Entry<Object,Integer> entry : wordCountMap.entrySet()){
-            System.out.println(entry.getKey()+ " count :"+entry.getValue());
+        for (Map.Entry<Object, Integer> entry : wordCountMap.entrySet()) {
+            System.out.println(entry.getKey() + " count :" + entry.getValue());
         }
     }
 }

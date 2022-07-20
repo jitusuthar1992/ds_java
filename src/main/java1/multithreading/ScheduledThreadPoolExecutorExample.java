@@ -31,12 +31,12 @@ public class ScheduledThreadPoolExecutorExample {
 
         //executorService.scheduleAtFixedRate(task1, 5,5, TimeUnit.SECONDS);
 
-        executorService.scheduleWithFixedDelay(task1, 5,5, TimeUnit.SECONDS);
+        executorService.scheduleWithFixedDelay(task1, 5, 5, TimeUnit.SECONDS);
 
     }
 }
-class Task implements Runnable
-{
+
+class Task implements Runnable {
     private String name;
 
     public Task(String name) {
@@ -48,14 +48,12 @@ class Task implements Runnable
     }
 
     @Override
-    public void run()
-    {
+    public void run() {
         try {
             Thread.sleep(5000);
 
             System.out.println("Doing a task during : " + name + " - Time - " + new Date());
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

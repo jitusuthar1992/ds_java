@@ -2,7 +2,7 @@ package main.designpattern.decorator.beverageproblem;
 
 public class Espresso extends Beverage {
     public Espresso() {
-        description="Espresso Coffee";
+        description = "Espresso Coffee";
     }
 
     @Override

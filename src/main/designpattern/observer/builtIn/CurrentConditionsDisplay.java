@@ -5,7 +5,7 @@ import main.designpattern.observer.DisplayElement;
 import java.util.Observable;
 import java.util.Observer;
 
-public class CurrentConditionsDisplay implements Observer,DisplayElement {
+public class CurrentConditionsDisplay implements Observer, DisplayElement {
     Observable observable;
     private float temp;
     private float humidity;
@@ -17,12 +17,12 @@ public class CurrentConditionsDisplay implements Observer,DisplayElement {
 
     @Override
     public void display() {
-        System.out.println("Current Conditions : "+ temp + "F Degrees and "+ humidity + " % humidity");
+        System.out.println("Current Conditions : " + temp + "F Degrees and " + humidity + " % humidity");
     }
 
     @Override
     public void update(Observable o, Object arg) {
-        if(o instanceof WeatherData){
+        if (o instanceof WeatherData) {
             this.temp = ((WeatherData) o).getTemp();
             this.humidity = ((WeatherData) o).getHumidity();
             display();

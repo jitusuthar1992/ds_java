@@ -2,7 +2,7 @@ package main.airteltest;
 
 import java.util.List;
 
-public class Rectangle  extends Polygon{
+public class Rectangle extends Polygon {
 
     private Double side1, side2;
 
@@ -19,6 +19,6 @@ public class Rectangle  extends Polygon{
 
     @Override
     public Double getArea() {
-        return  (side1 *side2);
+        return (side1 * side2);
     }
 }

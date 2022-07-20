@@ -3,9 +3,9 @@ package main.lru;
 import java.util.*;
 
 public class LRUCacheImpl {
-    private Deque<Node> cache ;
+    private Deque<Node> cache;
 
-    private Map<Integer, Node> map ;
+    private Map<Integer, Node> map;
 
     int cSize;
 
@@ -24,16 +24,15 @@ public class LRUCacheImpl {
         }
     }
 
-    LRUCacheImpl(int n)
-    {
+    LRUCacheImpl(int n) {
         cache = new LinkedList<>();
         map = new HashMap<Integer, Node>();
         cSize = n;
     }
 
 
-    public Integer get(int key){
-        if(map.containsKey(key)){
+    public Integer get(int key) {
+        if (map.containsKey(key)) {
             Node node = map.get(key);
             cache.remove(node);
             cache.addLast(node);
@@ -43,20 +42,20 @@ public class LRUCacheImpl {
 
     }
 
-    public void put(int key , int value){
-        if(map.containsKey(key)){
+    public void put(int key, int value) {
+        if (map.containsKey(key)) {
             Node node = map.get(key);
             cache.remove(node);
             node.value = value;
             cache.addLast(node);
 
-        }else {
-            Node node = new Node(key,value);
-            if(map.size() == cSize){
+        } else {
+            Node node = new Node(key, value);
+            if (map.size() == cSize) {
                 cache.removeLast();
             }
             cache.addLast(node);
-            map.put(key,node);
+            map.put(key, node);
         }
     }
 
@@ -70,10 +69,10 @@ public class LRUCacheImpl {
         lrucache.put(12, 15);
         lrucache.put(18, 10);
         lrucache.put(13, 16);
-        Iterator it  = lrucache.cache.iterator();
+        Iterator it = lrucache.cache.iterator();
 
 
-        while (it.hasNext()){
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
         /*System.out.println(lrucache.get(1));

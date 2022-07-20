@@ -7,7 +7,7 @@ class Outer {
         System.out.println("inside outerMethod");
         class Inner {
             void innerMethod() {
-                System.out.println("x= "+x);
+                System.out.println("x= " + x);
             }
         }
         Inner y = new Inner();
@@ -17,7 +17,7 @@ class Outer {
 
 public class MethodLocalVariableDemo {
     public static void main(String[] args) {
-        Outer x=new Outer();
+        Outer x = new Outer();
         x.outerMethod();
     }
 }

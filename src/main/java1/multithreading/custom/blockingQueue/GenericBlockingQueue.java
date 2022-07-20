@@ -12,8 +12,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class GenericBlockingQueue<T> {
     private Queue<T> queue = new LinkedList<>();
-    private int      capacity ;
-    private Lock     lock  = new ReentrantLock();
+    private int capacity;
+    private Lock lock = new ReentrantLock();
 
     private Condition notFull = lock.newCondition();
     private Condition notEmpty = lock.newCondition();
@@ -22,15 +22,15 @@ public class GenericBlockingQueue<T> {
         this.capacity = capacity;
     }
 
-    public void put(T element) throws InterruptedException{
+    public void put(T element) throws InterruptedException {
         lock.lock();
-        try{
-            while (queue.size() ==capacity){
+        try {
+            while (queue.size() == capacity) {
                 notFull.await();
             }
             queue.add(element);
             notEmpty.signal();
-        }finally {
+        } finally {
             lock.unlock();
         }
     }

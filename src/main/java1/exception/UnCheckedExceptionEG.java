@@ -8,15 +8,14 @@ public class UnCheckedExceptionEG {
 
     static String name;
     static int count;
-    public static void printLength() throws NullPointerException
-    {
+
+    public static void printLength() throws NullPointerException {
         System.out.println(name.length());
     }
 
 
     //IllegalArgumentException
-    public void setCount(int count)
-    {
+    public void setCount(int count) {
         if (count < 0)
             throw new IllegalArgumentException("cont must not be negative");
         this.count = count;

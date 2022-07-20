@@ -5,15 +5,15 @@ package main.linkedlist.singly;
  * 07/02/20
  */
 public class RemoveNthElementFromEnd {
-    public static void removeNthNodeFromEnd(int n , ListNode head , SinglyLinkedList list){
-        ListNode temp1 = head , temp2 = head;
-        int count =0;
+    public static void removeNthNodeFromEnd(int n, ListNode head, SinglyLinkedList list) {
+        ListNode temp1 = head, temp2 = head;
+        int count = 0;
         ListNode prev = null;
 
-        while(temp2 != null){
+        while (temp2 != null) {
             count++;
-            if(count > n){
-                prev =temp1;
+            if (count > n) {
+                prev = temp1;
                 temp1 = temp1.next;
             }
             temp2 = temp2.next;
@@ -23,19 +23,19 @@ public class RemoveNthElementFromEnd {
 
     }
 
-    public static void removeNthNodeFromEndSol1(int n , ListNode head , SinglyLinkedList list){
-        ListNode temp1 = head , temp2 = head;
+    public static void removeNthNodeFromEndSol1(int n, ListNode head, SinglyLinkedList list) {
+        ListNode temp1 = head, temp2 = head;
 
-        for (int i = 0; i <n ; i++) {
-            if(temp2.next == null){
-                if(i == n-1)
+        for (int i = 0; i < n; i++) {
+            if (temp2.next == null) {
+                if (i == n - 1)
                     head = head.next;
                 return;
             }
-           temp2 = temp2.next;
+            temp2 = temp2.next;
         }
 
-        while (temp2.next != null){
+        while (temp2.next != null) {
             temp1 = temp1.next;
             temp2 = temp2.next;
         }
@@ -58,7 +58,7 @@ public class RemoveNthElementFromEnd {
 
         System.out.println("Linked List after removing element : ");
 
-        removeNthNodeFromEnd(4 ,  list.head , list);
+        removeNthNodeFromEnd(4, list.head, list);
 
 
     }

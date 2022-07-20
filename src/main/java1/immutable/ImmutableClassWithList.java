@@ -11,11 +11,11 @@ import java.util.List;
 public class ImmutableClassWithList {
     private int var1;
 
-    private final List<String> strings ;
+    private final List<String> strings;
     //private final List<String> strings = new ArrayList<String>();
 
-    public ImmutableClassWithList(int var,final List<String> stringList) {
-        this.var1 =var;
+    public ImmutableClassWithList(int var, final List<String> stringList) {
+        this.var1 = var;
         /*List<String> stringList1 = new ArrayList();
         stringList1.addAll(stringList);*/
         this.strings = stringList;
@@ -35,8 +35,8 @@ public class ImmutableClassWithList {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        List<String> list = Arrays.asList("Test1","test2");
-        ImmutableClassWithList im = new ImmutableClassWithList(10,list);
+        List<String> list = Arrays.asList("Test1", "test2");
+        ImmutableClassWithList im = new ImmutableClassWithList(10, list);
         System.out.println(im.getStrings());
         im.getStrings().remove("string 2");
         System.out.println(im.getStrings());

@@ -6,8 +6,7 @@ package main.array;
  */
 public class Segregate012S {
 
-    static void sort012(int a[], int arr_size)
-    {
+    static void sort012(int a[], int arr_size) {
         int lo = 0;
         int hi = arr_size - 1;
         int mid = 0, temp = 0;
@@ -37,8 +36,7 @@ public class Segregate012S {
     }
 
     /* Utility function to print array arr[] */
-    static void printArray(int arr[], int arr_size)
-    {
+    static void printArray(int arr[], int arr_size) {
         int i;
         for (i = 0; i < arr_size; i++)
             System.out.print(arr[i] + " ");
@@ -46,9 +44,8 @@ public class Segregate012S {
     }
 
     /*Driver function to check for above functions*/
-    public static void main(String[] args)
-    {
-        int arr[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
+    public static void main(String[] args) {
+        int arr[] = {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1};
         int arr_size = arr.length;
         sort012(arr, arr_size);
         System.out.println("Array after seggregation ");

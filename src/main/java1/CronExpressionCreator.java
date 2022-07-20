@@ -140,8 +140,7 @@ public class CronExpressionCreator implements Serializable {
     /**
      * The date set should be of the format (MM-DD-YYYY for example 25-04-2011)
      *
-     * @param startDate
-     *            the startDate to set
+     * @param startDate the startDate to set
      */
     public void setStartDate(String startDate) {
         this.startDate = startDate;
@@ -157,8 +156,7 @@ public class CronExpressionCreator implements Serializable {
     /**
      * The time set should be of the format (HH:MM AM/PM for example 12:15 PM)
      *
-     * @param time
-     *            the time to set
+     * @param time the time to set
      */
     public void setTime(String time) {
         this.time = time;
@@ -185,8 +183,7 @@ public class CronExpressionCreator implements Serializable {
     }
 
     /**
-     * @param mON
-     *            the mON to set
+     * @param mON the mON to set
      */
     public void setMON(boolean mON) {
         MON = mON;

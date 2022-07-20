@@ -4,7 +4,7 @@ import main.designpattern.command.impl.SimpleRemoteControl;
 
 public class CeilingFanMediumCommand implements SimpleRemoteControl.Command {
     CeilingFan fan;
-    int        prevSpeed;
+    int prevSpeed;
 
     public CeilingFanMediumCommand(CeilingFan fan) {
         this.fan = fan;
@@ -18,13 +18,13 @@ public class CeilingFanMediumCommand implements SimpleRemoteControl.Command {
 
     @Override
     public void undo() {
-        if(prevSpeed == CeilingFan.HIGH){
+        if (prevSpeed == CeilingFan.HIGH) {
             fan.high();
-        }else if (prevSpeed == CeilingFan.MEDIUM){
+        } else if (prevSpeed == CeilingFan.MEDIUM) {
             fan.medium();
-        }else if(prevSpeed == CeilingFan.LOW){
+        } else if (prevSpeed == CeilingFan.LOW) {
             fan.low();
-        }else{
+        } else {
             fan.off();
         }
     }

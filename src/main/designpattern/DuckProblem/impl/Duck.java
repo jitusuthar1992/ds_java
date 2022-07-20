@@ -23,16 +23,18 @@ public abstract class Duck {
         this.quackBehaviour = quackBehaviour;
     }
 
-    public void swim(){
+    public void swim() {
         System.out.println("can swim");
     }
 
-    public void fly(){
+    public void fly() {
         flyBehaviour.fly();
     }
-    public void  quack(){
+
+    public void quack() {
         quackBehaviour.quack();
     }
+
     public abstract void display();
 
 }

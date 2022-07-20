@@ -10,8 +10,8 @@ import java.util.Map;
 public class TrieImplementation {
 
 
-    public static class TrieNode{
-        private Map<Character,TrieNode> children ;
+    public static class TrieNode {
+        private Map<Character, TrieNode> children;
         private boolean isEndOfWord;
 
         public TrieNode() {
@@ -20,15 +20,16 @@ public class TrieImplementation {
         }
     }
 
-    private  final TrieNode root  ;
+    private final TrieNode root;
 
-    TrieImplementation(){
+    TrieImplementation() {
         root = new TrieNode();
     }
 
     public boolean searchRecursive(String word) {
         return searchRecursive(root, word, 0);
     }
+
     private boolean searchRecursive(TrieNode current, String word, int index) {
         if (index == word.length()) {
             //return true of current's endOfWord is true else return false.
@@ -42,6 +43,7 @@ public class TrieImplementation {
         }
         return searchRecursive(node, word, index + 1);
     }
+
     public void insertRecursive(String word) {
         insertRecursive(root, word, 0);
     }
@@ -64,15 +66,15 @@ public class TrieImplementation {
         insertRecursive(node, word, index + 1);
     }
 
-    public void insert(String word){
+    public void insert(String word) {
         TrieNode current = root;
 
-        for (int i = 0; i <word.length() ; i++) {
+        for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             TrieNode node = current.children.get(ch);
-            if(null == node){
+            if (null == node) {
                 node = new TrieNode();
-                current.children.put(ch,node);
+                current.children.put(ch, node);
             }
             current = node;
         }
@@ -81,36 +83,36 @@ public class TrieImplementation {
     }
 
 
-    public boolean search(String word){
-        TrieNode current = root ;
+    public boolean search(String word) {
+        TrieNode current = root;
 
-        for (int i = 0; i <word.length() ; i++) {
+        for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
             TrieNode node = current.children.get(ch);
-            if(null == node)
+            if (null == node)
                 return false;
             current = node;
         }
         return current.isEndOfWord;
     }
 
-    public boolean delete(String word){
-        return delete(root,word,0);
+    public boolean delete(String word) {
+        return delete(root, word, 0);
     }
 
     private boolean delete(TrieNode current, String word, int index) {
-        if(index == word.length()){
-            if(!current.isEndOfWord){
+        if (index == word.length()) {
+            if (!current.isEndOfWord) {
                 return false;
             }
 
             current.isEndOfWord = false;
-            return current.children.size() ==0;
+            return current.children.size() == 0;
         }
 
         char ch = word.charAt(index);
         TrieNode node = current.children.get(ch);
-        if(node == null){
+        if (node == null) {
             return false;
         }
 

@@ -9,40 +9,37 @@ import java.util.Map;
  */
 public class LargestSubArrayWithEquals0S1S {
 
-    int findSubArray(int arr[], int n)
-    {
-        int sum =0 ;
-        int maxSize =-1;
-        int startIndex =0;
-        int endIndex =0;
+    int findSubArray(int arr[], int n) {
+        int sum = 0;
+        int maxSize = -1;
+        int startIndex = 0;
+        int endIndex = 0;
 
-        for (int i = 0; i <n ; i++) {
-            sum += arr[i]==0 ?-1 :1;
+        for (int i = 0; i < n; i++) {
+            sum += arr[i] == 0 ? -1 : 1;
 
-            for (int j = i+1; j <n ; j++) {
-                sum += arr[j]==0 ?-1 :1;
+            for (int j = i + 1; j < n; j++) {
+                sum += arr[j] == 0 ? -1 : 1;
 
-                if(sum ==0 && maxSize < j-i+1)
-                {
-                    maxSize = j-i+1;
-                    startIndex =i;
+                if (sum == 0 && maxSize < j - i + 1) {
+                    maxSize = j - i + 1;
+                    startIndex = i;
                 }
             }
 
         }
 
-        endIndex = startIndex +maxSize -1;
+        endIndex = startIndex + maxSize - 1;
 
         if (maxSize == -1)
             System.out.println("No such subarray");
         else
-            System.out.println(startIndex+" to "+endIndex);
+            System.out.println(startIndex + " to " + endIndex);
 
         return maxSize;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         LargestSubArrayWithEquals0S1S sub;
         sub = new LargestSubArrayWithEquals0S1S();
         int arr[] = {0, 0, 0, 1, 0, 1, 1};
@@ -52,8 +49,7 @@ public class LargestSubArrayWithEquals0S1S {
         sub.maxLenSubarray(arr);
     }
 
-    public static void maxLenSubarray(int[] A)
-    {
+    public static void maxLenSubarray(int[] A) {
         // create an empty Hash Map to store ending index of first
         // sub-array having some sum
         Map<Integer, Integer> map = new HashMap<>();
@@ -71,18 +67,15 @@ public class LargestSubArrayWithEquals0S1S {
         int sum = 0;
 
         // Traverse through the given array
-        for (int i = 0; i < A.length; i++)
-        {
+        for (int i = 0; i < A.length; i++) {
             // sum of elements so far (replace 0 with -1)
-            sum += (A[i] == 0)? -1: 1;
+            sum += (A[i] == 0) ? -1 : 1;
 
             // if sum is seen before
-            if (map.containsKey(sum))
-            {
+            if (map.containsKey(sum)) {
                 // update length and ending index of maximum length
                 // sub-array having sum 0
-                if (len < i - map.get(sum))
-                {
+                if (len < i - map.get(sum)) {
                     len = i - map.get(sum);
                     ending_index = i;
                 }
@@ -97,9 +90,8 @@ public class LargestSubArrayWithEquals0S1S {
         // print the sub-array if present
         if (ending_index != -1) {
             System.out.println("[" + (ending_index - len + 1) + ", " +
-                                       ending_index + "]");
-        }
-        else {
+                    ending_index + "]");
+        } else {
             System.out.println("No sub-array exists");
         }
     }

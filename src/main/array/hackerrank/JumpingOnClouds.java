@@ -42,27 +42,27 @@ Sample Output 0
  */
 public class JumpingOnClouds {
     static int jumpingOnCloudsSol1(int[] c) {
-        if(c.length <2 || 1== c[0])
+        if (c.length < 2 || 1 == c[0])
             return 0;
 
         int count = -1;
         for (int i = 0; i < c.length; i++, count++) {
-            if (i<c.length-2 && c[i+2]==0) i++;
+            if (i < c.length - 2 && c[i + 2] == 0) i++;
         }
         System.out.println(count);
 
-    return 0;
- }
+        return 0;
+    }
 
     static int jumpingOnCloudsSol2(int[] c) {
-        int jumps =0;
-        int i=0;
-        while (i<c.length-1){
-            if(i+2 ==c.length || c[i+2]==1){
+        int jumps = 0;
+        int i = 0;
+        while (i < c.length - 1) {
+            if (i + 2 == c.length || c[i + 2] == 1) {
                 jumps++;
                 i++;
-            }else{
-                i+=2;
+            } else {
+                i += 2;
                 jumps++;
             }
         }
@@ -71,7 +71,7 @@ public class JumpingOnClouds {
     }
 
     public static void main(String[] args) {
-        int a[] = new int[]{0,0,0,1,0,0,1,0,0};
+        int a[] = new int[]{0, 0, 0, 1, 0, 0, 1, 0, 0};
         JumpingOnClouds.jumpingOnCloudsSol1(a);
         JumpingOnClouds.jumpingOnCloudsSol2(a);
     }

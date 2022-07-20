@@ -11,9 +11,9 @@ import java.io.ObjectInputStream;
  */
 public class DeserializationMain {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        try(FileInputStream fileInputStream = new FileInputStream("employee.ser");
-            ObjectInputStream objectInputStream =new ObjectInputStream(fileInputStream);){
-            Employee employee =(Employee)objectInputStream.readObject();
+        try (FileInputStream fileInputStream = new FileInputStream("employee.ser");
+             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);) {
+            Employee employee = (Employee) objectInputStream.readObject();
             System.out.printf(employee.toString());
         }
     }

@@ -29,7 +29,7 @@ public class SynchronousQueueExample {
 
             sharedState.set(producedElement);
             latch.countDown();
-            System.out.println("Saving an element: "+producedElement +"  to the exchange point");
+            System.out.println("Saving an element: " + producedElement + "  to the exchange point");
 
         };
 
@@ -40,7 +40,7 @@ public class SynchronousQueueExample {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("Consume an element: "+consumedElement +"  to the exchange point");
+            System.out.println("Consume an element: " + consumedElement + "  to the exchange point");
 
         };
 
@@ -61,7 +61,7 @@ public class SynchronousQueueExample {
                     .nextInt();
             try {
                 queue.put(producedElement);
-                System.out.println("Saving an element: "+producedElement +"  to the exchange point");
+                System.out.println("Saving an element: " + producedElement + "  to the exchange point");
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
@@ -70,7 +70,7 @@ public class SynchronousQueueExample {
         Runnable consumer = () -> {
             try {
                 Integer consumedElement = queue.take();
-                System.out.println("Consume an element: "+consumedElement +"  to the exchange point");
+                System.out.println("Consume an element: " + consumedElement + "  to the exchange point");
 
             } catch (InterruptedException ex) {
                 ex.printStackTrace();

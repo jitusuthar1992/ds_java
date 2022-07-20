@@ -4,32 +4,32 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class HeapImplUsingPriorityQueue {
-    public static void minHeap(int arr[]){
+    public static void minHeap(int arr[]) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        for (int i = 0; i <arr.length ; i++) {
+        for (int i = 0; i < arr.length; i++) {
             minHeap.add(arr[i]);
         }
 
         System.out.println("Min Heap Elements");
 
-        while (!minHeap.isEmpty()){
-            System.out.print(minHeap.poll() +" ");
+        while (!minHeap.isEmpty()) {
+            System.out.print(minHeap.poll() + " ");
         }
 
         System.out.println();
 
     }
 
-    public static void maxHeap(int arr[]){
+    public static void maxHeap(int arr[]) {
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
-        for (int i = 0; i <arr.length ; i++) {
+        for (int i = 0; i < arr.length; i++) {
             maxHeap.add(arr[i]);
         }
 
         System.out.println("MAX Heap Elements");
 
-        while (!maxHeap.isEmpty()){
-            System.out.print(maxHeap.poll() +" ");
+        while (!maxHeap.isEmpty()) {
+            System.out.print(maxHeap.poll() + " ");
         }
 
         System.out.println();
@@ -44,7 +44,6 @@ public class HeapImplUsingPriorityQueue {
         HeapImplUsingPriorityQueue.minHeap(arr);
 
         HeapImplUsingPriorityQueue.maxHeap(arr);
-
 
 
     }

@@ -4,7 +4,7 @@ import main.systemdesign.parkingslot.constant.State;
 import main.systemdesign.parkingslot.constant.VehicleType;
 
 public class ParkingSlot {
-    long id ;
+    long id;
     VehicleType vehicleType;
     State state;
 

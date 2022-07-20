@@ -3,16 +3,16 @@ package main.queue;
 import main.linkedlist.singly.ListNode;
 
 public class QueueWithLinkedList {
-    ListNode rear , front;
+    ListNode rear, front;
 
     public QueueWithLinkedList() {
         this.rear = null;
         this.front = null;
     }
 
-    void enqueue(int data){
+    void enqueue(int data) {
         ListNode node = new ListNode(data);
-        if(null == rear){
+        if (null == rear) {
             this.front = this.rear = node;
             return;
         }
@@ -21,20 +21,19 @@ public class QueueWithLinkedList {
         this.rear = node;
     }
 
-    ListNode dequeue(){
-        if(null == front)
+    ListNode dequeue() {
+        if (null == front)
             return null;
         ListNode temp = this.front;
         this.front = this.front.getNext();
 
-        if(null==front)
+        if (null == front)
             this.rear = null;
         return temp;
     }
 
-    public static void main(String[] args)
-    {
-        QueueWithLinkedList q=new QueueWithLinkedList();
+    public static void main(String[] args) {
+        QueueWithLinkedList q = new QueueWithLinkedList();
         q.enqueue(10);
         q.enqueue(20);
         q.dequeue();
@@ -43,6 +42,6 @@ public class QueueWithLinkedList {
         q.enqueue(40);
         q.enqueue(50);
 
-        System.out.println("Dequeued item is "+ q.dequeue().getData());
+        System.out.println("Dequeued item is " + q.dequeue().getData());
     }
 }

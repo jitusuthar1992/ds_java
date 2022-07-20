@@ -11,18 +11,20 @@ package main.java1;
         t.fun();
     }
 }*/
-class GrandParent{
-    void display(){
+class GrandParent {
+    void display() {
         System.out.printf("GrandParent");
     }
 }
-class Parent1{
-    void display(){
+
+class Parent1 {
+    void display() {
         System.out.printf("Parent1");
     }
 }
-class Parent2{
-    void display(){
+
+class Parent2 {
+    void display() {
         System.out.printf("Parent2");
     }
 }

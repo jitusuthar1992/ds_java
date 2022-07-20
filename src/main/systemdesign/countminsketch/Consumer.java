@@ -2,7 +2,7 @@ package main.systemdesign.countminsketch;
 
 import java.util.concurrent.BlockingQueue;
 
-public class Consumer implements Runnable{
+public class Consumer implements Runnable {
 
     private static final int H1 = 0;
     private static final int H2 = 1;
@@ -12,10 +12,10 @@ public class Consumer implements Runnable{
     final static int LIMIT = 100;
     final int[][] sketch = new int[4][LIMIT];
 
-    final HashFunction h1 = new HashFunction(11, 9,LIMIT);
-    final HashFunction h2 = new HashFunction(17, 15,LIMIT);
-    final HashFunction h3 = new HashFunction(31, 29,LIMIT);
-    final HashFunction h4 = new HashFunction(61, 59,LIMIT);
+    final HashFunction h1 = new HashFunction(11, 9, LIMIT);
+    final HashFunction h2 = new HashFunction(17, 15, LIMIT);
+    final HashFunction h3 = new HashFunction(31, 29, LIMIT);
+    final HashFunction h4 = new HashFunction(61, 59, LIMIT);
 
     BlockingQueue<Character> blockingQueue;
     final int[] actualFrequency = new int[26];
@@ -51,7 +51,7 @@ public class Consumer implements Runnable{
     }
 
     private int findMinimum(final int a, final int b, final int c, final int d) {
-        return Math.min( Math.min(a, b), Math.min(c, d) );
+        return Math.min(Math.min(a, b), Math.min(c, d));
     }
 
 }

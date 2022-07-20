@@ -46,10 +46,10 @@ public class kClosestPointFromOrigin {
         PriorityQueue<Coordinates> minHeap = new PriorityQueue<>((c1, c2) -> c1.getDistanceFromOrigin() - c2.getDistanceFromOrigin());
         minHeap.addAll(listOfCoordinate);
 
-        int i =0;
+        int i = 0;
         List<Coordinates> result = new ArrayList<>();
 
-        while (!minHeap.isEmpty() && i <k){
+        while (!minHeap.isEmpty() && i < k) {
             result.add(minHeap.poll());
             i++;
         }
@@ -64,19 +64,19 @@ public class kClosestPointFromOrigin {
 
         PriorityQueue<Coordinates> maxHeap = new PriorityQueue<>((c1, c2) -> c2.getDistanceFromOrigin() - c1.getDistanceFromOrigin());
 
-        for (int i = 0; i <k ; i++) {
+        for (int i = 0; i < k; i++) {
             maxHeap.add(listOfCoordinate.get(i));
         }
 
-        for (int i =k;i<listOfCoordinate.size();i++){
-            if(listOfCoordinate.get(i).getDistanceFromOrigin() < maxHeap.peek().getDistanceFromOrigin()){
+        for (int i = k; i < listOfCoordinate.size(); i++) {
+            if (listOfCoordinate.get(i).getDistanceFromOrigin() < maxHeap.peek().getDistanceFromOrigin()) {
                 maxHeap.poll();
                 maxHeap.add(listOfCoordinate.get(i));
             }
         }
         List<Coordinates> result = new ArrayList<>();
 
-        while(!maxHeap.isEmpty()) {
+        while (!maxHeap.isEmpty()) {
             result.add(maxHeap.poll());
         }
         return result;
@@ -95,21 +95,21 @@ public class kClosestPointFromOrigin {
         listOfCoordinate.add(c4);
 
         List<Coordinates> kClosestPointsUsingList = kClosestPointFromOrigin.kClosestPointFromOriginUsingList(listOfCoordinate, 2);
-        for(Coordinates c: kClosestPointsUsingList) {
+        for (Coordinates c : kClosestPointsUsingList) {
             System.out.println(c.x + " " + c.y);
         }
 
         System.out.println();
 
         List<Coordinates> kClosestPointsUsingMinHeap = kClosestPointFromOrigin.kClosestPointFromOriginUsingMinHeap(listOfCoordinate, 2);
-        for(Coordinates c: kClosestPointsUsingMinHeap) {
+        for (Coordinates c : kClosestPointsUsingMinHeap) {
             System.out.println(c.x + " " + c.y);
         }
 
         System.out.println();
 
         List<Coordinates> kClosestPointsUsingMaxHeap = kClosestPointFromOrigin.kClosestPointFromOriginUsingMaxHeap(listOfCoordinate, 2);
-        for(Coordinates c: kClosestPointsUsingMaxHeap) {
+        for (Coordinates c : kClosestPointsUsingMaxHeap) {
             System.out.println(c.x + " " + c.y);
         }
     }

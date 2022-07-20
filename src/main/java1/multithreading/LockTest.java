@@ -12,18 +12,16 @@ public class LockTest {
     public static void main(String[] args) {
         PrinterQueue printerQueue = new PrinterQueue();
         Thread thread[] = new Thread[10];
-        for (int i = 0; i < 10; i++)
-        {
+        for (int i = 0; i < 10; i++) {
             thread[i] = new Thread(new PrintingJob(printerQueue), "Thread " + i);
         }
-        for (int i = 0; i < 10; i++)
-        {
+        for (int i = 0; i < 10; i++) {
             thread[i].start();
         }
     }
 }
 
-class PrintingJob implements Runnable{
+class PrintingJob implements Runnable {
 
     private PrinterQueue printerQueue;
 
@@ -40,13 +38,14 @@ class PrintingJob implements Runnable{
 
 class PrinterQueue {
     private final Lock queueLock = new ReentrantLock();
-    public void printJob(Object document){
+
+    public void printJob(Object document) {
         queueLock.lock();
         try {
-            Long duration = (long)(Math.random()*10000);
+            Long duration = (long) (Math.random() * 10000);
             System.out.println(Thread.currentThread().getName() + ": PrintQueue: Printing a Job during " + (duration / 1000) + " seconds :: Time - " + new Date());
             Thread.sleep(duration);
-        }catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             System.out.printf("%s: The document has been printed\n", Thread.currentThread().getName());

@@ -5,7 +5,8 @@ import java.util.Map;
 
 
 public class HashMapTest {
-    int a= 100;
+    int a = 100;
+
     public static void main(String[] args) throws Exception {
 
 
@@ -53,23 +54,23 @@ public class HashMapTest {
 */
     }
 
-    static int fix(int a){
-        a=2000;
+    static int fix(int a) {
+        a = 2000;
         //throw  new Error();
         return a;
-        
+
     }
 
-    static long[] fix(long[] a){
-        a[1]=7;
+    static long[] fix(long[] a) {
+        a[1] = 7;
         //throw  new Error();
         return a;
 
     }
 
     static class Test {
-        public  String var;
-        public  String var2;
+        public String var;
+        public String var2;
 
         @Override
         public boolean equals(Object o) {
@@ -101,14 +102,13 @@ public class HashMapTest {
 
 }
 
-class Foo
-{
-    class Bar{ }
+class Foo {
+    class Bar {
+    }
 }
-class Pack
-{
-    public static void main (String [] args)
-    {
+
+class Pack {
+    public static void main(String[] args) {
         Foo f = new Foo();
         Foo.Bar b = f.new Bar();
 

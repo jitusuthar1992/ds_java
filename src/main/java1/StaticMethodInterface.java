@@ -8,7 +8,7 @@ public class StaticMethodInterface implements IStaticMethodInterface {
 
 
 interface IStaticMethodInterface {
-    static void show(){
+    static void show() {
         System.out.println("Calling show");
     }
 }

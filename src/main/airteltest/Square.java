@@ -11,7 +11,7 @@ public class Square extends Rectangle {
         this.side = side1;
     }
 
-    public Double getArea(){
-        return (side*side);
+    public Double getArea() {
+        return (side * side);
     }
 }

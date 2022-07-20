@@ -42,7 +42,7 @@ public class ResolveDeadLockTest {
             }
         };*/
 
-      //Dead Lock Solution by re ordering
+        //Dead Lock Solution by re ordering
         Runnable block1 = new Runnable() {
             public void run() {
                 synchronized (b) {
@@ -102,4 +102,4 @@ public class ResolveDeadLockTest {
             this.i = i;
         }
     }
- }
+}
