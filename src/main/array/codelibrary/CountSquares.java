@@ -1,4 +1,4 @@
-package main.array;
+package main.array.codelibrary;
 
 public class CountSquares {
     private static int countSquares(int n) {
