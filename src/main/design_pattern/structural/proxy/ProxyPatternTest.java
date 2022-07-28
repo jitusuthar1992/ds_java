@@ -1,4 +1,4 @@
-package main.design_pattern.structural;
+package main.design_pattern.structural.proxy;
 
 public class ProxyPatternTest {
     public static void main(String[] args) {

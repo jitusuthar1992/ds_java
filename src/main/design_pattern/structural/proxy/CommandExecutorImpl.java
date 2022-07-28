@@ -1,6 +1,4 @@
-package main.design_pattern.structural;
-
-import java.io.IOException;
+package main.design_pattern.structural.proxy;
 
 public class CommandExecutorImpl implements CommandExecutor {
     @Override
