@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ReverseList {
     public static ListNode reverse(ListNode head) {
-        ListNode prev = null, next = null, current = head;
+        ListNode prev = null, next, current = head;
         while (null != current) {
             next = current.getNext();
             current.setNext(prev);

@@ -2,6 +2,7 @@ package main.linkedlist.singly;
 
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 
 public class DetectAndRemoveLoop {
@@ -56,6 +57,31 @@ public class DetectAndRemoveLoop {
             prev.setNext(null);
     }
 
+    private static ListNode detectAndRemoveLool2(ListNode head){
+        ListNode slow = head, fast = head;
+        while (null != slow && null != fast && null != fast.next) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                break;
+            }
+        }
+        if(slow == head){
+            while (fast.next != slow){
+                fast = fast.next;
+            }
+            fast.next = null;
+        }else if (slow == fast){
+            slow = head;
+            while (slow.next != fast.next){
+                slow = slow.next;
+                fast = fast.next;
+            }
+            fast.next = null;
+        }
+        return head;
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
 
@@ -69,7 +95,7 @@ public class DetectAndRemoveLoop {
         // System.out.println("Linked List before removing loop : ");
         // list.printList(list.head);
 
-        DetectAndRemoveLoop.removeLoopSol(list.head);
+        DetectAndRemoveLoop.detectAndRemoveLool2(list.head);
         System.out.println("Linked List after removing loop : ");
         list.printList(list.head);
 

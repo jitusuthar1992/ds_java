@@ -22,7 +22,7 @@ public class RemoveDuplicatesUnsortedList {
                 prev = curr;
             }
 
-            curr = curr.next;
+            curr = prev.next;
         }
     }
 

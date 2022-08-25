@@ -19,7 +19,7 @@ public class DiamondProblemWithInterface extends Parent implements PI1, PI2 {
 
 class Parent {
     void show() {
-        System.out.println("Default PI1");
+        System.out.println("Default class PI1");
     }
 }
 

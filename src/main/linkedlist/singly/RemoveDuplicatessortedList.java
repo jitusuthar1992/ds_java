@@ -17,7 +17,7 @@ public class RemoveDuplicatessortedList {
         list.head.next.next.next.next.next.next = new ListNode(14);
 
         printList(list.head);
-        removeDuplicates(list.head);
+        removeDuplicates1(list.head);
         printList(list.head);
 
     }
@@ -38,6 +38,19 @@ public class RemoveDuplicatessortedList {
             if (curr.data != curr.next.data) {
                 curr = curr.next;
             }
+        }
+    }
+
+
+    private static void removeDuplicates1(ListNode head) {
+
+        ListNode root = head;
+
+        while (root.next != null) {
+            if (root.data == root.next.data) {
+                root.next = root.next.next;
+            } else
+                root = root.next;
         }
     }
 
