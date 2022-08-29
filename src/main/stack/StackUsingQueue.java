@@ -42,4 +42,5 @@ public class StackUsingQueue {
         System.out.println(a.pop());
         System.out.println(a.pop());
     }
+
 }
