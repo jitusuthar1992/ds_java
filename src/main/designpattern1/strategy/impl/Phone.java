@@ -1,0 +1,10 @@
+package main.designpattern1.strategy.impl;
+
+import main.designpattern1.strategy.Device;
+
+public class Phone implements Device {
+    @Override
+    public void display() {
+        System.out.println("Playing the video in Phone");
+    }
+}

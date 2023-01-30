@@ -1,11 +1,10 @@
-package main.tree;
+package main.trie;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author jitendra.kumar01
- * 12/11/19
+ * @author jitendra.kumar01 * 12/11/19
  */
 public class TrieImplementation {
 
@@ -126,6 +125,8 @@ public class TrieImplementation {
         }
         return false;
     }
+
+
 
     public static void main(String[] args) {
         TrieImplementation trieImplementation = new TrieImplementation();
