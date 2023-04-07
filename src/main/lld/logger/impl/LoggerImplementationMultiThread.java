@@ -11,9 +11,9 @@ import java.util.concurrent.locks.ReentrantLock;
 public class LoggerImplementationMultiThread implements LogClient {
 
     private final Map<String, Process> processes;
-    //private final ConcurrentSkipListMap<Long, Process> queue;
+    private final ConcurrentSkipListMap<Long, Process> queue;
 
-    private final PriorityQueue<Process> queue;
+    //private final PriorityQueue<Process> queue;
 
     private final List<CompletableFuture<Void>> futures;
 
@@ -24,7 +24,7 @@ public class LoggerImplementationMultiThread implements LogClient {
     public LoggerImplementationMultiThread(int n) {
         this.processes = new ConcurrentHashMap<>();
         //this.queue = new ConcurrentSkipListMap<>();
-        this.queue = new PriorityQueue<>(Comparator.comparingLong(process -> process.getStartTime()));
+        this.queue = new ConcurrentSkipListMap<>(Comparator.comparingLong(startTime -> startTime));
         this.futures = new CopyOnWriteArrayList<>();
         this.lock = new ReentrantLock();
         taskScheduler = new ExecutorService[n];
@@ -39,7 +39,7 @@ public class LoggerImplementationMultiThread implements LogClient {
             final Long now = System.currentTimeMillis();
             final Process process = new Process(processId, now);
             processes.put(processId, process);
-            queue.add(process);
+            queue.put(now, process);
         });
     }
 
@@ -50,8 +50,7 @@ public class LoggerImplementationMultiThread implements LogClient {
             try {
                 final Long now = System.currentTimeMillis();
                 processes.get(processId).setEndTime(now);
-
-                if (!futures.isEmpty() && queue.peek().getId().equals(processId)) {
+                if (!futures.isEmpty() && queue.firstEntry().getValue().getId().equals(processId)) {
                     pollNow();
                     final CompletableFuture result = futures.remove(0);
                     result.complete(null);
@@ -68,7 +67,7 @@ public class LoggerImplementationMultiThread implements LogClient {
         lock.lock();
         try {
             final CompletableFuture result = new CompletableFuture<Void>();
-            if (!queue.isEmpty() && queue.peek().getEndTime() != -1) {
+            if (!queue.isEmpty() && queue.firstEntry().getValue().getEndTime() != -1) {
                 pollNow();
             } else {
                 futures.add(result);
@@ -86,11 +85,11 @@ public class LoggerImplementationMultiThread implements LogClient {
     }
 
     private void pollNow() {
-        if (!queue.isEmpty() && queue.peek().getEndTime() != -1) {
-            final Process process = queue.peek();
+        if (!queue.isEmpty() && queue.firstEntry().getValue().getEndTime() != -1) {
+            final Process process = queue.firstEntry().getValue();
             System.out.println("Process " + process.getId() + " started at " + process.getStartTime() + " ended at " + process.getEndTime());
             processes.remove(process.getId());
-            queue.poll();
+            queue.pollFirstEntry();
         }
     }
 }
