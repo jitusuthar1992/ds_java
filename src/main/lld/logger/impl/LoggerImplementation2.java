@@ -2,7 +2,6 @@ package main.lld.logger.impl;
 
 import main.lld.logger.LogClient;
 import main.lld.logger.Process;
-
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,10 +32,10 @@ public class LoggerImplementation2 implements LogClient {
     }
 
     @Override
-    public void poll() {
+    public String poll() {
         if(queue.isEmpty()){
             System.out.println("Queue is Empty");
-            return;
+            return null;
         }
         final  Process process = queue.firstEntry().getValue();
         if(process.getEndTime() != -1){
@@ -46,5 +45,6 @@ public class LoggerImplementation2 implements LogClient {
         }else {
             System.out.println("No Completed Task in the queue ."+ queue.size());
         }
+        return null;
     }
 }

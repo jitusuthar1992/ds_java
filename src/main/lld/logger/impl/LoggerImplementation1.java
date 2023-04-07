@@ -23,11 +23,12 @@ public class LoggerImplementation1 implements LogClient {
     }
 
     @Override
-    public void poll() {
+    public String poll() {
         final  Process process = processMap.firstEntry().getValue();
         if(process.getEndTime() != -1){
             System.out.println("Process "+process.getId()+ " started at "+process.getStartTime() + " ended at "+process.getEndTime());
             processMap.remove(process.getId());
         }
+        return null;
     }
 }
