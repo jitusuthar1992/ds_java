@@ -13,35 +13,35 @@ public class DoublyLinkedList<E> {
         this.last = null;
     }
 
-    public void detachNode(DoublyLinkedListNode<E> node){
-        if(null == node){
+    public void detachNode(DoublyLinkedListNode<E> node) {
+        if (null == node) {
             return;
         }
-        if(node.equals(first)){
+        if (node.equals(first)) {
             first = first.next;
 
-            if(first != null){
-                first.prev= null;
+            if (first != null) {
+                first.prev = null;
             }
-        }else if(node.equals(last)){
+        } else if (node.equals(last)) {
             last = last.prev;
-            if(last.next != null){
+            if (last.next != null) {
                 last.next = null;
             }
-        }else {
-            node.prev.next= node.next;
+        } else {
+            node.prev.next = node.next;
             node.next.prev = node.prev;
         }
     }
 
-    public void addNodeAtLast(DoublyLinkedListNode<E> node){
-        if(null == node){
+    public void addNodeAtLast(DoublyLinkedListNode<E> node) {
+        if (null == node) {
             throw new InvalidNodeException();
         }
-        if(last == null){
+        if (last == null) {
             last = node;
             first = node;
-        }else {
+        } else {
             last.next = node;
             node.prev = last;
             node.next = null;
@@ -49,8 +49,8 @@ public class DoublyLinkedList<E> {
         }
     }
 
-    public DoublyLinkedListNode<E> addElementAtLast(E element){
-        if(null == element){
+    public DoublyLinkedListNode<E> addElementAtLast(E element) {
+        if (null == element) {
             throw new InvalidElementException();
         }
         DoublyLinkedListNode<E> node = new DoublyLinkedListNode<>(element);
@@ -58,7 +58,7 @@ public class DoublyLinkedList<E> {
         return node;
     }
 
-    public DoublyLinkedListNode<E> getFirst(){
+    public DoublyLinkedListNode<E> getFirst() {
         return first;
     }
 }

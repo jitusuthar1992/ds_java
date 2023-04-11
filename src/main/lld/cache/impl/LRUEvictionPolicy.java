@@ -20,12 +20,12 @@ public class LRUEvictionPolicy<Key> implements EvictionPolicy<Key> {
 
     @Override
     public void keyAccessed(Key key) {
-        if(map.containsKey(key)){
-           dll.detachNode(map.get(key));
-           dll.addNodeAtLast(map.get(key));
-        }else {
-            DoublyLinkedListNode<Key> newNode =  dll.addElementAtLast(key);
-            map.put(key,newNode);
+        if (map.containsKey(key)) {
+            dll.detachNode(map.get(key));
+            dll.addNodeAtLast(map.get(key));
+        } else {
+            DoublyLinkedListNode<Key> newNode = dll.addElementAtLast(key);
+            map.put(key, newNode);
         }
     }
 
@@ -33,7 +33,7 @@ public class LRUEvictionPolicy<Key> implements EvictionPolicy<Key> {
     public Key evictKey() {
         DoublyLinkedListNode<Key> first = dll.getFirst();
 
-        if(null == first){
+        if (null == first) {
             return null;
         }
         dll.detachNode(first);

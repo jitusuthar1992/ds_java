@@ -31,10 +31,10 @@ public class LoggerTest {
         //allOf(tasks.toArray(CompletableFuture[]::new)).get();
     }
 
-   /* @Test
+    @Test
     public void concurrencyTest() throws ExecutionException, InterruptedException {
-        final LogClient logClient = new LogClientImpl(10);
-        final var size = 1000;
+        final LogClient logClient = new LoggerImplementationMultiThread(10);
+        final int size = 1000;
         final ExecutorService executorService = Executors.newFixedThreadPool(size);
         final Random random = new Random();
         final List<String> commands = new ArrayList<>();
@@ -52,8 +52,8 @@ public class LoggerTest {
         int index = commands.size() - 1;
         while (index >= 0) {
             if (commands.get(index).startsWith("END ")) {
-                final var taskId = Integer.parseInt(commands.get(index).split(" ")[1]);
-                final var insertionPoint = random.nextInt(Math.min(ends.get(taskId), ends.getOrDefault(taskId + 1, commands.size() - 1)) + 1);
+                final int taskId = Integer.parseInt(commands.get(index).split(" ")[1]);
+                final int insertionPoint = random.nextInt(Math.min(ends.get(taskId), ends.getOrDefault(taskId + 1, commands.size() - 1)) + 1);
                 commands.add(insertionPoint, "START " + taskId);
                 if (insertionPoint <= index) {
                     index++;
@@ -66,14 +66,15 @@ public class LoggerTest {
             if (command.equals("POLL")) {
                 tasks.add(runAsync(logClient::poll, executorService));
             } else {
-                final var id = command.split(" ")[1];
+                final String id = command.split(" ")[1];
                 if (command.startsWith("START ")) {
-                    logClient.start(id, size - Long.parseLong(id) + 1);
+                    logClient.start(id);
                 } else {
                     logClient.end(id);
+                    Thread.sleep(100);
                 }
             }
         }
-        allOf(tasks.toArray(CompletableFuture[]::new)).get();
-    }*/
+        //allOf(tasks.toArray(CompletableFuture[]::new)).get();
+    }
 }
