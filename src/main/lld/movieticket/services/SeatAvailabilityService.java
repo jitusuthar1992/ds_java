@@ -28,7 +28,7 @@ public class SeatAvailabilityService {
 
     private List<Seat> getUnAvailableSeats(final Show show) {
         List<Seat> unavailableSeats = bookingService.getBookedSeats(show);
-        unavailableSeats.removeAll(seatLockProvider.getLockedSeats(show));
+        unavailableSeats.addAll(seatLockProvider.getLockedSeats(show));
         return unavailableSeats;
     }
 }

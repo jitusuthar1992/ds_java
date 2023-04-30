@@ -1,4 +1,4 @@
-package main.recusrsion;
+package main.recusrsion.array;
 
 public class BinarySearch {
     static boolean binarySearch(int arr[], int s , int e , int key){

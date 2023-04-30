@@ -1,4 +1,4 @@
-package main.string;
+package main.recusrsion.string;
 
 public class PermutationString {
     public static void main(String[] args) {

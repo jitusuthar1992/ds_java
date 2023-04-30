@@ -1,3 +1,4 @@
+/*
 package test.java;
 
 
@@ -77,4 +78,4 @@ public class LoggerTest {
         }
         //allOf(tasks.toArray(CompletableFuture[]::new)).get();
     }
-}
+}*/

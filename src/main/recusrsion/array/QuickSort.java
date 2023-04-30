@@ -1,4 +1,4 @@
-package main.recusrsion;
+package main.recusrsion.array;
 
 import java.util.stream.IntStream;
 

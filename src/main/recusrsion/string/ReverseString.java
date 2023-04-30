@@ -1,4 +1,4 @@
-package main.recusrsion;
+package main.recusrsion.string;
 
 public class ReverseString {
     static void reverse(char[] chars,int i, int j){
