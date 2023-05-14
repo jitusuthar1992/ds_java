@@ -18,6 +18,7 @@ public class ShowController {
     private final TheatreService theatreService;
     private final MovieService movieService;
     private final ShowService showService;
+    private final SeatAvailabilityService seatAvailabilityService;
 
     public ShowController(TheatreService theatreService, MovieService movieService, ShowService showService, SeatAvailabilityService seatAvailabilityService) {
         this.theatreService = theatreService;
@@ -26,7 +27,6 @@ public class ShowController {
         this.seatAvailabilityService = seatAvailabilityService;
     }
 
-    private final SeatAvailabilityService seatAvailabilityService;
 
     public String createShow(final String screenId, final String movieId, final Date startTime,
                              final Integer durationInSeconds) {
