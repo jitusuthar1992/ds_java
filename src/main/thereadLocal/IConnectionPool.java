@@ -5,5 +5,5 @@ public interface IConnectionPool {
     boolean isActive();
 
     // Regularly check the connection pool situation
-    void cheackPool();
+    void checkPool();
 }

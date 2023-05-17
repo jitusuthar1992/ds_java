@@ -1,7 +1,8 @@
-/*
 package main.thereadLocal;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,10 +26,10 @@ public class ConnectionPool implements IConnectionPool {
         super();
         this.dbBean = dbBean;
         init();
-        cheackPool();
+        checkPool();
     }
 
-    // Initialize
+    // Initialize+
     public void init() {
         try {
             Class.forName(dbBean.getDriverName());
@@ -42,9 +43,7 @@ public class ConnectionPool implements IConnectionPool {
                 }
             }
             isActive = true;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }
@@ -107,7 +106,7 @@ public class ConnectionPool implements IConnectionPool {
     }
 
     // release the connection
-    public synchronized void releaseConn(Connection conn) throws SQLException {
+    public synchronized void releaseConn(Connection conn) {
         if (isValid(conn)&& !(freeConnection.size() > dbBean.getMaxConnections())) {
             freeConnection.add(conn);
             activeConnection.remove(conn);
@@ -162,8 +161,8 @@ public class ConnectionPool implements IConnectionPool {
 
     // Regularly check the connection pool situation
     @Override
-    public void cheackPool() {
-        if(dbBean.isCheakPool()){
+    public void checkPool() {
+        if(dbBean.isCheckPool()){
             new Timer().schedule(new TimerTask() {
                 @Override
                 public void run() {
@@ -178,4 +177,3 @@ public class ConnectionPool implements IConnectionPool {
         }
     }
 }
-*/

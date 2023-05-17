@@ -15,4 +15,44 @@ public class FindNthElementFromEnd {
 
         return secondPtr;
     }
+    public static ListNode findKthNode(ListNode head, int k)
+    {
+        ListNode first = head, second = head , prev = null;
+
+        for (int i = 0; i < k && first != null; i++) {
+            first = first.next;
+            if(first == null && i != k-1){
+                return new ListNode(-1);
+            }
+        }
+
+        while (first != null) {
+            first = first.next;
+            prev = second;
+            second = second.next;
+
+        }
+        return second;
+    }
+
+    public static void main(String[] args) {
+        SinglyLinkedList list = new SinglyLinkedList();
+
+        list.head = new ListNode(1);
+        list.head.setNext(new ListNode(2));
+        list.head.getNext().setNext(new ListNode(3));
+        list.head.getNext().getNext().setNext(new ListNode(4));
+        list.head.getNext().getNext().getNext().setNext(new ListNode(5));
+
+        System.out.println("Linked List before removing element : ");
+        list.printList(list.head);
+        System.out.println();
+
+
+        ListNode kthNode  = findKthNode(list.head, 5);
+
+        System.out.println("Kth node "+kthNode.data);
+
+    }
+
 }
