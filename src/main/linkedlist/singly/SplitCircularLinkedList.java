@@ -9,7 +9,7 @@ public class SplitCircularLinkedList {
             fast = fast.next.next;
         }
         ListNode h1 = head;
-        ListNode h2 = fast;
+        ListNode h2 = slow.next;
         slow.next =h1;
 
         ListNode curr = h2;
