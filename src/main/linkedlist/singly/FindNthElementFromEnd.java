@@ -28,11 +28,21 @@ public class FindNthElementFromEnd {
 
         while (first != null) {
             first = first.next;
-            prev = second;
             second = second.next;
 
         }
         return second;
+    }
+
+    public int findNthNode(ListNode node ,int k){
+        if(node == null){
+            return 0;
+        }
+        int count = findNthNode(node.next,k);
+        if(count == k){
+            System.out.println("k'th node from the end is " + node.data);
+        }
+        return 0;
     }
 
     public static void main(String[] args) {
