@@ -19,9 +19,4 @@ public class WeightedRoundRobinLoadBalancer extends RoundRobinLoadBalancer {
                 .collect(Collectors.toList())
         );
     }
-
-    @Override
-    protected String getIp() {
-        return null;
-    }
 }

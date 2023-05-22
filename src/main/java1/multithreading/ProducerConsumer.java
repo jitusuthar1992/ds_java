@@ -11,26 +11,20 @@ public class ProducerConsumer {
         final PC pc = new PC();
 
         // Create producer thread
-        Thread t1 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    pc.produce();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        Thread t1 = new Thread(() -> {
+            try {
+                pc.produce();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         });
 
         // Create consumer thread
-        Thread t2 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    pc.consume();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        Thread t2 = new Thread(() -> {
+            try {
+                pc.consume();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         });
 

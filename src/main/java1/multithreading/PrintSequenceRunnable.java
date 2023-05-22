@@ -1,17 +1,14 @@
 package main.java1.multithreading;
 
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class PrintSequenceRunnable implements Runnable {
     public static int PRINT_NUMBERS_UPTO = 10;
-    static int number = 1;
+    static volatile int number = 1;
     int remainder;
     //static Object lock=new Object();
 
-    static Lock lock = new ReentrantLock();
-    private Condition notFull = lock.newCondition();
+    static Object lock = new Object();
+    //private Condition notFull = lock.newCondition();
 
     public PrintSequenceRunnable(int remainder) {
         this.remainder = remainder;
@@ -19,7 +16,7 @@ public class PrintSequenceRunnable implements Runnable {
 
     @Override
     public void run() {
-        while (number < PRINT_NUMBERS_UPTO - 1) {
+        while (number <= PRINT_NUMBERS_UPTO) {
             synchronized (lock) {
                 while (number % 3 != remainder) {
                     try {
@@ -28,7 +25,10 @@ public class PrintSequenceRunnable implements Runnable {
                         e.printStackTrace();
                     }
                 }
-                System.out.println(Thread.currentThread().getName() + " " + number);
+                if(number % 3 == remainder && number <= PRINT_NUMBERS_UPTO){
+                    System.out.println(Thread.currentThread().getName() + " " + number);
+
+                }
                 number++;
                 lock.notifyAll();
             }
