@@ -25,6 +25,7 @@ public class RedundantBrackets {
                     if(redundant)
                         return true;
                 }
+                stack.pop();
             }
         }
         return false;
