@@ -1,9 +1,6 @@
 package main.priority.queue;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class GameStringMinSum {
     public static int getMinSum(String str, int k){
@@ -20,7 +17,7 @@ public class GameStringMinSum {
         }
 
         PriorityQueue<Integer> pq = new PriorityQueue<>(Comparator.reverseOrder());
-
+        List<String> list = new ArrayList<>();
 
         for (Integer f :freq.values()) {
             pq.add(f);
