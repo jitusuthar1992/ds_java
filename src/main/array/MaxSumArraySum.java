@@ -2,7 +2,7 @@ package main.array;
 
 public class MaxSumArraySum {
 
-    static void maxSubArraySum(int a[], int size) {
+   public static int maxSubArraySum(int a[], int size) {
         int max_so_far = Integer.MIN_VALUE, max_ending_here = 0, start = 0, end = 0, s = 0;
 
         for (int i = 0; i < size; i++) {
@@ -21,6 +21,7 @@ public class MaxSumArraySum {
                 + max_so_far);
         System.out.println("Starting index " + start);
         System.out.println("Ending index " + end);
+        return max_so_far;
     }
 
     public static void main(String[] args) {
