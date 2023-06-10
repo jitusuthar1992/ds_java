@@ -8,7 +8,7 @@ public class AddOneToList {
         ListNode curr = head;
 
         while(curr != null){
-            if(curr.next == null && curr.data ==0){
+            if(curr.next == null && curr.data ==9){
                 curr.data = 0;
                 ListNode temp = new ListNode(1);
                 temp.next =head;

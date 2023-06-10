@@ -23,7 +23,7 @@ public class MaxProfitMultipleTrax {
 
 
     public static void main(String[] args) {
-        int[] price = {5, 2, 3, 2, 6, 6, 2, 9, 1, 0, 7, 4, 5, 0};
+        int[] price = {5, 2, 3, 2, 6,  2, 9, 1, 0, 7, 4, 5, 0};
 
         System.out.print("\nTotal profit earned is " + maxProfit(price));
     }

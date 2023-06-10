@@ -13,4 +13,18 @@ public class BinarySearch {
             return binarySearch(arr,s,mid-1,key);
         }
     }
+
+    public static void main(String[] args) {
+        int a = 10,b =25,c=15;
+        int res =0;
+        while (b >0){
+            res += (a%c)+(c%a);
+            b-= (a%c);
+            int t = a ;
+            a=c;
+            c =t;
+
+        }
+        System.out.println(res);
+    }
 }

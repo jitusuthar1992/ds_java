@@ -1,5 +1,7 @@
 package main.tree;
 
+import org.w3c.dom.Node;
+
 import java.util.*;
 
 public class BinaryTreeTraversal {
@@ -188,7 +190,7 @@ public class BinaryTreeTraversal {
         }
     }
 
-    private static void printRightView(BinaryTreeNode root) {
+    private static void printRightView1(BinaryTreeNode root) {
         if (root == null)
             return;
 
@@ -336,4 +338,51 @@ public class BinaryTreeTraversal {
 
         map.values().stream().forEach(System.out::println);
     }
+
+
+    void printLeftView(BinaryTreeNode node){
+        if(null == node)
+            return;
+        List<BinaryTreeNode> list = new ArrayList<>();
+        leftViewUtil(node,list,0);
+        for (BinaryTreeNode n : list) {
+            System.out.println(n.data);
+        }
+    }
+
+    private void leftViewUtil(BinaryTreeNode node, List<BinaryTreeNode> list, int level) {
+        if(node == null)
+            return;
+        if(list.get(level) == null)
+            list.add(node);
+        leftViewUtil(node.left,list,level+1);
+        leftViewUtil(node.right,list,level+1);
+    }
+
+    void printRightView(BinaryTreeNode node){
+        if(null == node)
+            return;
+        List<BinaryTreeNode> list = new ArrayList<>();
+        rightViewUtil(node,list,0);
+        for (BinaryTreeNode n : list) {
+            System.out.println(n.data);
+        }
+    }
+
+    private void rightViewUtil(BinaryTreeNode node, List<BinaryTreeNode> list, int level) {
+        if(node == null)
+            return;
+        list.add(node);
+        rightViewUtil(node.left,list,level+1);
+        rightViewUtil(node.right,list,level+1);
+
+        /*
+        or
+        list.add(node);
+        rightViewUtil(node.right,list,level+1);
+        rightViewUtil(node.left,list,level+1);
+        */
+    }
+
+
 }

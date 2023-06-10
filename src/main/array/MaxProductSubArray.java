@@ -19,4 +19,20 @@ public class MaxProductSubArray {
         }
         return ans;
     }
+
+    private static  int getMaxProductSol2(int arr[]){
+
+        int ans = arr[0];
+
+        for (int i = 0; i < arr.length ; i++) {
+           int mul = arr[i];
+            for (int j = i+1; j <arr.length ; j++) {
+                ans = Math.max(ans ,mul);
+                mul +=arr[j];
+            }
+            ans = Math.max(ans ,mul);
+        }
+        return ans;
+    }
+
 }

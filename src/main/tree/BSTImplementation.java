@@ -17,6 +17,29 @@ public class BSTImplementation {
         return root;
     }
 
+    public static BinaryTreeNode insertIterative(BinaryTreeNode root, int data) {
+       BinaryTreeNode newNode = new BinaryTreeNode(data);
+       BinaryTreeNode curr = root;
+       BinaryTreeNode parent = null;
+
+       while (curr != null){
+           parent = curr;
+           if(data < curr.data)
+               curr = curr.left;
+           else
+               curr = curr.right;
+       }
+       if(parent == null)
+           return newNode;
+       else if(data < parent.data){
+           parent.left = newNode;
+       }else {
+           parent.right = newNode;
+       }
+       return root;
+    }
+
+
     public static BinaryTreeNode findMin(BinaryTreeNode root) {
         if (root == null)
             return null;
