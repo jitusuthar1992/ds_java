@@ -17,7 +17,7 @@ public class RedundantBrackets {
 
                     while (stack.peek() != '('){
                         char top = stack.peek();
-                        if( ch == '+' || ch == '-' || ch == '*' || ch == '/'){
+                        if( top == '+' || top == '-' || top == '*' || top == '/'){
                             redundant = false;
                         }
                         stack.pop();

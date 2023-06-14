@@ -28,7 +28,7 @@ public class MaxProductSubArray {
            int mul = arr[i];
             for (int j = i+1; j <arr.length ; j++) {
                 ans = Math.max(ans ,mul);
-                mul +=arr[j];
+                mul *=arr[j];
             }
             ans = Math.max(ans ,mul);
         }

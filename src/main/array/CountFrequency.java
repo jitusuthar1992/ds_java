@@ -89,7 +89,7 @@ public class CountFrequency {
             // If the elementIndex has an element that is not
             // processed yet, then first store that element
             // to arr[i] so that we don't loose anything.
-            if (arr[elementIndex] > 0) {
+             if (arr[elementIndex] > 0) {
                 arr[i] = arr[elementIndex];
 
                 // After storing arr[elementIndex], change it

@@ -10,15 +10,14 @@ public class MinSetCovInterval {
                               List<Integer> b)
     {
         if (a.get(1).equals(b.get(1))) {
-            return a.get(0).compareTo(b.get(0));
+            return b.get(0).compareTo(a.get(0));
         }
         else {
             return a.get(1).compareTo(b.get(1));
         }
     }
 
-    public static int
-    intersectionSizeTwo(List<List<Integer>> intervals)
+    public static int intersectionSizeTwo(List<List<Integer>> intervals)
     {
         int n = intervals.size();
 
