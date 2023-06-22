@@ -3,7 +3,7 @@ package main.tree;
 public class TargetCloneTree {
     public static BinaryTreeNode getTargetNode(BinaryTreeNode orig, BinaryTreeNode clone , BinaryTreeNode target){
         if(null == orig){
-            return orig;
+            return null;
         }
 
         if(orig == target){

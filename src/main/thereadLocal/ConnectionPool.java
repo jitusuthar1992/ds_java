@@ -34,8 +34,7 @@ public class ConnectionPool implements IConnectionPool {
         try {
             Class.forName(dbBean.getDriverName());
             for (int i = 0; i < dbBean.getInitConnections(); i++) {
-                Connection conn;
-                conn = newConnection();
+                Connection conn = newConnection();
                 // Initialize the minimum number of connections
                 if (conn != null) {
                     freeConnection.add(conn);

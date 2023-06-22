@@ -4,8 +4,7 @@ public class RotateMatrixAntiClock90Degree {
     // Function for do transpose of matrix
     static void transpose(int arr[][]) {
         for (int i = 0; i < arr.length; i++)
-            for (int j = i; j < arr[0].length;
-                 j++) {
+            for (int j = i; j < arr[0].length; j++) {
                 int temp = arr[j][i];
                 arr[j][i] = arr[i][j];
                 arr[i][j] = temp;

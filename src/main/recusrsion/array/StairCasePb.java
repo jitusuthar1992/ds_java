@@ -6,12 +6,9 @@ public class StairCasePb {
     {
         int arr[] = { 1, 3, 5 };
         int len = arr.length;
-        ;
         int n = 5;
 
         System.out.println(countWays(n, arr, len));
-
-        System.out.println(noOfWays(n ,arr));
     }
     static int countWays(int n, int arr[], int len){
         if(n ==0){
@@ -24,25 +21,5 @@ public class StairCasePb {
             }
         }
         return noWays;
-    }
-
-    public static int noOfWays(int n ,int[] steps ){
-
-        int r = n+1;
-        int c = steps.length+1;
-        int arr[][] = new int[c][r];
-
-        for (int i = 0; i <c ; i++) {
-            for (int j = 0; j <r ; j++) {
-                if(i == 0 || j==0){
-                    arr[i][j]=0;
-                }else if( j < steps[i-1]){
-                    arr[i][j] = arr[i-1][j];
-                }else {
-                    arr[i][j] = steps[i-1]+arr[i-1][j-steps[i-1]];
-                }
-            }
-        }
-        return arr[c-1][r-1];
     }
 }

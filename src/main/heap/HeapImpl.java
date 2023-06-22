@@ -71,7 +71,7 @@ public class HeapImpl {
         int smallest = i;
 
         if (l < this.size && arr[l] < arr[smallest]) {
-            smallest = i;
+            smallest = l;
         }
 
         if (r < this.size && arr[r] < arr[smallest]) {
