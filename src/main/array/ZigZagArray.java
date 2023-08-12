@@ -9,7 +9,7 @@ public class ZigZagArray {
     static void zigZag(int arr[]) {
 
         boolean flag = true;
-        int temp = 0;
+        int temp;
 
         for (int i = 0; i < arr.length - 1; i++) {
             if (flag) {

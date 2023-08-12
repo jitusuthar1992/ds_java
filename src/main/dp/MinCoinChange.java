@@ -18,7 +18,7 @@ public class MinCoinChange {
         int ans = Integer.MAX_VALUE;
         for (int i = 0; i <coins.length ; i++) {
             if(n-coins[i] >=0){
-                int subAns =0 ;
+                int subAns;
                 if(dp[n-coins[i]] != -1) {
                     subAns= dp[n-coins[i]];
                 }else {
