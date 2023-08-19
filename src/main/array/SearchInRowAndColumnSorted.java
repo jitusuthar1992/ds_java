@@ -4,7 +4,7 @@ package main.array;
  * @author jitendra.kumar01
  * 09/11/19
  */
-public class SearchInRowAndColumnSorted {
+public class  SearchInRowAndColumnSorted {
     private static void search(int[][] mat, int n, int x) {
         int i = 0, j = n - 1;
 

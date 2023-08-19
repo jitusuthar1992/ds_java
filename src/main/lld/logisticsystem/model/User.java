@@ -1,7 +1,5 @@
 package main.lld.logisticsystem.model;
 
-import main.lld.logisticsystem.model.Location;
-
 public class User {
     private int userId;
     private String name;

@@ -17,7 +17,7 @@ public class SearchInSortedRotatedArraySol2 {
                     low = mid + 1;
                 }
             } else {
-                if (arr[low] >= target && arr[mid] <= target) {
+                if (arr[high] >= target && arr[mid] <= target) {
                     low = mid + 1;
                 } else {
                     high = mid - 1;

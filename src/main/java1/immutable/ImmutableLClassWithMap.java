@@ -8,7 +8,8 @@ import java.util.Map;
  * @author jitendra.kumar01
  * 21/02/20
  */
-public class ImmutableLClassWithMap {
+public class
+ImmutableLClassWithMap {
     private int var1;
 
     private final HashMap<String, String> testMap;
