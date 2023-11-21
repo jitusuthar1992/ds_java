@@ -1,3 +1,4 @@
+/*
 package main.java1.java8;
 
 import java.io.BufferedReader;
@@ -71,17 +72,21 @@ public class StreamExamples {
         employees.add(employee2);
         employees.add(employee3);
 
-        /*addressList = employees.stream().flatMap(e->e.addreses.stream()).collect(Collectors.toList());
+        */
+/*addressList = employees.stream().flatMap(e->e.addreses.stream()).collect(Collectors.toList());
 
         addressList = addressList.stream().filter(a->a.type.equals("Home")).collect(Collectors.toList());
 
         addressList.forEach(System.out::println);
-        */
+        *//*
 
 
-       /* List<Address> addresseses =  employees.stream().flatMap(e->e.addreses.stream()).collect(Collectors.toList());
 
-        addresseses.stream().filter(a->a.type.equals("Home Address")).collect(Collectors.toList());*/
+       */
+/* List<Address> addresseses =  employees.stream().flatMap(e->e.addreses.stream()).collect(Collectors.toList());
+
+        addresseses.stream().filter(a->a.type.equals("Home Address")).collect(Collectors.toList());*//*
+
 
         employees = employees.stream().sorted((o1, o2) -> {
             int diff = o2.salary - o1.salary;
@@ -203,3 +208,4 @@ class Address {
                 '}';
     }
 }
+*/

@@ -1,6 +1,6 @@
 package main.stack;
 
-public class MiddleElement {
+public class  MiddleElement {
 
     private static class Node {
         Node next ;
