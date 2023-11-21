@@ -6,6 +6,7 @@ import main.lld.cache.exception.StorageFullException;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class HashMapBasedStorage<Key, Value> implements Storage<Key, Value> {
 

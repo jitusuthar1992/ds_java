@@ -1,3 +1,4 @@
+/*
 package main.java1.reflection;
 
 import java.sql.SQLException;
@@ -19,3 +20,4 @@ public class MethodMetaData {
         System.out.println("Demo method for Reflection API");
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package main.java1.reflection;
 
 import java.rmi.RemoteException;
@@ -13,3 +14,4 @@ public class ConstructorMetaData {
     public ConstructorMetaData(int no, String name, String address) throws InterruptedException {
     }
 }
+*/

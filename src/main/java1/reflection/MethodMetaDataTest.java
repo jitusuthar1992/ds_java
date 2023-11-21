@@ -1,3 +1,4 @@
+/*
 package main.java1.reflection;
 
 import java.lang.reflect.Method;
@@ -38,3 +39,4 @@ public class MethodMetaDataTest {
         }
     }
 }
+*/

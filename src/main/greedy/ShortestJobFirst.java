@@ -1,3 +1,4 @@
+/*
 package main.greedy;
 
 import jdk.nashorn.internal.scripts.JO;
@@ -76,3 +77,4 @@ public class ShortestJobFirst {
         ShortestJobFirst.sjfScheduling(jobs);
     }
 }
+*/

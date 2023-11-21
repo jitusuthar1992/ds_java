@@ -1,3 +1,4 @@
+/*
 package main.designpattern.command.impl1;
 
 import main.designpattern.command.impl.Light;
@@ -26,3 +27,4 @@ public class RemoteLoader {
         control.undoButtonWasPressed();
     }
 }
+*/

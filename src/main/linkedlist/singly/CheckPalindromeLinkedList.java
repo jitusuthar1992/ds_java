@@ -1,6 +1,8 @@
 package main.linkedlist.singly;
 
+/*
 import sun.jvm.hotspot.utilities.Interval;
+*/
 
 import java.util.Stack;
 

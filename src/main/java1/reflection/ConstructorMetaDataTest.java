@@ -1,3 +1,4 @@
+/*
 package main.java1.reflection;
 
 import java.lang.reflect.Constructor;
@@ -39,3 +40,4 @@ public class ConstructorMetaDataTest {
 
 
 }
+*/

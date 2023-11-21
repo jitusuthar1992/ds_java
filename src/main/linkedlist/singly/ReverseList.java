@@ -16,6 +16,16 @@ public class ReverseList {
         return head;
     }
 
+    private void reverse1(Node head , Node prev, Node curr){
+        if(null == curr){
+            head = prev;
+            return;
+        }
+        Node next = curr.next;
+        reverse1(head,curr,next);
+        curr.next = prev;
+    }
+
     public static void main(String[] args) {
         Map<String, String> map = new HashMap<>();
         map.put("test1", "test1");

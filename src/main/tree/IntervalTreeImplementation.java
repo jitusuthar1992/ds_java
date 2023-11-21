@@ -1,11 +1,14 @@
+/*
 package main.tree;
 
 import sun.jvm.hotspot.utilities.Interval;
 
+*/
 /**
  * @author jitendra.kumar01
  * 03/12/19
- */
+ *//*
+
 public class IntervalTreeImplementation {
     class Node {
         private Interval interval;
@@ -39,3 +42,4 @@ public class IntervalTreeImplementation {
         return root;
     }
 }
+*/
